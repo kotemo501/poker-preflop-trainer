@@ -460,31 +460,134 @@ function renderWhyPanel(revealed = false) {
 
 function marginalInsight(question, revealed) {
   const profile = handProfile(question.hand);
-  const stage = question.kind === "open" ? question.heroPosition : question.villainPosition;
   const strength = effectiveLevel(question.baseLevel);
   const threshold = referenceThreshold(question);
+  const answer = actionLabel(question.correct);
   const title = revealed
-    ? `${question.hand}: ${levelNames[strength]} / 基準 ${thresholdLabel(threshold)}`
+    ? `${question.hand}: ${answer}の理由`
     : `${question.hand} の価値と弱点`;
-
-  const points = [
-    ...handTypePoints(profile).slice(0, 2),
-    thresholdComparisonPoints(question, strength, threshold)[0],
-  ];
-
-  if (question.kind === "open") {
-    points.push(...openContextPoints(question, profile, revealed).slice(0, 2));
-  } else if (question.kind === "bbDefense") {
-    points.push(...bbDefenseContextPoints(question, profile, revealed).slice(0, 2));
-  } else {
-    points.push(...vsOpenContextPoints(question, profile, revealed).slice(0, 2));
-  }
-
-  if (revealed) {
-    points.push(...postAnswerPoints(question, profile, stage).slice(0, 2));
-  }
+  const points = revealed
+    ? revealedInsight(question, profile, strength, threshold)
+    : previewInsight(question, profile, strength, threshold);
 
   return { title, points };
+}
+
+function previewInsight(question, profile, strength, threshold) {
+  return [
+    `${question.hand}は${levelNames[strength]}。この場面の基準は${thresholdLabel(threshold)}です。`,
+    handShapeSummary(profile),
+    scenarioQuestionPoint(question),
+  ];
+}
+
+function revealedInsight(question, profile, strength, threshold) {
+  if (question.kind === "open") return openDecisionInsight(question, profile, strength, threshold);
+  if (question.kind === "bbDefense") return bbDefenseDecisionInsight(question, profile, strength, threshold);
+  return vsOpenDecisionInsight(question, profile, strength, threshold);
+}
+
+function openDecisionInsight(question, profile, strength, threshold) {
+  const diff = strength - threshold;
+  if (question.correct === "fold") {
+    return [
+      `${question.hand}は${levelNames[strength]}で、${question.heroPosition}の参加基準${thresholdLabel(threshold)}に届いていません。`,
+      `${question.heroPosition}はまだ後ろに${playersBehind(question.heroPosition)}人残るため、微妙なハンドを開くとコール/3betを受けた後が苦しくなります。`,
+      `${handRisk(profile)} ここは「惜しい」よりも、表の下限を守ってフォールドする場面です。`,
+    ];
+  }
+  return [
+    `${question.hand}は${levelNames[strength]}で、${question.heroPosition}の基準${thresholdLabel(threshold)}を${diff === 0 ? "ちょうど満たす下限" : "満たしています"}。`,
+    `${question.heroPosition}まで全員フォールドなら、自分からレイズしてブラインドを降ろす価値があります。`,
+    `${handValue(profile)} ただし下限ハンドなので、強く抵抗されたら無理に守らない前提です。`,
+  ];
+}
+
+function bbDefenseDecisionInsight(question, profile, strength, threshold) {
+  if (question.correct === "fold") {
+    return [
+      `${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準${thresholdLabel(threshold)}より下です。`,
+      `${question.villainPosition}オープンはBTNより強いので、BTN級のハンドをそのまま守るとレンジ負けしやすいです。`,
+      `${handRisk(profile)} BBはポジション不利で主導権もないため、弱いワンペアや弱いドローで難しい判断を強いられます。`,
+      `実戦では「BTN相手なら守れるかも」と「CO相手にも守る」を分けて覚えるのが大事です。`,
+    ];
+  }
+  if (question.correct === "raise") {
+    return [
+      `${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準より2ランク以上上です。`,
+      `この帯はただ守るだけでなく、相手のオープンに対して強く返せる候補です。`,
+      `${handValue(profile)} レイズ後にコールされても戦える強さがあるため、受け身のコールより主導権を取り返します。`,
+    ];
+  }
+  return [
+    `${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準${thresholdLabel(threshold)}を満たします。`,
+    `BBはすでにブラインドを払っているので追加投資は小さく、基準を満たす下限ハンドは守れます。`,
+    `${handValue(profile)} ただしポジション不利なので、ヒットしても弱いワンペアで大きく払いすぎない前提です。`,
+  ];
+}
+
+function vsOpenDecisionInsight(question, profile, strength, threshold) {
+  if (question.correct === "fold") {
+    return [
+      `${question.hand}は${levelNames[strength]}。${question.villainPosition}オープンに対しては、最低でも相手レンジより1ランク上が欲しい場面です。`,
+      `自分から開く時と違い、相手はすでに強いレンジで参加しています。境界未満のハンドでコールすると支配されやすいです。`,
+      `${handRisk(profile)} コールしても主導権がなく、難しいフロップで損失が膨らみやすいのでフォールドします。`,
+    ];
+  }
+  if (question.correct === "raise") {
+    return [
+      `${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンに対してレイズできる強い帯です。`,
+      `レイズは、相手を降ろす力と、コールされても戦える強さの両方が必要です。`,
+      `${handValue(profile)} 受け身でコールするより、主導権を取り返す価値があります。`,
+    ];
+  }
+  return [
+    `${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンに対してコール基準を満たします。`,
+    `ただしレイズするほど強い帯ではないため、相手の強いレンジを尊重してコール止まりです。`,
+    `${handValue(profile)} フロップ後は当たり方が弱ければ無理に粘らない前提です。`,
+  ];
+}
+
+function scenarioQuestionPoint(question) {
+  if (question.kind === "open") {
+    return `${question.heroPosition}まで全員フォールド。後ろの人数とスティール価値込みで、基準に届くかを見ます。`;
+  }
+  if (question.kind === "bbDefense") {
+    return `${question.villainPosition}オープンにBBで対応。相手位置が早いほど守る基準は厳しくなります。`;
+  }
+  return `${question.villainPosition}オープンへの対応。自分から開く時より、相手レンジに対して強さが必要です。`;
+}
+
+function handShapeSummary(profile) {
+  if (profile.pair) return `${profile.hand}はポケットペア。セット価値はありますが、オーバーカードが出ると扱いが難しくなります。`;
+  if (profile.suited && profile.connected) return `${profile.hand}はスーテッドコネクター。強いドローを作れますが、ワンペアだけでは強くありません。`;
+  if (profile.suited && profile.oneGap) return `${profile.hand}はスーテッドワンギャッパー。ドローの伸びしろはありますが、完成しない時は弱いです。`;
+  if (profile.suited) return `${profile.hand}はスーテッド。フラッシュ/バックドアはありますが、キッカーと連結性を確認します。`;
+  if (profile.offsuit && profile.broadway) return `${profile.hand}はオフスートの高めハンド。トップペア価値はありますが、キッカー負けに注意します。`;
+  return `${profile.hand}は伸びしろが少ないタイプ。参加できる場面はかなり位置と状況に依存します。`;
+}
+
+function handValue(profile) {
+  if (profile.pair) return "ペアはプリフロップ時点で完成していて、セットを引いた時のリターンもあります。";
+  if (profile.suited && profile.aceHigh) return "Aスーテッドはナッツフラッシュの可能性とAブロッカーが価値になります。";
+  if (profile.suited && profile.connected) return "スーテッドかつ連結しているため、フラッシュだけでなくストレート/強いドローも狙えます。";
+  if (profile.suited && profile.oneGap) return "スーテッドで一部のストレート筋も残るため、フロップ後に続けられる形が少しあります。";
+  if (profile.suited) return "スーテッドなので、フラッシュドローやバックドアで続けられるボードが増えます。";
+  if (profile.broadway) return "高いカードを含むため、トップペアを作った時の価値があります。";
+  return "単体のカード価値は高くないため、参加するなら位置やポットオッズ込みの判断になります。";
+}
+
+function handRisk(profile) {
+  if (profile.pair) return "セットを引けない時はオーバーカードに弱く、ショーダウンまで行きにくいです。";
+  if (profile.suited && profile.high <= 11 && profile.gap >= 4) return "スーテッドでも連結性が低く、Jヒットなどの弱いトップペアは上のキッカーに支配されやすいです。";
+  if (profile.suited && profile.gap >= 3) return "スーテッドでもストレートの筋が薄く、フラッシュ以外の強い完成形が少ないです。";
+  if (profile.suited && profile.low <= 7) return "キッカーが弱く、トップペアを作っても大きなポットには向きません。";
+  if (profile.offsuit) return "オフスートはドローの保険が少なく、当たらない時に続ける理由が少ないです。";
+  return "境界ハンドは当たっても中途半端になりやすく、強い抵抗には弱いです。";
+}
+
+function playersBehind(position) {
+  return { UTG: 8, EP: 6, "LJ/HJ": 4, CO: 3, BTN: 2 }[position] || 0;
 }
 
 function scrollQuestionIntoView() {
