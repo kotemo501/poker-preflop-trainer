@@ -491,60 +491,63 @@ function openDecisionInsight(question, profile, strength, threshold) {
   const diff = strength - threshold;
   if (question.correct === "fold") {
     return [
-      `${question.hand}は${levelNames[strength]}で、${question.heroPosition}の参加基準${thresholdLabel(threshold)}に届いていません。`,
-      `${question.heroPosition}はまだ後ろに${playersBehind(question.heroPosition)}人残るため、微妙なハンドを開くとコール/3betを受けた後が苦しくなります。`,
-      `${handRisk(profile)} ここは「惜しい」よりも、表の下限を守ってフォールドする場面です。`,
+      `判定: ${question.hand}は${levelNames[strength]}で、${question.heroPosition}の参加基準${thresholdLabel(threshold)}に届いていません。`,
+      `理由: ${question.heroPosition}はまだ後ろに${playersBehind(question.heroPosition)}人残るため、微妙なハンドを開くとコール/3betを受けた後が苦しくなります。`,
+      `実戦: ${handRisk(profile)} ここは「惜しい」よりも、表の下限を守ってフォールドする場面です。`,
     ];
   }
   return [
-    `${question.hand}は${levelNames[strength]}で、${question.heroPosition}の基準${thresholdLabel(threshold)}を${diff === 0 ? "ちょうど満たす下限" : "満たしています"}。`,
-    `${question.heroPosition}まで全員フォールドなら、自分からレイズしてブラインドを降ろす価値があります。`,
-    `${handValue(profile)} ただし下限ハンドなので、強く抵抗されたら無理に守らない前提です。`,
+    `判定: ${question.hand}は${levelNames[strength]}で、${question.heroPosition}の基準${thresholdLabel(threshold)}を${diff === 0 ? "ちょうど満たす下限" : "満たしています"}。`,
+    `理由: ${question.heroPosition}まで全員フォールドなら、自分からレイズしてブラインドを降ろす価値があります。`,
+    `実戦: ${handValue(profile)} ただし下限ハンドなので、強く抵抗されたら無理に守らない前提です。`,
   ];
 }
 
 function bbDefenseDecisionInsight(question, profile, strength, threshold) {
   if (question.correct === "fold") {
+    const villainReason = question.villainPosition === "BTN"
+      ? "BTNオープンは広いですが、このハンドはBBの追加コール枠にも届いていません。"
+      : `${question.villainPosition}オープンはBTNより強いので、BTN級のハンドをそのまま守るとレンジ負けしやすいです。`;
     return [
-      `${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準${thresholdLabel(threshold)}より下です。`,
-      `${question.villainPosition}オープンはBTNより強いので、BTN級のハンドをそのまま守るとレンジ負けしやすいです。`,
-      `${handRisk(profile)} BBはポジション不利で主導権もないため、弱いワンペアや弱いドローで難しい判断を強いられます。`,
-      `実戦では「BTN相手なら守れるかも」と「CO相手にも守る」を分けて覚えるのが大事です。`,
+      `判定: ${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準${thresholdLabel(threshold)}より下です。`,
+      `理由: ${villainReason}`,
+      `ハンド: ${handRisk(profile)} BBはポジション不利で主導権もないため、弱いワンペアや弱いドローで難しい判断を強いられます。`,
+      `実戦: 相手がBTNかCO以前かで守る下限を分けて覚えます。位置が早いオープンほどBBでも無理に守りません。`,
     ];
   }
   if (question.correct === "raise") {
     return [
-      `${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準より2ランク以上上です。`,
-      `この帯はただ守るだけでなく、相手のオープンに対して強く返せる候補です。`,
-      `${handValue(profile)} レイズ後にコールされても戦える強さがあるため、受け身のコールより主導権を取り返します。`,
+      `判定: ${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準より2ランク以上上です。`,
+      `理由: この帯はただ守るだけでなく、相手のオープンに対して強く返せる候補です。`,
+      `実戦: ${handValue(profile)} レイズ後にコールされても戦える強さがあるため、受け身のコールより主導権を取り返します。`,
     ];
   }
   return [
-    `${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準${thresholdLabel(threshold)}を満たします。`,
-    `BBはすでにブラインドを払っているので追加投資は小さく、基準を満たす下限ハンドは守れます。`,
-    `${handValue(profile)} ただしポジション不利なので、ヒットしても弱いワンペアで大きく払いすぎない前提です。`,
+    `判定: ${question.hand}は${levelNames[strength]}で、BB対${question.villainPosition}のコール基準${thresholdLabel(threshold)}を満たします。`,
+    `理由: BBはすでにブラインドを払っているので追加投資は小さく、基準を満たす下限ハンドは守れます。`,
+    `実戦: ${handValue(profile)} ただしポジション不利なので、ヒットしても弱いワンペアで大きく払いすぎない前提です。`,
   ];
 }
 
 function vsOpenDecisionInsight(question, profile, strength, threshold) {
   if (question.correct === "fold") {
     return [
-      `${question.hand}は${levelNames[strength]}。${question.villainPosition}オープンに対しては、最低でも相手レンジより1ランク上が欲しい場面です。`,
-      `自分から開く時と違い、相手はすでに強いレンジで参加しています。境界未満のハンドでコールすると支配されやすいです。`,
-      `${handRisk(profile)} コールしても主導権がなく、難しいフロップで損失が膨らみやすいのでフォールドします。`,
+      `判定: ${question.hand}は${levelNames[strength]}。${question.villainPosition}オープンへのコール基準${thresholdLabel(threshold)}に届いていません。`,
+      `理由: 自分から開く時と違い、相手はすでに強いレンジで参加しています。境界未満のハンドでコールすると支配されやすいです。`,
+      `実戦: ${handRisk(profile)} コールしても主導権がなく、難しいフロップで損失が膨らみやすいのでフォールドします。`,
     ];
   }
   if (question.correct === "raise") {
     return [
-      `${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンに対してレイズできる強い帯です。`,
-      `レイズは、相手を降ろす力と、コールされても戦える強さの両方が必要です。`,
-      `${handValue(profile)} 受け身でコールするより、主導権を取り返す価値があります。`,
+      `判定: ${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンに対してレイズできる強い帯です。`,
+      `理由: レイズは、相手を降ろす力と、コールされても戦える強さの両方が必要です。`,
+      `実戦: ${handValue(profile)} 受け身でコールするより、主導権を取り返す価値があります。`,
     ];
   }
   return [
-    `${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンに対してコール基準を満たします。`,
-    `ただしレイズするほど強い帯ではないため、相手の強いレンジを尊重してコール止まりです。`,
-    `${handValue(profile)} フロップ後は当たり方が弱ければ無理に粘らない前提です。`,
+    `判定: ${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンへのコール基準${thresholdLabel(threshold)}を満たします。`,
+    `理由: ただしレイズするほど強い帯ではないため、相手の強いレンジを尊重してコール止まりです。`,
+    `実戦: ${handValue(profile)} フロップ後は当たり方が弱ければ無理に粘らない前提です。`,
   ];
 }
 
@@ -603,7 +606,7 @@ function referenceThreshold(question) {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
     return state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
   }
-  return openingThreshold(question.villainPosition);
+  return Math.min(8, openingThreshold(question.villainPosition) + 1);
 }
 
 function thresholdComparisonPoints(question, strength, threshold) {
