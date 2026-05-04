@@ -900,10 +900,13 @@ dialog img {
   }
 
   .quiz {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
   }
 
   .scenario {
+    order: 1;
     font-size: 12px;
   }
 
@@ -923,87 +926,97 @@ dialog img {
   }
 
   .pokerStage {
-    min-height: 260px;
-    margin-top: 8px;
+    order: 4;
+    min-height: 172px;
+    margin-top: 10px;
   }
 
   .seat {
-    width: 72px;
-    min-height: 48px;
-    padding: 5px;
+    width: 60px;
+    min-height: 40px;
+    padding: 4px;
     gap: 2px;
   }
 
   .seat strong {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .seat .role,
   .seat .actionBadge {
-    font-size: 9px;
+    font-size: 8px;
   }
 
   .dealerButton {
-    width: 18px;
-    height: 18px;
-    font-size: 10px;
-    right: 5px;
-    top: 5px;
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+    right: 4px;
+    top: 4px;
   }
 
   .heroPointer {
-    bottom: -25px;
-    font-size: 10px;
-    padding: 4px 8px;
+    bottom: -22px;
+    font-size: 9px;
+    padding: 3px 7px;
   }
 
   .tableCenter {
-    min-width: 150px;
-    transform: translate(-50%, -33%);
-    gap: 7px;
+    min-width: 120px;
+    transform: translate(-50%, -29%);
+    gap: 5px;
   }
 
   .potStack {
-    height: 24px;
+    height: 18px;
   }
 
   .potStack span {
-    width: 26px;
-    height: 10px;
-    border-width: 3px;
+    width: 20px;
+    height: 8px;
+    border-width: 2px;
   }
 
   .playingCard {
-    width: 48px;
-    height: 66px;
-    padding: 6px;
+    width: 40px;
+    height: 56px;
+    padding: 5px;
   }
 
   .playingCard .rank {
-    font-size: 19px;
+    font-size: 16px;
   }
 
   .playingCard .suit {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   #tableStatus {
-    font-size: 10px;
-    max-width: 190px;
+    font-size: 9px;
+    max-width: 170px;
     text-align: center;
     padding: 6px 9px;
   }
 
   .prompt {
+    order: 2;
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    align-items: center;
     margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #dbe7ee;
+    border-radius: 8px;
+    background: #ffffff;
   }
 
   #handText {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   #situationText {
-    font-size: 17px;
+    font-size: 16px;
+    margin-top: 3px;
   }
 
   .actions,
@@ -1013,6 +1026,7 @@ dialog img {
   }
 
   .memoryCoach {
+    order: 3;
     gap: 6px;
   }
 
@@ -1025,15 +1039,17 @@ dialog img {
   }
 
   .whyPanel {
+    order: 8;
     max-height: none;
     padding: 10px;
   }
 
   .whyPanel li {
-    font-size: 13px;
+    font-size: 12.5px;
   }
 
   .actions {
+    order: 5;
     position: sticky;
     bottom: 0;
     z-index: 8;
@@ -1051,7 +1067,12 @@ dialog img {
   }
 
   .feedback {
+    order: 6;
     font-size: 13px;
+  }
+
+  .quizFooter {
+    order: 7;
   }
 
   .panelHeader {

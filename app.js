@@ -324,6 +324,7 @@ function renderQuestion() {
   renderTable(meta);
   renderMemoryCoach();
   renderGrid();
+  scrollQuestionIntoView();
 }
 
 function answer(action) {
@@ -448,7 +449,6 @@ function renderWhyPanel(revealed = false) {
 
 function marginalInsight(question, revealed) {
   const profile = handProfile(question.hand);
-  const points = [];
   const stage = question.kind === "open" ? question.heroPosition : question.villainPosition;
   const strength = effectiveLevel(question.baseLevel);
   const threshold = referenceThreshold(question);
@@ -456,22 +456,31 @@ function marginalInsight(question, revealed) {
     ? `${question.hand}: ${levelNames[strength]} / 基準 ${thresholdLabel(threshold)}`
     : `${question.hand} の価値と弱点`;
 
-  points.push(...handTypePoints(profile));
-  points.push(...thresholdComparisonPoints(question, strength, threshold));
+  const points = [
+    ...handTypePoints(profile).slice(0, 2),
+    thresholdComparisonPoints(question, strength, threshold)[0],
+  ];
 
   if (question.kind === "open") {
-    points.push(...openContextPoints(question, profile, revealed));
+    points.push(...openContextPoints(question, profile, revealed).slice(0, 2));
   } else if (question.kind === "bbDefense") {
-    points.push(...bbDefenseContextPoints(question, profile, revealed));
+    points.push(...bbDefenseContextPoints(question, profile, revealed).slice(0, 2));
   } else {
-    points.push(...vsOpenContextPoints(question, profile, revealed));
+    points.push(...vsOpenContextPoints(question, profile, revealed).slice(0, 2));
   }
 
   if (revealed) {
-    points.push(...postAnswerPoints(question, profile, stage));
+    points.push(...postAnswerPoints(question, profile, stage).slice(0, 2));
   }
 
   return { title, points };
+}
+
+function scrollQuestionIntoView() {
+  if (!window.matchMedia("(max-width: 760px)").matches) return;
+  requestAnimationFrame(() => {
+    els.scenarioType.scrollIntoView({ block: "start", behavior: "auto" });
+  });
 }
 
 function referenceThreshold(question) {
