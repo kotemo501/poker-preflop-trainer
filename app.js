@@ -340,7 +340,7 @@ function answer(action) {
   const progress = state.stats.progress[state.current.id] || { correct: 0, wrong: 0 };
   if (isCorrect) {
     progress.correct += 1;
-    if (progress.correct >= 3) state.stats.mastered[state.current.id] = true;
+    state.stats.mastered[state.current.id] = true;
   } else {
     progress.wrong += 1;
     progress.correct = 0;
@@ -440,7 +440,7 @@ function renderMemoryCoach(revealed = false) {
   } else if (progress.wrong > 0) {
     els.cueProgress.textContent = `苦手: ミス${progress.wrong}回`;
   } else if (progress.correct > 0) {
-    els.cueProgress.textContent = `あと${Math.max(1, 3 - progress.correct)}回で習得`;
+    els.cueProgress.textContent = "正解済み";
   } else {
     els.cueProgress.textContent = "初見";
   }
