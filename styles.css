@@ -231,7 +231,62 @@ h2 {
 }
 
 .quiz {
+  position: relative;
   padding: 14px;
+}
+
+.resultBurst {
+  position: fixed;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  display: none;
+  place-items: center;
+  z-index: 30;
+  font-size: 110px;
+  line-height: 1;
+  font-weight: 900;
+  pointer-events: none;
+  background: rgb(255 255 255 / 0.92);
+  box-shadow: 0 22px 70px rgb(16 24 40 / 0.28);
+}
+
+.resultBurst.correct,
+.resultBurst.wrong {
+  display: grid;
+  animation: result-pop 0.86s ease-out forwards;
+}
+
+.resultBurst.correct {
+  color: var(--good);
+  border: 8px solid #75e0a7;
+}
+
+.resultBurst.wrong {
+  color: var(--bad);
+  border: 8px solid #f97066;
+}
+
+@keyframes result-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.55) rotate(-8deg);
+  }
+  16% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.12) rotate(0deg);
+  }
+  62% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.92);
+  }
 }
 
 .scenario {
@@ -903,6 +958,14 @@ dialog img {
     display: flex;
     flex-direction: column;
     padding: 10px;
+  }
+
+  .resultBurst {
+    top: 38%;
+    width: 112px;
+    height: 112px;
+    font-size: 82px;
+    border-width: 6px;
   }
 
   .scenario {

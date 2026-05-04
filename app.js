@@ -98,6 +98,7 @@ const els = {
   seatLayer: document.querySelector("#seatLayer"),
   heroCards: document.querySelector("#heroCards"),
   tableStatus: document.querySelector("#tableStatus"),
+  resultBurst: document.querySelector("#resultBurst"),
   rangePanel: document.querySelector(".rangePanel"),
   memoryCoach: document.querySelector("#memoryCoach"),
   cueRule: document.querySelector("#cueRule"),
@@ -352,6 +353,7 @@ function answer(action) {
     button.disabled = true;
     if (selected) button.classList.add("selected", isCorrect ? "correct" : "wrong");
   });
+  showResultBurst(isCorrect);
 
   const correctLabel = actionLabel(state.current.correct);
   els.feedback.className = `feedback ${isCorrect ? "good" : "bad"}`;
@@ -376,6 +378,15 @@ function answer(action) {
   saveStats();
   renderStats();
   els.markMastered.checked = Boolean(state.stats.mastered[state.current.id]);
+}
+
+function showResultBurst(isCorrect) {
+  els.resultBurst.className = `resultBurst ${isCorrect ? "correct" : "wrong"}`;
+  els.resultBurst.textContent = isCorrect ? "○" : "×";
+  window.setTimeout(() => {
+    els.resultBurst.className = "resultBurst";
+    els.resultBurst.textContent = "";
+  }, 900);
 }
 
 function actionLabel(action) {
