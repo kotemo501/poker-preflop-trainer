@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preflop Range Trainer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">Poker Preflop Trainer</p>
+          <h1>ヨコサワ式ハンドレンジ練習</h1>
+        </div>
+        <div class="controls">
+          <div class="segmented" role="tablist" aria-label="モード">
+            <button class="active" data-mode="cash" type="button">リング</button>
+            <button data-mode="tournament" type="button">トーナメント</button>
+          </div>
+          <label class="toggle">
+            <input id="skipMastered" type="checkbox" checked />
+            <span>習得済みをスキップ</span>
+          </label>
+          <div class="segmented studySwitch" role="tablist" aria-label="表の表示">
+            <button class="active" data-study-mode="withChart" type="button">表を見ながら</button>
+            <button data-study-mode="afterAnswer" type="button">回答後のみ</button>
+          </div>
+          <label class="selectControl">
+            <span>練習範囲</span>
+            <select id="drillMode">
+              <option value="all">全部</option>
+              <option value="open">未参加ポット</option>
+              <option value="vsOpen">相手オープン対応</option>
+              <option value="bbDefense">BBディフェンス</option>
+              <option value="mistakes">苦手だけ</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="studyFlow" aria-label="学習の流れ">
+        <div class="flowStep active">
+          <span>1</span>
+          <strong>場面を読む</strong>
+        </div>
+        <div class="flowStep">
+          <span>2</span>
+          <strong>先に答える</strong>
+        </div>
+        <div class="flowStep">
+          <span>3</span>
+          <strong>理由で定着</strong>
+        </div>
+      </section>
+
+      <section class="trainer">
+        <aside class="stats">
+          <div class="stat">
+            <span>正解率</span>
+            <strong id="accuracy">0%</strong>
+          </div>
+          <div class="stat">
+            <span>連続正解</span>
+            <strong id="streak">0</strong>
+          </div>
+          <div class="stat">
+            <span>習得済み</span>
+            <strong id="masteredCount">0</strong>
+          </div>
+          <div class="stat">
+            <span>苦手</span>
+            <strong id="weakCount">0</strong>
+          </div>
+          <button id="showChart" class="ghost" type="button">表を見る</button>
+          <button id="resetStats" class="ghost danger" type="button">履歴リセット</button>
+        </aside>
+
+        <section class="quiz">
+          <div class="scenario" id="scenarioType">未参加ポット</div>
+          <section class="pokerStage" aria-label="ポーカーテーブル">
+            <img src="./assets/poker-table-bg.png" alt="" aria-hidden="true" />
+            <div class="seatLayer" id="seatLayer"></div>
+            <div class="tableCenter">
+              <div class="potStack" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="heroCards" id="heroCards"></div>
+              <p id="tableStatus">Hero action</p>
+            </div>
+          </section>
+          <div class="prompt">
+            <div>
+              <span class="label">あなたのハンド</span>
+              <strong id="handText">AA</strong>
+            </div>
+            <div>
+              <span class="label">状況</span>
+              <p id="situationText">全員フォールド。あなたはUTG。</p>
+            </div>
+          </div>
+
+          <div class="memoryCoach" id="memoryCoach">
+            <div>
+              <span class="label">覚える基準</span>
+              <strong id="cueRule">境界を確認</strong>
+            </div>
+            <div>
+              <span class="label">このハンド</span>
+              <strong id="cueHand">表のどの帯かを見る</strong>
+            </div>
+            <div>
+              <span class="label">定着度</span>
+              <strong id="cueProgress">初見</strong>
+            </div>
+          </div>
+
+          <div class="whyPanel" id="whyPanel">
+            <div class="whyHead">
+              <span class="label">ぎりぎりハンドの理由</span>
+              <strong id="whyTitle">境界の考え方</strong>
+            </div>
+            <ul id="whyList"></ul>
+          </div>
+
+          <div class="actions" id="actions">
+            <button data-action="raise" type="button">レイズ</button>
+            <button data-action="call" type="button">コール</button>
+            <button data-action="open" type="button">オープン</button>
+            <button data-action="fold" type="button">フォールド</button>
+          </div>
+
+          <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+          <div class="quizFooter">
+            <button id="nextQuestion" type="button">スキップ</button>
+            <label class="toggle">
+              <input id="markMastered" type="checkbox" />
+              <span>この問題を習得済みにする</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="rangePanel">
+          <div class="panelHeader">
+            <h2>現在の表</h2>
+            <p id="modeNote">リングゲーム用</p>
+          </div>
+          <div id="rangeGrid" class="rangeGrid" aria-label="ハンドレンジ表"></div>
+          <div class="legend" id="legend"></div>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="chartDialog">
+      <div class="dialogHead">
+        <strong id="chartTitle">ハンドレンジ表</strong>
+        <button id="closeChart" type="button" aria-label="閉じる">x</button>
+      </div>
+      <img id="chartImage" src="./assets/ring-game.png" alt="ハンドレンジ表" />
+    </dialog>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
