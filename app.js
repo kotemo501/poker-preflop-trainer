@@ -129,8 +129,7 @@ function effectiveLevel(baseLevel) {
 }
 
 function openingThreshold(position) {
-  const base = { UTG: 6, EP: 5, "LJ/HJ": 4, CO: 3, BTN: 2 }[position];
-  return state.mode === "tournament" ? Math.max(1, base - 1) : base;
+  return { UTG: 6, EP: 5, "LJ/HJ": 4, CO: 3, BTN: 2 }[position];
 }
 
 function answerFor(question) {
@@ -141,9 +140,8 @@ function answerFor(question) {
 
   if (question.kind === "bbDefense") {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
-    const adjustedCall = state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
-    if (strength >= adjustedCall + 2) return "raise";
-    if (strength >= adjustedCall) return "call";
+    if (strength >= callThreshold + 2) return "raise";
+    if (strength >= callThreshold) return "call";
     return "fold";
   }
 
@@ -236,8 +234,7 @@ function isMarginal(question) {
   }
   if (question.kind === "bbDefense") {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
-    const adjustedCall = state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
-    return onBoundary && strength >= adjustedCall - 1 && strength <= adjustedCall + 2;
+    return onBoundary && strength >= callThreshold - 1 && strength <= callThreshold + 2;
   }
   const threshold = openingThreshold(question.villainPosition);
   return onBoundary && strength >= threshold && strength <= threshold + 2;
@@ -404,8 +401,7 @@ function ruleFor(question) {
   }
   if (question.kind === "bbDefense") {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
-    const adjustedCall = state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
-    return `BBは${question.villainPosition}相手に${thresholdLabel(adjustedCall)}でコール、2ランク上でレイズ`;
+    return `BBは${question.villainPosition}相手に${thresholdLabel(callThreshold)}でコール、2ランク上でレイズ`;
   }
   const thresholds = vsOpenThresholds(question.villainPosition);
   return `${question.villainPosition}オープン基準は${thresholdLabel(thresholds.open)}。対応は${thresholdLabel(thresholds.call)}でコール、${thresholdLabel(thresholds.raise)}でレイズ`;
@@ -420,8 +416,7 @@ function explainAnswer(question) {
   }
   if (question.kind === "bbDefense") {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
-    const adjustedCall = state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
-    return `${question.hand}は${band}。BB対${question.villainPosition}は${thresholdLabel(adjustedCall)}でコール、さらに強ければレイズです。`;
+    return `${question.hand}は${band}。BB対${question.villainPosition}は${thresholdLabel(callThreshold)}でコール、さらに強ければレイズです。`;
   }
   const thresholds = vsOpenThresholds(question.villainPosition);
   return `${question.hand}は${band}。${question.villainPosition}のオープン基準${thresholdLabel(thresholds.open)}に対して、${thresholdLabel(thresholds.call)}以上でコールです。`;
@@ -605,7 +600,7 @@ function referenceThreshold(question) {
   if (question.kind === "open") return openingThreshold(question.heroPosition);
   if (question.kind === "bbDefense") {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
-    return state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
+    return callThreshold;
   }
   return vsOpenThresholds(question.villainPosition).call;
 }
