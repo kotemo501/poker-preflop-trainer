@@ -58,6 +58,15 @@ const seatPositions = {
   BB: { x: 16, y: 72 },
 };
 
+const mobileSeatPositions = {
+  UTG: { x: 28, y: 24 },
+  EP: { x: 50, y: 15 },
+  "LJ/HJ": { x: 72, y: 24 },
+  CO: { x: 72, y: 72 },
+  BTN: { x: 50, y: 84 },
+  BB: { x: 28, y: 72 },
+};
+
 const state = {
   mode: "cash",
   studyMode: "withChart",
@@ -68,6 +77,7 @@ const state = {
   recentQuestionIds: [],
   recentKinds: [],
   stats: loadStats(),
+  renderedOnce: false,
 };
 
 const els = {
@@ -322,7 +332,8 @@ function renderQuestion() {
   renderTable(meta);
   renderMemoryCoach();
   renderGrid();
-  scrollQuestionIntoView();
+  if (state.renderedOnce) scrollQuestionIntoView();
+  state.renderedOnce = true;
 }
 
 function answer(action) {
@@ -822,17 +833,18 @@ function renderTable(meta) {
   const q = state.current;
   const hero = heroPositionFor(q);
   const villain = q.kind === "open" ? null : q.villainPosition;
-  const seats = Object.keys(seatPositions);
+  const seatMap = window.matchMedia("(max-width: 760px)").matches ? mobileSeatPositions : seatPositions;
+  const seats = Object.keys(seatMap);
   els.seatLayer.innerHTML = "";
 
   seats.forEach((position) => {
     const seat = document.createElement("div");
     const isHero = position === hero;
     const isVillain = position === villain;
-    const isLowerSeat = seatPositions[position].y > 58;
+    const isLowerSeat = seatMap[position].y > 58;
     seat.className = `seat${isHero ? " hero" : ""}${isVillain ? " villain" : ""}${isLowerSeat ? " lowerSeat" : ""}`;
-    seat.style.left = `${seatPositions[position].x}%`;
-    seat.style.top = `${seatPositions[position].y}%`;
+    seat.style.left = `${seatMap[position].x}%`;
+    seat.style.top = `${seatMap[position].y}%`;
     const action = tableActionFor(position, q, hero, villain);
     seat.innerHTML = `
       <span class="role">${isHero ? "Hero" : isVillain ? "Opponent" : "Player"}</span>

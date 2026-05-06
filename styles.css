@@ -906,6 +906,11 @@ dialog img {
 }
 
 @media (max-width: 760px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     background: #f4f6f8;
   }
@@ -929,6 +934,8 @@ dialog img {
     border-width: 0 0 1px;
     border-radius: 0;
     box-shadow: none;
+    width: 100%;
+    min-width: 0;
   }
 
   .eyebrow {
@@ -965,14 +972,18 @@ dialog img {
   }
 
   .controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
     justify-content: flex-start;
     margin-top: 8px;
     gap: 6px;
+    min-width: 0;
   }
 
   .segmented,
   .studySwitch {
     width: 100%;
+    min-width: 0;
     background: #f2f4f7;
     padding: 3px;
     border: 0;
@@ -980,10 +991,12 @@ dialog img {
 
   .segmented button {
     flex: 1;
+    min-width: 0;
     padding: 8px 6px;
     font-size: 12px;
     border-radius: 6px;
     background: transparent;
+    white-space: nowrap;
   }
 
   .toggle,
@@ -1016,15 +1029,18 @@ dialog img {
     border-width: 1px 0;
     border-radius: 0;
     box-shadow: none;
+    width: 100%;
+    min-width: 0;
   }
 
   .stats {
     border-right: 0;
     border-bottom: 1px solid var(--line);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     padding: 8px 10px;
     gap: 6px;
     background: #ffffff;
+    min-width: 0;
   }
 
   .stat {
@@ -1048,6 +1064,7 @@ dialog img {
 
   .stats button {
     grid-column: span 2;
+    min-width: 0;
     text-align: center;
     padding: 8px;
     font-size: 12px;
@@ -1059,6 +1076,7 @@ dialog img {
     flex-direction: column;
     padding: 10px 10px 12px;
     background: #f4f6f8;
+    min-width: 0;
   }
 
   .resultBurst {
@@ -1093,16 +1111,17 @@ dialog img {
   }
 
   .pokerStage {
-    order: 4;
+    order: 3;
     height: clamp(210px, 62vw, 260px);
     min-height: 0;
+    width: 100%;
     margin-top: 8px;
     border-radius: 10px;
   }
 
   .seat {
-    width: 64px;
-    min-height: 44px;
+    width: 58px;
+    min-height: 42px;
     padding: 5px 4px;
     gap: 2px;
     border-radius: 7px;
@@ -1180,7 +1199,7 @@ dialog img {
   .prompt {
     order: 2;
     display: grid;
-    grid-template-columns: 86px 1fr;
+    grid-template-columns: 76px minmax(0, 1fr);
     align-items: center;
     margin: 0 0 8px;
     padding: 12px;
@@ -1190,15 +1209,20 @@ dialog img {
     box-shadow: 0 12px 26px rgb(16 24 40 / 0.08);
   }
 
+  .prompt > div {
+    min-width: 0;
+  }
+
   #handText {
-    font-size: 42px;
+    font-size: 40px;
     color: #101828;
   }
 
   #situationText {
-    font-size: 15px;
+    font-size: 14px;
     margin-top: 3px;
     line-height: 1.42;
+    overflow-wrap: anywhere;
   }
 
   .actions,
@@ -1208,9 +1232,9 @@ dialog img {
   }
 
   .memoryCoach {
-    order: 3;
+    order: 4;
     gap: 6px;
-    margin-bottom: 0;
+    margin: 8px 0 0;
   }
 
   .memoryCoach > div {
