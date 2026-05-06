@@ -592,7 +592,7 @@ function playersBehind(position) {
 function scrollQuestionIntoView() {
   if (!window.matchMedia("(max-width: 760px)").matches) return;
   requestAnimationFrame(() => {
-    document.querySelector(".prompt").scrollIntoView({ block: "center", behavior: "auto" });
+    document.querySelector(".pokerStage").scrollIntoView({ block: "center", behavior: "auto" });
   });
 }
 

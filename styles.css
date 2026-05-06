@@ -1094,15 +1094,16 @@ dialog img {
 
   .pokerStage {
     order: 4;
-    min-height: 150px;
+    height: clamp(210px, 62vw, 260px);
+    min-height: 0;
     margin-top: 8px;
     border-radius: 10px;
   }
 
   .seat {
-    width: 56px;
-    min-height: 38px;
-    padding: 4px 3px;
+    width: 64px;
+    min-height: 44px;
+    padding: 5px 4px;
     gap: 2px;
     border-radius: 7px;
     box-shadow: 0 8px 18px rgb(0 0 0 / 0.2);
@@ -1117,61 +1118,61 @@ dialog img {
   }
 
   .seat strong {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .seat .role,
   .seat .actionBadge {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .dealerButton {
-    width: 15px;
-    height: 15px;
-    font-size: 9px;
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
     right: 4px;
     top: 4px;
   }
 
   .heroPointer {
-    bottom: -20px;
+    bottom: -22px;
     font-size: 9px;
     padding: 3px 6px;
   }
 
   .tableCenter {
-    min-width: 120px;
-    transform: translate(-50%, -27%);
-    gap: 5px;
+    min-width: 146px;
+    transform: translate(-50%, -39%);
+    gap: 6px;
   }
 
   .potStack {
-    height: 18px;
+    height: 22px;
   }
 
   .potStack span {
-    width: 20px;
-    height: 8px;
+    width: 24px;
+    height: 9px;
     border-width: 2px;
   }
 
   .playingCard {
-    width: 40px;
-    height: 56px;
-    padding: 5px;
+    width: 46px;
+    height: 64px;
+    padding: 6px;
   }
 
   .playingCard .rank {
-    font-size: 16px;
-  }
-
-  .playingCard .suit {
     font-size: 18px;
   }
 
+  .playingCard .suit {
+    font-size: 21px;
+  }
+
   #tableStatus {
-    font-size: 9px;
-    max-width: 170px;
+    font-size: 10px;
+    max-width: 190px;
     text-align: center;
     padding: 6px 9px;
   }
