@@ -925,13 +925,10 @@ dialog img {
   }
 
   .topbar {
-    position: sticky;
-    top: 0;
-    z-index: 12;
     padding: 10px 10px 8px;
     border-width: 0 0 1px;
     border-radius: 0;
-    box-shadow: 0 10px 24px rgb(16 24 40 / 0.08);
+    box-shadow: none;
   }
 
   .eyebrow {
