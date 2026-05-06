@@ -407,8 +407,8 @@ function ruleFor(question) {
     const adjustedCall = state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
     return `BBは${question.villainPosition}相手に${thresholdLabel(adjustedCall)}でコール、2ランク上でレイズ`;
   }
-  const threshold = openingThreshold(question.villainPosition);
-  return `${question.villainPosition}オープンには1ランク上でコール、2ランク上でレイズ`;
+  const thresholds = vsOpenThresholds(question.villainPosition);
+  return `${question.villainPosition}オープン基準は${thresholdLabel(thresholds.open)}。対応は${thresholdLabel(thresholds.call)}でコール、${thresholdLabel(thresholds.raise)}でレイズ`;
 }
 
 function explainAnswer(question) {
@@ -423,8 +423,8 @@ function explainAnswer(question) {
     const adjustedCall = state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
     return `${question.hand}は${band}。BB対${question.villainPosition}は${thresholdLabel(adjustedCall)}でコール、さらに強ければレイズです。`;
   }
-  const threshold = openingThreshold(question.villainPosition);
-  return `${question.hand}は${band}。相手レンジより1ランク上でコール、2ランク上でレイズです。`;
+  const thresholds = vsOpenThresholds(question.villainPosition);
+  return `${question.hand}は${band}。${question.villainPosition}のオープン基準${thresholdLabel(thresholds.open)}に対して、${thresholdLabel(thresholds.call)}以上でコールです。`;
 }
 
 function renderMemoryCoach(revealed = false) {
@@ -530,10 +530,11 @@ function bbDefenseDecisionInsight(question, profile, strength, threshold) {
 }
 
 function vsOpenDecisionInsight(question, profile, strength, threshold) {
+  const thresholds = vsOpenThresholds(question.villainPosition);
   if (question.correct === "fold") {
     return [
       `判定: ${question.hand}は${levelNames[strength]}。${question.villainPosition}オープンへのコール基準${thresholdLabel(threshold)}に届いていません。`,
-      `理由: 自分から開く時と違い、相手はすでに強いレンジで参加しています。境界未満のハンドでコールすると支配されやすいです。`,
+      `理由: ${question.villainPosition}のオープン基準は${thresholdLabel(thresholds.open)}なので、コールには1ランク上の${thresholdLabel(thresholds.call)}が必要です。境界未満のハンドでコールすると支配されやすいです。`,
       `実戦: ${handRisk(profile)} コールしても主導権がなく、難しいフロップで損失が膨らみやすいのでフォールドします。`,
     ];
   }
@@ -546,7 +547,7 @@ function vsOpenDecisionInsight(question, profile, strength, threshold) {
   }
   return [
     `判定: ${question.hand}は${levelNames[strength]}で、${question.villainPosition}オープンへのコール基準${thresholdLabel(threshold)}を満たします。`,
-    `理由: ただしレイズするほど強い帯ではないため、相手の強いレンジを尊重してコール止まりです。`,
+    `理由: ${question.villainPosition}のオープン基準は${thresholdLabel(thresholds.open)}。その1ランク上である${thresholdLabel(thresholds.call)}に届いているのでコールできますが、レイズ基準${thresholdLabel(thresholds.raise)}には届きません。`,
     `実戦: ${handValue(profile)} フロップ後は当たり方が弱ければ無理に粘らない前提です。`,
   ];
 }
@@ -606,7 +607,16 @@ function referenceThreshold(question) {
     const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
     return state.mode === "tournament" ? Math.max(1, callThreshold - 1) : callThreshold;
   }
-  return Math.min(8, openingThreshold(question.villainPosition) + 1);
+  return vsOpenThresholds(question.villainPosition).call;
+}
+
+function vsOpenThresholds(villainPosition) {
+  const open = openingThreshold(villainPosition);
+  return {
+    open,
+    call: Math.min(8, open + 1),
+    raise: Math.min(8, open + 2),
+  };
 }
 
 function thresholdComparisonPoints(question, strength, threshold) {
