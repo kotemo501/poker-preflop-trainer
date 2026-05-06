@@ -592,7 +592,7 @@ function playersBehind(position) {
 function scrollQuestionIntoView() {
   if (!window.matchMedia("(max-width: 760px)").matches) return;
   requestAnimationFrame(() => {
-    els.scenarioType.scrollIntoView({ block: "start", behavior: "auto" });
+    document.querySelector(".prompt").scrollIntoView({ block: "center", behavior: "auto" });
   });
 }
 
