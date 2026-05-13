@@ -22,6 +22,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -41,7 +42,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -60,6 +62,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -79,7 +82,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -98,6 +102,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -118,6 +123,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -137,6 +143,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -157,6 +164,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -176,6 +184,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -290,6 +299,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -310,6 +320,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -329,6 +340,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -367,6 +379,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -386,7 +399,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -405,6 +419,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -423,7 +438,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -479,6 +495,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -498,7 +515,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -517,6 +535,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -536,7 +555,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -555,6 +575,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -575,6 +596,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -594,6 +616,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -614,6 +637,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -633,6 +657,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -747,6 +772,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -767,6 +793,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -786,6 +813,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -824,6 +852,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -843,7 +872,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -862,6 +892,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -880,7 +911,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -936,6 +968,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -955,7 +988,8 @@
       "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -974,6 +1008,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -993,7 +1028,8 @@
       "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1012,6 +1048,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1032,6 +1069,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1051,6 +1089,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1071,6 +1110,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1090,6 +1130,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1204,6 +1245,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1224,6 +1266,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1243,6 +1286,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1281,6 +1325,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -1300,7 +1345,8 @@
       "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1319,6 +1365,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -1337,7 +1384,8 @@
       "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1393,6 +1441,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -1412,7 +1461,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1431,6 +1481,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -1450,7 +1501,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1469,6 +1521,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1489,6 +1542,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1508,6 +1562,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1528,6 +1583,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1547,6 +1603,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1661,6 +1718,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1681,6 +1739,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1700,6 +1759,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1738,6 +1798,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -1757,7 +1818,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1776,6 +1838,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -1794,7 +1857,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1850,6 +1914,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -1869,7 +1934,8 @@
       "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1888,6 +1954,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -1907,7 +1974,8 @@
       "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -1926,6 +1994,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1946,6 +2015,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -1965,6 +2035,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -1985,6 +2056,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2004,6 +2076,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2118,6 +2191,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2138,6 +2212,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2157,6 +2232,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2195,6 +2271,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -2214,7 +2291,8 @@
       "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2233,6 +2311,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -2251,7 +2330,8 @@
       "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2307,6 +2387,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -2326,7 +2407,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2345,6 +2427,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -2364,7 +2447,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2383,6 +2467,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2403,6 +2488,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2422,6 +2508,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2442,6 +2529,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2461,6 +2549,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2575,6 +2664,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2595,6 +2685,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2614,6 +2705,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2652,6 +2744,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -2671,7 +2764,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2690,6 +2784,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -2708,7 +2803,8 @@
       "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2764,6 +2860,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -2783,7 +2880,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2802,6 +2900,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -2821,7 +2920,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -2840,6 +2940,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2860,6 +2961,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2879,6 +2981,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -2899,6 +3002,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -2918,6 +3022,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3032,6 +3137,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -3052,6 +3158,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3071,6 +3178,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -3109,6 +3217,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -3128,7 +3237,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -3147,6 +3257,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -3165,7 +3276,8 @@
       "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -3221,6 +3333,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -3240,7 +3353,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -3259,6 +3373,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -3278,7 +3393,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -3297,6 +3413,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -3317,6 +3434,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3336,6 +3454,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -3356,6 +3475,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3375,6 +3495,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3489,6 +3610,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -3509,6 +3631,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3528,6 +3651,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "overcards"
       ],
@@ -3566,6 +3690,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards",
         "air"
       ],
@@ -3585,7 +3710,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -3604,6 +3730,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "overcards"
       ],
       "notes": [
@@ -3622,7 +3749,8 @@
       "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "大きめの継続アクションはレンジ全体より強い塊に寄る。",
@@ -3677,7 +3805,8 @@
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "Aハイドライでのドンクは、コール側が絡んだ時に出やすい。",
@@ -3695,7 +3824,8 @@
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
@@ -3713,7 +3843,8 @@
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "Kハイドライでのドンクは、コール側が絡んだ時に出やすい。",
@@ -3731,7 +3862,8 @@
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
@@ -3750,6 +3882,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3769,6 +3902,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3788,6 +3922,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "underpair"
       ],
@@ -3808,6 +3943,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw",
         "underpair"
       ],
@@ -3827,6 +3963,7 @@
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3845,6 +3982,7 @@
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3937,6 +4075,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3956,6 +4095,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "draw"
       ],
       "notes": [
@@ -3975,7 +4115,8 @@
       "keep": [
         "made",
         "draw",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "ミドル連結ツートーンでのドンクは、コール側が絡んだ時に出やすい。",
@@ -3994,7 +4135,8 @@
       "keep": [
         "made",
         "draw",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
@@ -4013,6 +4155,7 @@
       "keep": [
         "made",
         "topPair",
+        "secondPair",
         "air"
       ],
       "notes": [
@@ -4031,7 +4174,8 @@
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
@@ -4049,7 +4193,8 @@
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "AKハイでのドンクは、コール側が絡んだ時に出やすい。",
@@ -4067,7 +4212,8 @@
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
-        "topPair"
+        "topPair",
+        "secondPair"
       ],
       "notes": [
         "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",

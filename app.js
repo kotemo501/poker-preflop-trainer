@@ -27,6 +27,7 @@ const legendItems = [
 const readerCategories = [
   ["made", "強い完成役", "ツーペア以上・強いペア"],
   ["topPair", "トップペア", "ボード最高カードにヒット"],
+  ["secondPair", "セカンドペア", "2番目以下のボードカードにヒット"],
   ["draw", "ドロー", "ストレート/フラッシュの伸びしろ"],
   ["overcards", "オーバーカード", "未ヒットだが高いカード2枚"],
   ["underpair", "中小ペア", "ボードより下のポケット"],
@@ -1443,6 +1444,7 @@ function readerHandCategory(hand, board) {
   if (profile.pair && handPowers[0] >= highBoard) return "made";
   if (matches >= 2 || (pairedBoard && matches >= 1)) return "made";
   if (matches === 1 && Math.max(...handPowers) >= highBoard) return "topPair";
+  if (matches === 1) return "secondPair";
   if (profile.suited && board.includes("ss")) return "draw";
   if (!profile.pair && profile.gap <= 1 && profile.low <= highBoard && profile.high >= lowBoard) return "draw";
   if (handPowers.every((power) => power > highBoard)) return "overcards";
