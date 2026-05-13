@@ -216,6 +216,7 @@ const els = {
   readerVillain: document.querySelector("#readerVillain"),
   readerTask: document.querySelector("#readerTask"),
   readerAction: document.querySelector("#readerAction"),
+  readerAutoStronger: document.querySelector("#readerAutoStronger"),
   readerRandom: document.querySelector("#readerRandom"),
   readerCheck: document.querySelector("#readerCheck"),
   readerReveal: document.querySelector("#readerReveal"),
@@ -1275,7 +1276,7 @@ function renderReaderScenarioOptions() {
 
 function renderReader() {
   const scenario = currentReaderScenario();
-  els.readerBoard.textContent = scenario.board;
+  els.readerBoard.textContent = displayBoard(scenario.board);
   els.readerLine.textContent = scenario.line;
   els.readerHero.textContent = scenario.heroPosition;
   els.readerVillain.textContent = scenario.villainPosition;
@@ -1288,7 +1289,6 @@ function renderReader() {
 function renderReaderGrid() {
   const scenario = currentReaderScenario();
   const retained = retainedReaderHands(scenario);
-  const caseIndex = readerScenarios.findIndex((item) => item.id === scenario.id);
   const answerHands = new Set(retained.map((entry) => entry.hand));
   const showAnswer = state.reader.revealed || state.reader.checked;
   els.readerGrid.innerHTML = "";
@@ -1319,6 +1319,7 @@ function renderReaderGrid() {
 function renderReaderStats() {
   const scenario = currentReaderScenario();
   const retained = retainedReaderHands(scenario);
+  const caseIndex = readerScenarios.findIndex((item) => item.id === scenario.id);
   const answerHands = new Set(retained.map((entry) => entry.hand));
   const selected = Array.from(state.reader.selectedHands);
   const correct = selected.filter((hand) => answerHands.has(hand)).length;
@@ -1343,6 +1344,35 @@ function renderReaderStats() {
     ? scenario.notes.map((note) => `<p>${note}</p>`).join("")
     : "";
   els.readerReveal.textContent = state.reader.revealed ? "レンジを隠す" : "残るレンジを見る";
+}
+
+function displayBoard(board) {
+  const rankText = board.replace(/[^AKQJT98765432]/g, "");
+  const ranksText = rankText.split("").join(" ");
+  if (board.endsWith("r")) return `${ranksText} rainbow`;
+  if (board.endsWith("ss")) return `${ranksText} ♠♠`;
+  if (board.endsWith("tt")) return `${ranksText} ♠♠x`;
+  return ranksText || board;
+}
+
+function setReaderHandSelection(hand) {
+  if (!els.readerAutoStronger.checked) {
+    if (state.reader.selectedHands.has(hand)) state.reader.selectedHands.delete(hand);
+    else state.reader.selectedHands.add(hand);
+    return;
+  }
+
+  const clicked = allHands().find((item) => item.hand === hand);
+  if (!clicked) return;
+  const level = correctPaintLevel(clicked.row, clicked.col);
+  const targetHands = allHands()
+    .filter(({ row, col }) => correctPaintLevel(row, col) >= level)
+    .map(({ hand: targetHand }) => targetHand);
+  const shouldRemove = targetHands.every((targetHand) => state.reader.selectedHands.has(targetHand));
+  targetHands.forEach((targetHand) => {
+    if (shouldRemove) state.reader.selectedHands.delete(targetHand);
+    else state.reader.selectedHands.add(targetHand);
+  });
 }
 
 function retainedReaderHands(scenario) {
@@ -1578,12 +1608,13 @@ els.readerRandom.addEventListener("click", pickRandomReaderCase);
 els.readerGrid.addEventListener("click", (event) => {
   const cell = event.target.closest("button[data-hand]");
   if (!cell) return;
-  const hand = cell.dataset.hand;
-  if (state.reader.selectedHands.has(hand)) state.reader.selectedHands.delete(hand);
-  else state.reader.selectedHands.add(hand);
+  setReaderHandSelection(cell.dataset.hand);
   state.reader.checked = false;
   state.reader.revealed = false;
   renderReader();
+});
+els.readerAutoStronger.addEventListener("change", () => {
+  renderReaderStats();
 });
 els.readerCheck.addEventListener("click", () => {
   state.reader.checked = true;
