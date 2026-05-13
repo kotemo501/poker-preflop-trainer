@@ -159,7 +159,6 @@ const state = {
     checked: false,
     revealed: false,
     isPainting: false,
-    touchStart: null,
   },
   reader: {
     scenarioId: readerScenarios[0].id,
@@ -1716,27 +1715,11 @@ els.paintBand.addEventListener("change", () => {
 els.paintGrid.addEventListener("pointerdown", (event) => {
   const cell = event.target.closest("button[data-hand]");
   if (!cell) return;
-  if (event.pointerType === "touch") {
-    state.paint.touchStart = {
-      hand: cell.dataset.hand,
-      x: event.clientX,
-      y: event.clientY,
-      moved: false,
-    };
-    return;
-  }
   state.paint.isPainting = true;
   event.preventDefault();
   setPaintLevel(cell.dataset.hand);
 });
 els.paintGrid.addEventListener("pointermove", (event) => {
-  if (event.pointerType === "touch") {
-    if (!state.paint.touchStart) return;
-    const dx = Math.abs(event.clientX - state.paint.touchStart.x);
-    const dy = Math.abs(event.clientY - state.paint.touchStart.y);
-    if (dx > 8 || dy > 8) state.paint.touchStart.moved = true;
-    return;
-  }
   if (!state.paint.isPainting) return;
   const target = document.elementFromPoint(event.clientX, event.clientY);
   const cell = target && target.closest("button[data-hand]");
@@ -1744,15 +1727,10 @@ els.paintGrid.addEventListener("pointermove", (event) => {
   event.preventDefault();
   setPaintLevel(cell.dataset.hand);
 });
-window.addEventListener("pointerup", (event) => {
-  if (event.pointerType === "touch" && state.paint.touchStart) {
-    if (!state.paint.touchStart.moved) setPaintLevel(state.paint.touchStart.hand);
-    state.paint.touchStart = null;
-  }
+window.addEventListener("pointerup", () => {
   state.paint.isPainting = false;
 });
 window.addEventListener("pointercancel", () => {
-  state.paint.touchStart = null;
   state.paint.isPainting = false;
 });
 els.paintCheck.addEventListener("click", () => {

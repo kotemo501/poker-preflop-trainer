@@ -980,7 +980,7 @@ body.chart-after-answer.chart-revealed .trainer {
   grid-template-columns: repeat(13, minmax(44px, 1fr));
   border: 2px solid #2d2725;
   min-width: 650px;
-  touch-action: pan-x pan-y;
+  touch-action: none;
 }
 
 .paintCell {
@@ -993,7 +993,7 @@ body.chart-after-answer.chart-revealed .trainer {
   font-weight: 900;
   font-size: 13px;
   position: relative;
-  touch-action: pan-x pan-y;
+  touch-action: none;
 }
 
 .paintCell.blank {
