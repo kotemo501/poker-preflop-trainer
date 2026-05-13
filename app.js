@@ -150,6 +150,10 @@ const state = {
     selectedHands: new Set(),
     checked: false,
     revealed: false,
+    isDragging: false,
+    dragMode: "add",
+    draggedHands: new Set(),
+    suppressClick: false,
   },
   renderedOnce: false,
 };
@@ -1374,6 +1378,24 @@ function toggleReaderHand(hand) {
   else state.reader.selectedHands.add(hand);
 }
 
+function setReaderHand(hand, selected) {
+  if (selected) state.reader.selectedHands.add(hand);
+  else state.reader.selectedHands.delete(hand);
+}
+
+function applyReaderDragAt(clientX, clientY) {
+  const target = document.elementFromPoint(clientX, clientY);
+  const cell = target && target.closest("button[data-hand]");
+  if (!cell) return false;
+  const hand = cell.dataset.hand;
+  if (state.reader.draggedHands.has(hand)) return true;
+  state.reader.draggedHands.add(hand);
+  setReaderHand(hand, state.reader.dragMode === "add");
+  state.reader.checked = false;
+  state.reader.revealed = false;
+  return true;
+}
+
 function toggleReaderCategory(category) {
   const scenario = currentReaderScenario();
   const hands = allHands()
@@ -1639,7 +1661,31 @@ els.readerPick.addEventListener("click", (event) => {
   state.reader.revealed = false;
   renderReader();
 });
+els.readerGrid.addEventListener("pointerdown", (event) => {
+  const cell = event.target.closest("button[data-hand]");
+  if (!cell) return;
+  state.reader.isDragging = true;
+  state.reader.dragMode = state.reader.selectedHands.has(cell.dataset.hand) ? "remove" : "add";
+  state.reader.draggedHands = new Set();
+  event.preventDefault();
+  applyReaderDragAt(event.clientX, event.clientY);
+  renderReader();
+});
+els.readerGrid.addEventListener("pointermove", (event) => {
+  if (!state.reader.isDragging) return;
+  event.preventDefault();
+  if (applyReaderDragAt(event.clientX, event.clientY)) renderReader();
+});
+window.addEventListener("pointerup", () => {
+  state.reader.suppressClick = state.reader.isDragging;
+  state.reader.isDragging = false;
+  state.reader.draggedHands = new Set();
+});
 els.readerGrid.addEventListener("click", (event) => {
+  if (state.reader.suppressClick) {
+    state.reader.suppressClick = false;
+    return;
+  }
   const cell = event.target.closest("button[data-hand]");
   if (!cell) return;
   toggleReaderHand(cell.dataset.hand);
