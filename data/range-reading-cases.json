@@ -17,7 +17,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "A72r",
-      "line": "UTGがオープン、BBがコール。A72rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ A72r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -38,15 +41,18 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "A72r",
-      "line": "UTGがオープン、BBがコール。A72rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ A72r。BBチェック、UTGが33%CB、BBがコール。ターン 8 でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -57,7 +63,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "K83r",
-      "line": "UTGがオープン、BBがコール。K83rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ K83r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -78,15 +87,18 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "K83r",
-      "line": "UTGがオープン、BBがコール。K83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ K83r。BBチェック、UTGが33%CB、BBがコール。ターン 2 でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -97,7 +109,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "QJ5tt",
-      "line": "UTGがオープン、BBがコール。QJ5ttでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ QJ5tt。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -118,8 +133,11 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "QJ5tt",
-      "line": "UTGがオープン、BBがコール。QJ5ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ QJ5tt。BBチェック、UTGが33%CB、BBがコール。ターン 9 でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -127,7 +145,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -138,7 +156,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "T54r",
-      "line": "UTGがオープン、BBがコール。T54rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ T54r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -159,8 +180,11 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "T54r",
-      "line": "UTGがオープン、BBがコール。T54rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ T54r。BBチェック、UTGが33%CB、BBがコール。ターン J でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -168,7 +192,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -179,7 +203,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "876ss",
-      "line": "UTGがオープン、BBがコール。876ssでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ 876ss。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -199,14 +226,17 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "876ss",
-      "line": "UTGがオープン、BBがコール。876ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ 876ss。BBチェック、UTGが33%CB、BBがコール。ターン 2 でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -217,7 +247,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "772r",
-      "line": "UTGがオープン、BBがコール。772rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ 772r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -237,15 +270,18 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "772r",
-      "line": "UTGがオープン、BBがコール。772rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ 772r。BBチェック、UTGが33%CB、BBがコール。ターン Q でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -256,7 +292,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "TT4r",
-      "line": "UTGがオープン、BBがコール。TT4rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ TT4r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -276,14 +315,17 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "TT4r",
-      "line": "UTGがオープン、BBがコール。TT4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ TT4r。BBチェック、UTGが33%CB、BBがコール。ターン A でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -294,7 +336,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "AJ5ss",
-      "line": "UTGがオープン、BBがコール。AJ5ssでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ AJ5ss。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -315,8 +360,11 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "AJ5ss",
-      "line": "UTGがオープン、BBがコール。AJ5ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ AJ5ss。BBチェック、UTGが33%CB、BBがコール。ターン 3 でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -324,7 +372,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -335,7 +383,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "986tt",
-      "line": "UTGがオープン、BBがコール。986ttでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ 986tt。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -356,14 +407,17 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "986tt",
-      "line": "UTGがオープン、BBがコール。986ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ 986tt。BBチェック、UTGが33%CB、BBがコール。ターン K でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -374,7 +428,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "Q83r",
-      "line": "UTGがオープン、BBがコール。Q83rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ Q83r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -395,15 +452,18 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "Q83r",
-      "line": "UTGがオープン、BBがコール。Q83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ Q83r。BBチェック、UTGが33%CB、BBがコール。ターン T でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -414,7 +474,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "AK4r",
-      "line": "UTGがオープン、BBがコール。AK4rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ AK4r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -434,15 +497,18 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "AK4r",
-      "line": "UTGがオープン、BBがコール。AK4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ AK4r。BBチェック、UTGが33%CB、BBがコール。ターン 8 でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -453,7 +519,10 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "654r",
-      "line": "UTGがオープン、BBがコール。654rでBBチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BBがコール。フロップ 654r。BBチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -472,14 +541,17 @@
       "heroPosition": "BB",
       "villainPosition": "UTG",
       "board": "654r",
-      "line": "UTGがオープン、BBがコール。654rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BBがコール。フロップ 654r。BBチェック、UTGが33%CB、BBがコール。ターン Q でBBチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -490,7 +562,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "A72r",
-      "line": "EPがオープン、BBがコール。A72rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ A72r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -511,15 +586,18 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "A72r",
-      "line": "EPがオープン、BBがコール。A72rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ A72r。BBチェック、EPが33%CB、BBがコール。ターン 8 でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -530,7 +608,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "K83r",
-      "line": "EPがオープン、BBがコール。K83rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ K83r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -551,15 +632,18 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "K83r",
-      "line": "EPがオープン、BBがコール。K83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ K83r。BBチェック、EPが33%CB、BBがコール。ターン 2 でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -570,7 +654,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "QJ5tt",
-      "line": "EPがオープン、BBがコール。QJ5ttでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ QJ5tt。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -591,8 +678,11 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "QJ5tt",
-      "line": "EPがオープン、BBがコール。QJ5ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ QJ5tt。BBチェック、EPが33%CB、BBがコール。ターン 9 でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -600,7 +690,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -611,7 +701,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "T54r",
-      "line": "EPがオープン、BBがコール。T54rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ T54r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -632,8 +725,11 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "T54r",
-      "line": "EPがオープン、BBがコール。T54rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ T54r。BBチェック、EPが33%CB、BBがコール。ターン J でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -641,7 +737,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -652,7 +748,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "876ss",
-      "line": "EPがオープン、BBがコール。876ssでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ 876ss。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -672,14 +771,17 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "876ss",
-      "line": "EPがオープン、BBがコール。876ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ 876ss。BBチェック、EPが33%CB、BBがコール。ターン 2 でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -690,7 +792,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "772r",
-      "line": "EPがオープン、BBがコール。772rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ 772r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -710,15 +815,18 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "772r",
-      "line": "EPがオープン、BBがコール。772rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ 772r。BBチェック、EPが33%CB、BBがコール。ターン Q でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -729,7 +837,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "TT4r",
-      "line": "EPがオープン、BBがコール。TT4rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ TT4r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -749,14 +860,17 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "TT4r",
-      "line": "EPがオープン、BBがコール。TT4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ TT4r。BBチェック、EPが33%CB、BBがコール。ターン A でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -767,7 +881,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "AJ5ss",
-      "line": "EPがオープン、BBがコール。AJ5ssでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ AJ5ss。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -788,8 +905,11 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "AJ5ss",
-      "line": "EPがオープン、BBがコール。AJ5ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ AJ5ss。BBチェック、EPが33%CB、BBがコール。ターン 3 でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -797,7 +917,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -808,7 +928,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "986tt",
-      "line": "EPがオープン、BBがコール。986ttでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ 986tt。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -829,14 +952,17 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "986tt",
-      "line": "EPがオープン、BBがコール。986ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ 986tt。BBチェック、EPが33%CB、BBがコール。ターン K でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -847,7 +973,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "Q83r",
-      "line": "EPがオープン、BBがコール。Q83rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ Q83r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -868,15 +997,18 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "Q83r",
-      "line": "EPがオープン、BBがコール。Q83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ Q83r。BBチェック、EPが33%CB、BBがコール。ターン T でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -887,7 +1019,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "AK4r",
-      "line": "EPがオープン、BBがコール。AK4rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ AK4r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -907,15 +1042,18 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "AK4r",
-      "line": "EPがオープン、BBがコール。AK4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ AK4r。BBチェック、EPが33%CB、BBがコール。ターン 8 でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -926,7 +1064,10 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "654r",
-      "line": "EPがオープン、BBがコール。654rでBBチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BBがコール。フロップ 654r。BBチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -945,14 +1086,17 @@
       "heroPosition": "BB",
       "villainPosition": "EP",
       "board": "654r",
-      "line": "EPがオープン、BBがコール。654rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BBがコール。フロップ 654r。BBチェック、EPが33%CB、BBがコール。ターン Q でBBチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -963,7 +1107,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "A72r",
-      "line": "LJ/HJがオープン、BBがコール。A72rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ A72r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -984,15 +1131,18 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "A72r",
-      "line": "LJ/HJがオープン、BBがコール。A72rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ A72r。BBチェック、LJ/HJが33%CB、BBがコール。ターン 8 でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -1003,7 +1153,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "K83r",
-      "line": "LJ/HJがオープン、BBがコール。K83rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ K83r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1024,15 +1177,18 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "K83r",
-      "line": "LJ/HJがオープン、BBがコール。K83rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ K83r。BBチェック、LJ/HJが33%CB、BBがコール。ターン 2 でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -1043,7 +1199,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "QJ5tt",
-      "line": "LJ/HJがオープン、BBがコール。QJ5ttでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ QJ5tt。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1064,8 +1223,11 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "QJ5tt",
-      "line": "LJ/HJがオープン、BBがコール。QJ5ttで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ QJ5tt。BBチェック、LJ/HJが33%CB、BBがコール。ターン 9 でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -1073,7 +1235,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -1084,7 +1246,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "T54r",
-      "line": "LJ/HJがオープン、BBがコール。T54rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ T54r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1105,8 +1270,11 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "T54r",
-      "line": "LJ/HJがオープン、BBがコール。T54rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ T54r。BBチェック、LJ/HJが33%CB、BBがコール。ターン J でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -1114,7 +1282,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -1125,7 +1293,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "876ss",
-      "line": "LJ/HJがオープン、BBがコール。876ssでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 876ss。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1145,14 +1316,17 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "876ss",
-      "line": "LJ/HJがオープン、BBがコール。876ssで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 876ss。BBチェック、LJ/HJが33%CB、BBがコール。ターン 2 でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -1163,7 +1337,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "772r",
-      "line": "LJ/HJがオープン、BBがコール。772rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 772r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1183,15 +1360,18 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "772r",
-      "line": "LJ/HJがオープン、BBがコール。772rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 772r。BBチェック、LJ/HJが33%CB、BBがコール。ターン Q でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -1202,7 +1382,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "TT4r",
-      "line": "LJ/HJがオープン、BBがコール。TT4rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ TT4r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1222,14 +1405,17 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "TT4r",
-      "line": "LJ/HJがオープン、BBがコール。TT4rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ TT4r。BBチェック、LJ/HJが33%CB、BBがコール。ターン A でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -1240,7 +1426,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "AJ5ss",
-      "line": "LJ/HJがオープン、BBがコール。AJ5ssでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ AJ5ss。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1261,8 +1450,11 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "AJ5ss",
-      "line": "LJ/HJがオープン、BBがコール。AJ5ssで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ AJ5ss。BBチェック、LJ/HJが33%CB、BBがコール。ターン 3 でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -1270,7 +1462,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -1281,7 +1473,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "986tt",
-      "line": "LJ/HJがオープン、BBがコール。986ttでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 986tt。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1302,14 +1497,17 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "986tt",
-      "line": "LJ/HJがオープン、BBがコール。986ttで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 986tt。BBチェック、LJ/HJが33%CB、BBがコール。ターン K でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -1320,7 +1518,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "Q83r",
-      "line": "LJ/HJがオープン、BBがコール。Q83rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ Q83r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1341,15 +1542,18 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "Q83r",
-      "line": "LJ/HJがオープン、BBがコール。Q83rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ Q83r。BBチェック、LJ/HJが33%CB、BBがコール。ターン T でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -1360,7 +1564,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "AK4r",
-      "line": "LJ/HJがオープン、BBがコール。AK4rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ AK4r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1380,15 +1587,18 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "AK4r",
-      "line": "LJ/HJがオープン、BBがコール。AK4rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ AK4r。BBチェック、LJ/HJが33%CB、BBがコール。ターン 8 でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -1399,7 +1609,10 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "654r",
-      "line": "LJ/HJがオープン、BBがコール。654rでBBチェック、LJ/HJが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 654r。BBチェック、LJ/HJが33%サイズでCB。",
       "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1418,14 +1631,17 @@
       "heroPosition": "BB",
       "villainPosition": "LJ/HJ",
       "board": "654r",
-      "line": "LJ/HJがオープン、BBがコール。654rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
-      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "LJ/HJがオープン、BBがコール。フロップ 654r。BBチェック、LJ/HJが33%CB、BBがコール。ターン Q でBBチェック、LJ/HJが75%サイズでベット。",
+      "action": "LJ/HJのターン75%ベット後、LJ/HJ側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -1436,7 +1652,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "A72r",
-      "line": "COがオープン、BBがコール。A72rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ A72r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1457,15 +1676,18 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "A72r",
-      "line": "COがオープン、BBがコール。A72rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ A72r。BBチェック、COが33%CB、BBがコール。ターン 8 でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -1476,7 +1698,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "K83r",
-      "line": "COがオープン、BBがコール。K83rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ K83r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1497,15 +1722,18 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "K83r",
-      "line": "COがオープン、BBがコール。K83rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ K83r。BBチェック、COが33%CB、BBがコール。ターン 2 でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -1516,7 +1744,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "QJ5tt",
-      "line": "COがオープン、BBがコール。QJ5ttでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ QJ5tt。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1537,8 +1768,11 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "QJ5tt",
-      "line": "COがオープン、BBがコール。QJ5ttで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ QJ5tt。BBチェック、COが33%CB、BBがコール。ターン 9 でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -1546,7 +1780,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -1557,7 +1791,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "T54r",
-      "line": "COがオープン、BBがコール。T54rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ T54r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1578,8 +1815,11 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "T54r",
-      "line": "COがオープン、BBがコール。T54rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ T54r。BBチェック、COが33%CB、BBがコール。ターン J でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -1587,7 +1827,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -1598,7 +1838,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "876ss",
-      "line": "COがオープン、BBがコール。876ssでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ 876ss。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1618,14 +1861,17 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "876ss",
-      "line": "COがオープン、BBがコール。876ssで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ 876ss。BBチェック、COが33%CB、BBがコール。ターン 2 でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -1636,7 +1882,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "772r",
-      "line": "COがオープン、BBがコール。772rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ 772r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1656,15 +1905,18 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "772r",
-      "line": "COがオープン、BBがコール。772rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ 772r。BBチェック、COが33%CB、BBがコール。ターン Q でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -1675,7 +1927,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "TT4r",
-      "line": "COがオープン、BBがコール。TT4rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ TT4r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1695,14 +1950,17 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "TT4r",
-      "line": "COがオープン、BBがコール。TT4rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ TT4r。BBチェック、COが33%CB、BBがコール。ターン A でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -1713,7 +1971,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "AJ5ss",
-      "line": "COがオープン、BBがコール。AJ5ssでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ AJ5ss。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1734,8 +1995,11 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "AJ5ss",
-      "line": "COがオープン、BBがコール。AJ5ssで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ AJ5ss。BBチェック、COが33%CB、BBがコール。ターン 3 でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -1743,7 +2007,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -1754,7 +2018,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "986tt",
-      "line": "COがオープン、BBがコール。986ttでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ 986tt。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1775,14 +2042,17 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "986tt",
-      "line": "COがオープン、BBがコール。986ttで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ 986tt。BBチェック、COが33%CB、BBがコール。ターン K でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -1793,7 +2063,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "Q83r",
-      "line": "COがオープン、BBがコール。Q83rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ Q83r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1814,15 +2087,18 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "Q83r",
-      "line": "COがオープン、BBがコール。Q83rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ Q83r。BBチェック、COが33%CB、BBがコール。ターン T でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -1833,7 +2109,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "AK4r",
-      "line": "COがオープン、BBがコール。AK4rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ AK4r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1853,15 +2132,18 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "AK4r",
-      "line": "COがオープン、BBがコール。AK4rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ AK4r。BBチェック、COが33%CB、BBがコール。ターン 8 でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -1872,7 +2154,10 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "654r",
-      "line": "COがオープン、BBがコール。654rでBBチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BBがコール。フロップ 654r。BBチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1891,14 +2176,17 @@
       "heroPosition": "BB",
       "villainPosition": "CO",
       "board": "654r",
-      "line": "COがオープン、BBがコール。654rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BBがコール。フロップ 654r。BBチェック、COが33%CB、BBがコール。ターン Q でBBチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -1909,7 +2197,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "A72r",
-      "line": "BTNがオープン、BBがコール。A72rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ A72r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1930,15 +2221,18 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "A72r",
-      "line": "BTNがオープン、BBがコール。A72rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ A72r。BBチェック、BTNが33%CB、BBがコール。ターン 8 でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -1949,7 +2243,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "K83r",
-      "line": "BTNがオープン、BBがコール。K83rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ K83r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -1970,15 +2267,18 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "K83r",
-      "line": "BTNがオープン、BBがコール。K83rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ K83r。BBチェック、BTNが33%CB、BBがコール。ターン 2 でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -1989,7 +2289,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "QJ5tt",
-      "line": "BTNがオープン、BBがコール。QJ5ttでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ QJ5tt。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2010,8 +2313,11 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "QJ5tt",
-      "line": "BTNがオープン、BBがコール。QJ5ttで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ QJ5tt。BBチェック、BTNが33%CB、BBがコール。ターン 9 でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2019,7 +2325,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -2030,7 +2336,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "T54r",
-      "line": "BTNがオープン、BBがコール。T54rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ T54r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2051,8 +2360,11 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "T54r",
-      "line": "BTNがオープン、BBがコール。T54rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ T54r。BBチェック、BTNが33%CB、BBがコール。ターン J でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2060,7 +2372,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -2071,7 +2383,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "876ss",
-      "line": "BTNがオープン、BBがコール。876ssでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 876ss。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2091,14 +2406,17 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "876ss",
-      "line": "BTNがオープン、BBがコール。876ssで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ 876ss。BBチェック、BTNが33%CB、BBがコール。ターン 2 でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -2109,7 +2427,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "772r",
-      "line": "BTNがオープン、BBがコール。772rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 772r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2129,15 +2450,18 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "772r",
-      "line": "BTNがオープン、BBがコール。772rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ 772r。BBチェック、BTNが33%CB、BBがコール。ターン Q でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -2148,7 +2472,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "TT4r",
-      "line": "BTNがオープン、BBがコール。TT4rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ TT4r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2168,14 +2495,17 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "TT4r",
-      "line": "BTNがオープン、BBがコール。TT4rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ TT4r。BBチェック、BTNが33%CB、BBがコール。ターン A でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -2186,7 +2516,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "AJ5ss",
-      "line": "BTNがオープン、BBがコール。AJ5ssでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ AJ5ss。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2207,8 +2540,11 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "AJ5ss",
-      "line": "BTNがオープン、BBがコール。AJ5ssで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ AJ5ss。BBチェック、BTNが33%CB、BBがコール。ターン 3 でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2216,7 +2552,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -2227,7 +2563,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "986tt",
-      "line": "BTNがオープン、BBがコール。986ttでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 986tt。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2248,14 +2587,17 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "986tt",
-      "line": "BTNがオープン、BBがコール。986ttで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ 986tt。BBチェック、BTNが33%CB、BBがコール。ターン K でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -2266,7 +2608,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "Q83r",
-      "line": "BTNがオープン、BBがコール。Q83rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ Q83r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2287,15 +2632,18 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "Q83r",
-      "line": "BTNがオープン、BBがコール。Q83rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ Q83r。BBチェック、BTNが33%CB、BBがコール。ターン T でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -2306,7 +2654,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "AK4r",
-      "line": "BTNがオープン、BBがコール。AK4rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ AK4r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2326,15 +2677,18 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "AK4r",
-      "line": "BTNがオープン、BBがコール。AK4rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ AK4r。BBチェック、BTNが33%CB、BBがコール。ターン 8 でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -2345,7 +2699,10 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "654r",
-      "line": "BTNがオープン、BBがコール。654rでBBチェック、BTNが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 654r。BBチェック、BTNが33%サイズでCB。",
       "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2364,14 +2721,17 @@
       "heroPosition": "BB",
       "villainPosition": "BTN",
       "board": "654r",
-      "line": "BTNがオープン、BBがコール。654rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
-      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "BTNがオープン、BBがコール。フロップ 654r。BBチェック、BTNが33%CB、BBがコール。ターン Q でBBチェック、BTNが75%サイズでベット。",
+      "action": "BTNのターン75%ベット後、BTN側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -2382,7 +2742,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "A72r",
-      "line": "UTGがオープン、BTNがコール。A72rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ A72r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2403,15 +2766,18 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "A72r",
-      "line": "UTGがオープン、BTNがコール。A72rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ A72r。BTNチェック、UTGが33%CB、BTNがコール。ターン 8 でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -2422,7 +2788,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "K83r",
-      "line": "UTGがオープン、BTNがコール。K83rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ K83r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2443,15 +2812,18 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "K83r",
-      "line": "UTGがオープン、BTNがコール。K83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ K83r。BTNチェック、UTGが33%CB、BTNがコール。ターン 2 でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -2462,7 +2834,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "QJ5tt",
-      "line": "UTGがオープン、BTNがコール。QJ5ttでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ QJ5tt。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2483,8 +2858,11 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "QJ5tt",
-      "line": "UTGがオープン、BTNがコール。QJ5ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ QJ5tt。BTNチェック、UTGが33%CB、BTNがコール。ターン 9 でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2492,7 +2870,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -2503,7 +2881,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "T54r",
-      "line": "UTGがオープン、BTNがコール。T54rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ T54r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2524,8 +2905,11 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "T54r",
-      "line": "UTGがオープン、BTNがコール。T54rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ T54r。BTNチェック、UTGが33%CB、BTNがコール。ターン J でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2533,7 +2917,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -2544,7 +2928,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "876ss",
-      "line": "UTGがオープン、BTNがコール。876ssでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ 876ss。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2564,14 +2951,17 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "876ss",
-      "line": "UTGがオープン、BTNがコール。876ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ 876ss。BTNチェック、UTGが33%CB、BTNがコール。ターン 2 でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -2582,7 +2972,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "772r",
-      "line": "UTGがオープン、BTNがコール。772rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ 772r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2602,15 +2995,18 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "772r",
-      "line": "UTGがオープン、BTNがコール。772rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ 772r。BTNチェック、UTGが33%CB、BTNがコール。ターン Q でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -2621,7 +3017,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "TT4r",
-      "line": "UTGがオープン、BTNがコール。TT4rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ TT4r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2641,14 +3040,17 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "TT4r",
-      "line": "UTGがオープン、BTNがコール。TT4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ TT4r。BTNチェック、UTGが33%CB、BTNがコール。ターン A でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -2659,7 +3061,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "AJ5ss",
-      "line": "UTGがオープン、BTNがコール。AJ5ssでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ AJ5ss。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2680,8 +3085,11 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "AJ5ss",
-      "line": "UTGがオープン、BTNがコール。AJ5ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ AJ5ss。BTNチェック、UTGが33%CB、BTNがコール。ターン 3 でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2689,7 +3097,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -2700,7 +3108,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "986tt",
-      "line": "UTGがオープン、BTNがコール。986ttでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ 986tt。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2721,14 +3132,17 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "986tt",
-      "line": "UTGがオープン、BTNがコール。986ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ 986tt。BTNチェック、UTGが33%CB、BTNがコール。ターン K でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -2739,7 +3153,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "Q83r",
-      "line": "UTGがオープン、BTNがコール。Q83rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ Q83r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2760,15 +3177,18 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "Q83r",
-      "line": "UTGがオープン、BTNがコール。Q83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ Q83r。BTNチェック、UTGが33%CB、BTNがコール。ターン T でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -2779,7 +3199,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "AK4r",
-      "line": "UTGがオープン、BTNがコール。AK4rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ AK4r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2799,15 +3222,18 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "AK4r",
-      "line": "UTGがオープン、BTNがコール。AK4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ AK4r。BTNチェック、UTGが33%CB、BTNがコール。ターン 8 でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -2818,7 +3244,10 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "654r",
-      "line": "UTGがオープン、BTNがコール。654rでBTNチェック、UTGが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "UTGがオープン、BTNがコール。フロップ 654r。BTNチェック、UTGが33%サイズでCB。",
       "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2837,14 +3266,17 @@
       "heroPosition": "BTN",
       "villainPosition": "UTG",
       "board": "654r",
-      "line": "UTGがオープン、BTNがコール。654rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
-      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "UTGがオープン、BTNがコール。フロップ 654r。BTNチェック、UTGが33%CB、BTNがコール。ターン Q でBTNチェック、UTGが75%サイズでベット。",
+      "action": "UTGのターン75%ベット後、UTG側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -2855,7 +3287,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "A72r",
-      "line": "EPがオープン、BTNがコール。A72rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ A72r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2876,15 +3311,18 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "A72r",
-      "line": "EPがオープン、BTNがコール。A72rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ A72r。BTNチェック、EPが33%CB、BTNがコール。ターン 8 でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -2895,7 +3333,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "K83r",
-      "line": "EPがオープン、BTNがコール。K83rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ K83r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2916,15 +3357,18 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "K83r",
-      "line": "EPがオープン、BTNがコール。K83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ K83r。BTNチェック、EPが33%CB、BTNがコール。ターン 2 でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -2935,7 +3379,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "QJ5tt",
-      "line": "EPがオープン、BTNがコール。QJ5ttでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ QJ5tt。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2956,8 +3403,11 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "QJ5tt",
-      "line": "EPがオープン、BTNがコール。QJ5ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ QJ5tt。BTNチェック、EPが33%CB、BTNがコール。ターン 9 でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -2965,7 +3415,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -2976,7 +3426,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "T54r",
-      "line": "EPがオープン、BTNがコール。T54rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ T54r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -2997,8 +3450,11 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "T54r",
-      "line": "EPがオープン、BTNがコール。T54rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ T54r。BTNチェック、EPが33%CB、BTNがコール。ターン J でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -3006,7 +3462,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -3017,7 +3473,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "876ss",
-      "line": "EPがオープン、BTNがコール。876ssでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ 876ss。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3037,14 +3496,17 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "876ss",
-      "line": "EPがオープン、BTNがコール。876ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ 876ss。BTNチェック、EPが33%CB、BTNがコール。ターン 2 でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -3055,7 +3517,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "772r",
-      "line": "EPがオープン、BTNがコール。772rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ 772r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3075,15 +3540,18 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "772r",
-      "line": "EPがオープン、BTNがコール。772rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ 772r。BTNチェック、EPが33%CB、BTNがコール。ターン Q でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -3094,7 +3562,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "TT4r",
-      "line": "EPがオープン、BTNがコール。TT4rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ TT4r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3114,14 +3585,17 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "TT4r",
-      "line": "EPがオープン、BTNがコール。TT4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ TT4r。BTNチェック、EPが33%CB、BTNがコール。ターン A でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -3132,7 +3606,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "AJ5ss",
-      "line": "EPがオープン、BTNがコール。AJ5ssでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ AJ5ss。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3153,8 +3630,11 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "AJ5ss",
-      "line": "EPがオープン、BTNがコール。AJ5ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ AJ5ss。BTNチェック、EPが33%CB、BTNがコール。ターン 3 でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -3162,7 +3642,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -3173,7 +3653,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "986tt",
-      "line": "EPがオープン、BTNがコール。986ttでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ 986tt。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3194,14 +3677,17 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "986tt",
-      "line": "EPがオープン、BTNがコール。986ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ 986tt。BTNチェック、EPが33%CB、BTNがコール。ターン K でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -3212,7 +3698,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "Q83r",
-      "line": "EPがオープン、BTNがコール。Q83rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ Q83r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3233,15 +3722,18 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "Q83r",
-      "line": "EPがオープン、BTNがコール。Q83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ Q83r。BTNチェック、EPが33%CB、BTNがコール。ターン T でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -3252,7 +3744,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "AK4r",
-      "line": "EPがオープン、BTNがコール。AK4rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ AK4r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3272,15 +3767,18 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "AK4r",
-      "line": "EPがオープン、BTNがコール。AK4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ AK4r。BTNチェック、EPが33%CB、BTNがコール。ターン 8 でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -3291,7 +3789,10 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "654r",
-      "line": "EPがオープン、BTNがコール。654rでBTNチェック、EPが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "EPがオープン、BTNがコール。フロップ 654r。BTNチェック、EPが33%サイズでCB。",
       "action": "EPの小CB後、EP側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3310,14 +3811,17 @@
       "heroPosition": "BTN",
       "villainPosition": "EP",
       "board": "654r",
-      "line": "EPがオープン、BTNがコール。654rで一度アクションが入り、EPが次のストリートで大きめにベット。",
-      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "EPがオープン、BTNがコール。フロップ 654r。BTNチェック、EPが33%CB、BTNがコール。ターン Q でBTNチェック、EPが75%サイズでベット。",
+      "action": "EPのターン75%ベット後、EP側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -3328,7 +3832,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "A72r",
-      "line": "COがオープン、BTNがコール。A72rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ A72r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3349,15 +3856,18 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "A72r",
-      "line": "COがオープン、BTNがコール。A72rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ A72r。BTNチェック、COが33%CB、BTNがコール。ターン 8 でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
         "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
       ]
@@ -3368,7 +3878,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "K83r",
-      "line": "COがオープン、BTNがコール。K83rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ K83r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3389,15 +3902,18 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "K83r",
-      "line": "COがオープン、BTNがコール。K83rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ K83r。BTNチェック、COが33%CB、BTNがコール。ターン 2 でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
         "小CBなら未ヒットの高いカードも残す。"
       ]
@@ -3408,7 +3924,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "QJ5tt",
-      "line": "COがオープン、BTNがコール。QJ5ttでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ QJ5tt。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3429,8 +3948,11 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "QJ5tt",
-      "line": "COがオープン、BTNがコール。QJ5ttで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "9",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ QJ5tt。BTNチェック、COが33%CB、BTNがコール。ターン 9 でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -3438,7 +3960,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高カード2枚はトップペアと強いドローが多く残る。",
         "ツートーンではフラッシュドローを落としすぎない。"
       ]
@@ -3449,7 +3971,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "T54r",
-      "line": "COがオープン、BTNがコール。T54rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ T54r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3470,8 +3995,11 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "T54r",
-      "line": "COがオープン、BTNがコール。T54rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "J",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ T54r。BTNチェック、COが33%CB、BTNがコール。ターン J でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -3479,7 +4007,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低中連結はBB側が多く絡みやすい。",
         "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
       ]
@@ -3490,7 +4018,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "876ss",
-      "line": "COがオープン、BTNがコール。876ssでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ 876ss。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3510,14 +4041,17 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "876ss",
-      "line": "COがオープン、BTNがコール。876ssで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "2",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ 876ss。BTNチェック、COが33%CB、BTNがコール。ターン 2 でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
         "強いアクション後は完成役とドローを中心に残す。"
       ]
@@ -3528,7 +4062,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "772r",
-      "line": "COがオープン、BTNがコール。772rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ 772r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3548,15 +4085,18 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "772r",
-      "line": "COがオープン、BTNがコール。772rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ 772r。BTNチェック、COが33%CB、BTNがコール。ターン Q でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair",
         "topPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ペアボードの小CBは広く打てる。",
         "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
       ]
@@ -3567,7 +4107,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "TT4r",
-      "line": "COがオープン、BTNがコール。TT4rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ TT4r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3587,14 +4130,17 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "TT4r",
-      "line": "COがオープン、BTNがコール。TT4rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "A",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ TT4r。BTNチェック、COが33%CB、BTNがコール。ターン A でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "underpair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "高ペアボードでは強いペアと中小ペアが残りやすい。",
         "小さいサイズなら空振りを完全には消さない。"
       ]
@@ -3605,7 +4151,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "AJ5ss",
-      "line": "COがオープン、BTNがコール。AJ5ssでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ AJ5ss。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3626,8 +4175,11 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "AJ5ss",
-      "line": "COがオープン、BTNがコール。AJ5ssで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "3",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ AJ5ss。BTNチェック、COが33%CB、BTNがコール。ターン 3 でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
@@ -3635,7 +4187,7 @@
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Aハイでドローが濃い時はAヒットと強いドローを残す。",
         "大きいベットはレンジ全体より強い塊に寄る。"
       ]
@@ -3646,7 +4198,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "986tt",
-      "line": "COがオープン、BTNがコール。986ttでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ 986tt。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3667,14 +4222,17 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "986tt",
-      "line": "COがオープン、BTNがコール。986ttで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "K",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ 986tt。BTNチェック、COが33%CB、BTNがコール。ターン K でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "ミドル連結はコール側にもかなり刺さる。",
         "チェックバックやレイズでレンジの形が大きく変わる。"
       ]
@@ -3685,7 +4243,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "Q83r",
-      "line": "COがオープン、BTNがコール。Q83rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ Q83r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3706,15 +4267,18 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "Q83r",
-      "line": "COがオープン、BTNがコール。Q83rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "T",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ Q83r。BTNチェック、COが33%CB、BTNがコール。ターン T でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
         "遅延CBでは弱いショーダウンバリューも残る。"
       ]
@@ -3725,7 +4289,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "AK4r",
-      "line": "COがオープン、BTNがコール。AK4rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ AK4r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3745,15 +4312,18 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "AK4r",
-      "line": "COがオープン、BTNがコール。AK4rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "8",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ AK4r。BTNチェック、COが33%CB、BTNがコール。ターン 8 でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "topPair",
         "secondPair"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
         "強いアクションでは空振りを残しすぎない。"
       ]
@@ -3764,7 +4334,10 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "654r",
-      "line": "COがオープン、BTNがコール。654rでBTNチェック、COが小さくCB。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "COがオープン、BTNがコール。フロップ 654r。BTNチェック、COが33%サイズでCB。",
       "action": "COの小CB後、CO側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3783,14 +4356,17 @@
       "heroPosition": "BTN",
       "villainPosition": "CO",
       "board": "654r",
-      "line": "COがオープン、BTNがコール。654rで一度アクションが入り、COが次のストリートで大きめにベット。",
-      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "turn": "Q",
+      "street": "turn",
+      "betSize": "75%",
+      "line": "COがオープン、BTNがコール。フロップ 654r。BTNチェック、COが33%CB、BTNがコール。ターン Q でBTNチェック、COが75%サイズでベット。",
+      "action": "COのターン75%ベット後、CO側に濃く残すハンドをクリック。",
       "keep": [
         "made",
         "draw"
       ],
       "notes": [
-        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。",
         "低連結はBB側のレンジに強く絡む。",
         "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
       ]
@@ -3801,7 +4377,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "A72r",
-      "line": "BTNがオープン、BBがコール。A72rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ A72r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3820,7 +4399,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "A72r",
-      "line": "BTNがオープン、BBがコール。A72rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ A72r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3839,7 +4421,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "K83r",
-      "line": "BTNがオープン、BBがコール。K83rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ K83r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3858,7 +4443,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "K83r",
-      "line": "BTNがオープン、BBがコール。K83rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ K83r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3877,7 +4465,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "QJ5tt",
-      "line": "BTNがオープン、BBがコール。QJ5ttでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ QJ5tt。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3897,7 +4488,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "QJ5tt",
-      "line": "BTNがオープン、BBがコール。QJ5ttでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ QJ5tt。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3917,7 +4511,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "T54r",
-      "line": "BTNがオープン、BBがコール。T54rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ T54r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3938,7 +4535,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "T54r",
-      "line": "BTNがオープン、BBがコール。T54rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ T54r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3959,7 +4559,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "876ss",
-      "line": "BTNがオープン、BBがコール。876ssでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 876ss。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3978,7 +4581,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "876ss",
-      "line": "BTNがオープン、BBがコール。876ssでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ 876ss。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -3997,7 +4603,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "772r",
-      "line": "BTNがオープン、BBがコール。772rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 772r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4016,7 +4625,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "772r",
-      "line": "BTNがオープン、BBがコール。772rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ 772r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4034,7 +4646,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "TT4r",
-      "line": "BTNがオープン、BBがコール。TT4rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ TT4r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4052,7 +4667,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "TT4r",
-      "line": "BTNがオープン、BBがコール。TT4rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ TT4r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4070,7 +4688,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "AJ5ss",
-      "line": "BTNがオープン、BBがコール。AJ5ssでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ AJ5ss。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4090,7 +4711,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "AJ5ss",
-      "line": "BTNがオープン、BBがコール。AJ5ssでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ AJ5ss。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4110,7 +4734,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "986tt",
-      "line": "BTNがオープン、BBがコール。986ttでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 986tt。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4130,7 +4757,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "986tt",
-      "line": "BTNがオープン、BBがコール。986ttでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ 986tt。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4150,7 +4780,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "Q83r",
-      "line": "BTNがオープン、BBがコール。Q83rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ Q83r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4170,7 +4803,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "Q83r",
-      "line": "BTNがオープン、BBがコール。Q83rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ Q83r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4189,7 +4825,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "AK4r",
-      "line": "BTNがオープン、BBがコール。AK4rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ AK4r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4208,7 +4847,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "AK4r",
-      "line": "BTNがオープン、BBがコール。AK4rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ AK4r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4227,7 +4869,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "654r",
-      "line": "BTNがオープン、BBがコール。654rでBBが小さくドンク。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "33%",
+      "line": "BTNがオープン、BBがコール。フロップ 654r。BBが33%サイズでドンクベット。",
       "action": "BBのドンク後、BB側に残すハンドをクリック。",
       "keep": [
         "made",
@@ -4246,7 +4891,10 @@
       "heroPosition": "BTN",
       "villainPosition": "BB",
       "board": "654r",
-      "line": "BTNがオープン、BBがコール。654rでBTNがCB、BBがチェックレイズ。",
+      "turn": null,
+      "street": "flop",
+      "betSize": "check-raise",
+      "line": "BTNがオープン、BBがコール。フロップ 654r。BBチェック、BTNが33%CB、BBがチェックレイズ。",
       "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
       "keep": [
         "made",

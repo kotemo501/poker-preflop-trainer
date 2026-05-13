@@ -1281,7 +1281,7 @@ function renderReaderScenarioOptions() {
 
 function renderReader() {
   const scenario = currentReaderScenario();
-  els.readerBoard.textContent = displayBoard(scenario.board);
+  els.readerBoard.textContent = displayBoard(scenario.board, scenario.turn);
   els.readerLine.textContent = scenario.line;
   els.readerHero.textContent = scenario.heroPosition;
   els.readerVillain.textContent = scenario.villainPosition;
@@ -1365,13 +1365,12 @@ function renderReaderStats() {
   els.readerReveal.textContent = state.reader.revealed ? "レンジを隠す" : "残るレンジを見る";
 }
 
-function displayBoard(board) {
+function displayBoard(board, turn = null) {
   const rankText = board.replace(/[^AKQJT98765432]/g, "");
   const ranksText = rankText.split("").join(" ");
-  if (board.endsWith("r")) return `${ranksText} rainbow`;
-  if (board.endsWith("ss")) return `${ranksText} ♠♠`;
-  if (board.endsWith("tt")) return `${ranksText} ♠♠x`;
-  return ranksText || board;
+  const texture = board.endsWith("r") ? "rainbow" : board.endsWith("ss") ? "♠♠" : board.endsWith("tt") ? "♠♠x" : "";
+  const flopText = `${ranksText}${texture ? ` ${texture}` : ""}`;
+  return turn ? `${flopText} / Turn ${turn}` : flopText || board;
 }
 
 function toggleReaderHand(hand) {
@@ -1399,8 +1398,9 @@ function applyReaderDragAt(clientX, clientY) {
 
 function toggleReaderCategory(category) {
   const scenario = currentReaderScenario();
+  const board = readerBoardForCategory(scenario);
   const hands = allHands()
-    .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, scenario.board) }))
+    .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, board) }))
     .filter((entry) => entry.category === category)
     .map((entry) => entry.hand);
   const shouldRemove = hands.every((hand) => state.reader.selectedHands.has(hand));
@@ -1412,11 +1412,12 @@ function toggleReaderCategory(category) {
 
 function selectedReaderCategories() {
   const scenario = currentReaderScenario();
+  const board = readerBoardForCategory(scenario);
   const selected = Array.from(state.reader.selectedHands);
   return new Set(readerCategories
     .filter(([category]) => {
       const categoryHands = allHands()
-        .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, scenario.board) }))
+        .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, board) }))
         .filter((entry) => entry.category === category)
         .map((entry) => entry.hand);
       return categoryHands.length && categoryHands.some((hand) => selected.includes(hand));
@@ -1426,10 +1427,15 @@ function selectedReaderCategories() {
 
 function retainedReaderHands(scenario) {
   const threshold = scenario.villainPosition === "BB" ? 1 : openingThreshold(scenario.villainPosition);
+  const board = readerBoardForCategory(scenario);
   return allHands()
     .filter(({ row, col }) => correctPaintLevel(row, col) >= threshold)
-    .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, scenario.board) }))
+    .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, board) }))
     .filter((entry) => scenario.keep.includes(entry.category));
+}
+
+function readerBoardForCategory(scenario) {
+  return scenario.turn ? `${scenario.board}${scenario.turn}` : scenario.board;
 }
 
 function readerHandCategory(hand, board) {

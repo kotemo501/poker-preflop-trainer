@@ -149,12 +149,16 @@ const boardProfiles = [
 ];
 
 function actionTemplates(family, board) {
+  const turn = turnCardFor(board.id);
   if (family.villain === "BB") {
     return [
       {
         id: "donk-small",
         label: "BBドンク",
-        line: `${family.preflop}${board.label}で${family.villain}が小さくドンク。`,
+        street: "flop",
+        betSize: "33%",
+        turn: null,
+        line: `${family.preflop}フロップ ${board.label}。${family.villain}が33%サイズでドンクベット。`,
         action: `${family.villain}のドンク後、${family.villain}側に残すハンドをクリック。`,
         keep: board.attack,
         notes: [`${board.type}でのドンクは、コール側が絡んだ時に出やすい。`, ...board.notes],
@@ -162,7 +166,10 @@ function actionTemplates(family, board) {
       {
         id: "checkraise",
         label: "チェックレイズ",
-        line: `${family.preflop}${board.label}で${family.opener}がCB、${family.villain}がチェックレイズ。`,
+        street: "flop",
+        betSize: "check-raise",
+        turn: null,
+        line: `${family.preflop}フロップ ${board.label}。${family.villain}チェック、${family.opener}が33%CB、${family.villain}がチェックレイズ。`,
         action: `${family.villain}のチェックレイズ後、${family.villain}側に残すハンドをクリック。`,
         keep: board.attack.filter((category) => category !== "air"),
         notes: [`チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。`, ...board.notes],
@@ -174,7 +181,10 @@ function actionTemplates(family, board) {
     {
       id: "small-cbet",
       label: "小CB",
-      line: `${family.preflop}${board.label}で${family.caller}チェック、${family.villain}が小さくCB。`,
+      street: "flop",
+      betSize: "33%",
+      turn: null,
+      line: `${family.preflop}フロップ ${board.label}。${family.caller}チェック、${family.villain}が33%サイズでCB。`,
       action: `${family.villain}の小CB後、${family.villain}側に残すハンドをクリック。`,
       keep: board.small,
       notes: [`小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。`, ...board.notes],
@@ -182,12 +192,32 @@ function actionTemplates(family, board) {
     {
       id: board.id.includes("986") || board.id.includes("876") || board.id.includes("654") ? "big-barrel" : "delayed-or-big",
       label: board.id.includes("986") || board.id.includes("876") || board.id.includes("654") ? "大きめ継続" : "遅延/大きめ",
-      line: `${family.preflop}${board.label}で一度アクションが入り、${family.villain}が次のストリートで大きめにベット。`,
-      action: `${family.villain}の強い継続アクション後、${family.villain}側に濃く残すハンドをクリック。`,
+      street: "turn",
+      betSize: "75%",
+      turn,
+      line: `${family.preflop}フロップ ${board.label}。${family.caller}チェック、${family.villain}が33%CB、${family.caller}がコール。ターン ${turn} で${family.caller}チェック、${family.villain}が75%サイズでベット。`,
+      action: `${family.villain}のターン75%ベット後、${family.villain}側に濃く残すハンドをクリック。`,
       keep: board.pressure,
-      notes: [`大きめの継続アクションはレンジ全体より強い塊に寄る。`, ...board.notes],
+      notes: [`ターン75%ベットは、フロップ小CBより強い完成役・強いドロー・強いペアに寄る。`, ...board.notes],
     },
   ];
+}
+
+function turnCardFor(boardId) {
+  return {
+    a72r: "8",
+    k83r: "2",
+    qj5tt: "9",
+    t54r: "J",
+    "876ss": "2",
+    "772r": "Q",
+    tt4r: "A",
+    aj5ss: "3",
+    "986tt": "K",
+    q83r: "T",
+    ak4r: "8",
+    "654r": "Q",
+  }[boardId] || "8";
 }
 
 const cases = [];
@@ -200,6 +230,9 @@ for (const family of lineFamilies) {
         heroPosition: family.hero,
         villainPosition: family.villain,
         board: board.board,
+        turn: action.turn,
+        street: action.street,
+        betSize: action.betSize,
         line: action.line,
         action: action.action,
         keep: Array.from(new Set(action.keep)),
