@@ -222,9 +222,7 @@
             <div id="paintGrid" class="paintGrid" aria-label="塗り絵用ハンドレンジ表"></div>
           </div>
           <div class="paintReview hidden" id="paintReview">
-            <div><span class="reviewMark correct"></span>一致</div>
-            <div><span class="reviewMark wrong"></span>違いあり: 正解色で表示</div>
-            <div><span class="reviewMark missing"></span>未回答</div>
+            <div>採点後は、間違い・未回答だけを正解レンジ色で表示します。</div>
           </div>
         </section>
       </section>
@@ -279,6 +277,12 @@
             <div><span>レンジ一致</span><strong id="readerScore">--</strong></div>
             <div><span>選択 / 正解</span><strong id="readerCombos">0/--</strong></div>
             <div><span>ケース</span><strong id="readerCaseCount">--</strong></div>
+          </div>
+          <div class="readerResult hidden" id="readerResult" aria-live="polite"></div>
+          <div class="readerLegend hidden" id="readerLegend" aria-label="採点表示の見方">
+            <div><span class="readerMark readerMarkCorrect">✓</span>正しく残した</div>
+            <div><span class="readerMark readerMarkExtra">+</span>残しすぎ</div>
+            <div><span class="readerMark readerMarkMissed">!</span>落としすぎ</div>
           </div>
           <div class="paintBoardWrap">
             <div id="readerGrid" class="readerGrid" aria-label="相手の残存レンジ"></div>

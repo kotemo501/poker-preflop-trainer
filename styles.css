@@ -1010,63 +1010,15 @@ body.chart-after-answer.chart-revealed .trainer {
   outline-offset: -3px;
 }
 
-.paintCell.correct::after,
-.paintCell.wrong::after,
-.paintCell.missing::after {
-  content: "";
-  position: absolute;
-  inset: 3px;
-  pointer-events: none;
-}
-
-.paintCell.correct::after {
-  border: 3px solid #067647;
-}
-
 .paintCell.correct {
-  box-shadow: inset 0 0 0 999px rgb(117 224 167 / 0.28);
+  background: #fff;
+  color: transparent;
+  opacity: 0.22;
 }
 
-.paintCell.wrong::after {
-  border: 4px solid #f04438;
-  box-shadow: inset 0 0 0 2px #fff;
-}
-
-.paintCell.wrong::before {
-  content: "正解";
-  position: absolute;
-  left: 3px;
-  top: 2px;
-  padding: 1px 3px;
-  border-radius: 3px;
-  background: #f04438;
-  color: #fff;
-  font-size: 9px;
-  font-weight: 900;
-  line-height: 1.1;
-  pointer-events: none;
-}
-
-.paintCell.missing::after {
-  border: 3px dashed #667085;
-}
-
-.paintCell.missing::before {
-  content: "未";
-  position: absolute;
-  left: 3px;
-  top: 2px;
-  width: 16px;
-  height: 14px;
-  display: grid;
-  place-items: center;
-  border-radius: 3px;
-  background: #667085;
-  color: #fff;
-  font-size: 9px;
-  font-weight: 900;
-  line-height: 1;
-  pointer-events: none;
+.paintCell.wrong,
+.paintCell.missing {
+  box-shadow: none;
 }
 
 .paintReview {
@@ -1077,32 +1029,6 @@ body.chart-after-answer.chart-revealed .trainer {
   color: #344054;
   font-size: 13px;
   font-weight: 800;
-}
-
-.paintReview div {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.reviewMark {
-  width: 18px;
-  height: 18px;
-  border: 3px solid;
-  background: #fff;
-}
-
-.reviewMark.correct {
-  border-color: #067647;
-}
-
-.reviewMark.wrong {
-  border-color: #f04438;
-}
-
-.reviewMark.missing {
-  border-style: dashed;
-  border-color: #667085;
 }
 
 .readerScenarioCard {
@@ -1276,6 +1202,89 @@ body.chart-after-answer.chart-revealed .trainer {
   font-size: 24px;
 }
 
+.readerResult {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px;
+  padding: 12px 14px;
+  border: 2px solid #d0d5dd;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.readerResult strong {
+  font-size: 22px;
+}
+
+.readerResult span {
+  color: #344054;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.readerResult.perfect {
+  border-color: #17b26a;
+  background: #ecfdf3;
+  color: #05603a;
+}
+
+.readerResult.close {
+  border-color: #fdb022;
+  background: #fffaeb;
+  color: #93370d;
+}
+
+.readerResult.needsWork {
+  border-color: #f04438;
+  background: #fff1f3;
+  color: #912018;
+}
+
+.readerLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 10px;
+}
+
+.readerLegend div {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #fff;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.readerMark {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.readerMarkCorrect {
+  background: #067647;
+}
+
+.readerMarkExtra {
+  background: #d92d20;
+}
+
+.readerMarkMissed {
+  background: #475467;
+}
+
 .readerGrid {
   display: grid;
   grid-template-columns: repeat(13, minmax(44px, 1fr));
@@ -1348,6 +1357,10 @@ body.chart-after-answer.chart-revealed .trainer {
   box-shadow: inset 0 0 0 999px rgb(117 224 167 / 0.38);
 }
 
+.readerCell.correct {
+  background: #d1fadf;
+}
+
 .readerCell.extra::after {
   border: 4px solid #f04438;
   box-shadow: inset 0 0 0 2px #fff;
@@ -1355,10 +1368,51 @@ body.chart-after-answer.chart-revealed .trainer {
 
 .readerCell.extra {
   box-shadow: inset 0 0 0 999px rgb(240 68 56 / 0.28);
+  background: #fee4e2;
 }
 
 .readerCell.missed::after {
   border: 3px dashed #667085;
+}
+
+.readerCell.missed {
+  background: repeating-linear-gradient(
+    135deg,
+    rgb(102 112 133 / 0.18) 0,
+    rgb(102 112 133 / 0.18) 7px,
+    rgb(255 255 255 / 0.92) 7px,
+    rgb(255 255 255 / 0.92) 14px
+  );
+}
+
+.readerCell[data-mark]::before {
+  content: attr(data-mark);
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgb(16 24 40 / 0.28);
+}
+
+.readerCell.correct::before {
+  background: #067647;
+}
+
+.readerCell.extra::before {
+  background: #d92d20;
+}
+
+.readerCell.missed::before {
+  background: #475467;
 }
 
 .readerNotes {
@@ -1750,13 +1804,6 @@ dialog img {
     border-width: 0.5px;
     font-size: clamp(7px, 2.35vw, 11px);
     line-height: 1;
-  }
-
-  .paintCell.correct::after,
-  .paintCell.wrong::after,
-  .paintCell.missing::after {
-    inset: 1px;
-    border-width: 2px;
   }
 
   .paintReview {

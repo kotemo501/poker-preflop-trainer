@@ -245,6 +245,8 @@ const els = {
   readerScore: document.querySelector("#readerScore"),
   readerCombos: document.querySelector("#readerCombos"),
   readerCaseCount: document.querySelector("#readerCaseCount"),
+  readerResult: document.querySelector("#readerResult"),
+  readerLegend: document.querySelector("#readerLegend"),
   readerNotes: document.querySelector("#readerNotes"),
 };
 
@@ -1352,6 +1354,11 @@ function renderReaderGrid() {
         else if (!selected && answerHands.has(hand)) cell.classList.add("missed");
       }
       cell.textContent = hand;
+      if (state.reader.checked) {
+        if (selected && answerHands.has(hand)) cell.dataset.mark = "✓";
+        else if (selected && !answerHands.has(hand)) cell.dataset.mark = "+";
+        else if (!selected && answerHands.has(hand)) cell.dataset.mark = "!";
+      }
       cell.title = showAnswer && item ? `${hand}: ${categoryLabel(item.category)}` : `${hand}: クリックで選択`;
       els.readerGrid.appendChild(cell);
     }
@@ -1373,9 +1380,10 @@ function renderReaderStats() {
     ? `${selected.length}/${retained.length}`
     : `${selected.length}/--`;
   els.readerCaseCount.textContent = `${caseIndex + 1}/${readerScenarios.length}`;
+  renderReaderResult({ correct, extra, missing, score, retainedCount: retained.length });
   if (state.reader.checked) {
     els.readerStatus.textContent = extra || missing
-      ? `一致${correct}、残しすぎ${extra}、落としすぎ${missing}。赤枠と点線を見直します。`
+      ? `一致${correct}、残しすぎ${extra}、落としすぎ${missing}。表の記号を見直します。`
       : "完全一致。残存レンジの形を確認します。";
   } else if (state.reader.revealed) {
     els.readerStatus.textContent = "残るレンジを表示中。カテゴリの偏りを表で確認します。";
@@ -1384,6 +1392,23 @@ function renderReaderStats() {
   }
   renderReaderNotes(scenario);
   els.readerReveal.textContent = state.reader.revealed ? "レンジを隠す" : "残るレンジを見る";
+}
+
+function renderReaderResult({ correct, extra, missing, score, retainedCount }) {
+  els.readerResult.className = "readerResult hidden";
+  els.readerResult.innerHTML = "";
+  els.readerLegend.classList.add("hidden");
+  if (!state.reader.checked) return;
+
+  const isPerfect = extra === 0 && missing === 0;
+  els.readerResult.className = `readerResult ${isPerfect ? "perfect" : score >= 70 ? "close" : "needsWork"}`;
+
+  const summary = document.createElement("strong");
+  summary.textContent = isPerfect ? "完全一致" : score >= 70 ? "だいたい近い" : "見直し多め";
+  const details = document.createElement("span");
+  details.textContent = `正しく残した ${correct}/${retainedCount} ・ 残しすぎ ${extra} ・ 落としすぎ ${missing}`;
+  els.readerResult.append(summary, details);
+  els.readerLegend.classList.remove("hidden");
 }
 
 function renderReaderNotes(scenario) {
