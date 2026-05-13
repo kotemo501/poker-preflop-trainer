@@ -1266,6 +1266,11 @@ body.chart-after-answer.chart-revealed .trainer {
   opacity: 0.16;
 }
 
+.readerCell.locked {
+  opacity: 0.22;
+  cursor: not-allowed;
+}
+
 .readerCell.selected::after,
 .readerCell.correct::after,
 .readerCell.extra::after,

@@ -1309,6 +1309,7 @@ function renderReaderGrid() {
   const scenario = currentReaderScenario();
   const retained = retainedReaderHands(scenario);
   const answerHands = new Set(retained.map((entry) => entry.hand));
+  const startingHands = readerStartingHandSet(scenario);
   const showAnswer = state.reader.revealed || state.reader.checked;
   els.readerGrid.innerHTML = "";
   for (let row = 0; row < 13; row += 1) {
@@ -1321,6 +1322,10 @@ function renderReaderGrid() {
       cell.type = "button";
       cell.dataset.hand = hand;
       cell.className = `readerCell ${showAnswer && item ? `rank-${level}` : "blank"}`;
+      if (!startingHands.has(hand)) {
+        cell.classList.add("locked");
+        cell.disabled = true;
+      }
       if (selected) cell.classList.add("selected");
       if (showAnswer && !item) cell.classList.add("faded");
       if (state.reader.checked) {
@@ -1357,7 +1362,7 @@ function renderReaderStats() {
   } else if (state.reader.revealed) {
     els.readerStatus.textContent = "残るレンジを表示中。カテゴリの偏りを表で確認します。";
   } else {
-    els.readerStatus.textContent = `${scenario.villainPosition}のアクション後に残ると思うハンドを表からクリックします。`;
+    els.readerStatus.textContent = `${scenario.villainPosition}の開始レンジ内から、アクション後に残るハンドを選びます。`;
   }
   els.readerNotes.innerHTML = state.reader.checked || state.reader.revealed
     ? scenario.notes.map((note) => `<p>${note}</p>`).join("")
@@ -1374,11 +1379,13 @@ function displayBoard(board, turn = null) {
 }
 
 function toggleReaderHand(hand) {
+  if (!readerStartingHandSet(currentReaderScenario()).has(hand)) return;
   if (state.reader.selectedHands.has(hand)) state.reader.selectedHands.delete(hand);
   else state.reader.selectedHands.add(hand);
 }
 
 function setReaderHand(hand, selected) {
+  if (!readerStartingHandSet(currentReaderScenario()).has(hand)) return;
   if (selected) state.reader.selectedHands.add(hand);
   else state.reader.selectedHands.delete(hand);
 }
@@ -1399,7 +1406,9 @@ function applyReaderDragAt(clientX, clientY) {
 function toggleReaderCategory(category) {
   const scenario = currentReaderScenario();
   const board = readerBoardForCategory(scenario);
+  const startingHands = readerStartingHandSet(scenario);
   const hands = allHands()
+    .filter((entry) => startingHands.has(entry.hand))
     .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, board) }))
     .filter((entry) => entry.category === category)
     .map((entry) => entry.hand);
@@ -1413,10 +1422,12 @@ function toggleReaderCategory(category) {
 function selectedReaderCategories() {
   const scenario = currentReaderScenario();
   const board = readerBoardForCategory(scenario);
+  const startingHands = readerStartingHandSet(scenario);
   const selected = Array.from(state.reader.selectedHands);
   return new Set(readerCategories
     .filter(([category]) => {
       const categoryHands = allHands()
+        .filter((entry) => startingHands.has(entry.hand))
         .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, board) }))
         .filter((entry) => entry.category === category)
         .map((entry) => entry.hand);
@@ -1426,12 +1437,19 @@ function selectedReaderCategories() {
 }
 
 function retainedReaderHands(scenario) {
-  const threshold = scenario.villainPosition === "BB" ? 1 : openingThreshold(scenario.villainPosition);
+  const startingHands = readerStartingHandSet(scenario);
   const board = readerBoardForCategory(scenario);
   return allHands()
-    .filter(({ row, col }) => correctPaintLevel(row, col) >= threshold)
+    .filter((entry) => startingHands.has(entry.hand))
     .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, board) }))
     .filter((entry) => scenario.keep.includes(entry.category));
+}
+
+function readerStartingHandSet(scenario) {
+  const threshold = scenario.villainPosition === "BB" ? 1 : openingThreshold(scenario.villainPosition);
+  return new Set(allHands()
+    .filter(({ row, col }) => correctPaintLevel(row, col) >= threshold)
+    .map(({ hand }) => hand));
 }
 
 function readerBoardForCategory(scenario) {
