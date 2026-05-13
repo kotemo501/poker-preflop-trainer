@@ -159,6 +159,7 @@ const state = {
     checked: false,
     revealed: false,
     isPainting: false,
+    touchStart: null,
   },
   reader: {
     scenarioId: readerScenarios[0].id,
@@ -1153,7 +1154,7 @@ function renderPaintGrid() {
       const hand = handAt(row, col);
       const answer = correctPaintLevel(row, col);
       const userLevel = entries[hand];
-      const shouldShowAnswerColor = state.paint.revealed || (state.paint.checked && target.has(hand) && userLevel !== answer);
+      const shouldShowAnswerColor = state.paint.revealed;
       const visibleLevel = shouldShowAnswerColor ? answer : userLevel;
       const cell = document.createElement("button");
       cell.type = "button";
@@ -1170,17 +1171,21 @@ function renderPaintGrid() {
       } else {
         cell.classList.add(`rank-${visibleLevel}`);
       }
-      if (state.paint.checked && target.has(hand)) {
+      if (state.paint.revealed && target.has(hand)) {
+        cell.classList.add("answer");
+        cell.disabled = true;
+      } else if (state.paint.checked && target.has(hand)) {
         if (userLevel === undefined) cell.classList.add("missing");
         else if (userLevel === answer) cell.classList.add("correct");
         else {
           cell.classList.add("wrong");
           cell.dataset.userLevel = String(userLevel);
+          cell.dataset.answerLevel = String(answer);
         }
       }
       cell.textContent = hand;
       cell.title = shouldShowAnswerColor
-        ? `${hand}: 正解は${levelNames[answer]}${userLevel === undefined ? " / 未回答" : ` / あなたは${levelNames[userLevel]}`}`
+        ? `${hand}: 正解は${levelNames[answer]}${userLevel === undefined ? "" : ` / あなたは${levelNames[userLevel]}`}`
         : `${hand}: ${userLevel === undefined ? "未回答" : levelNames[userLevel]}`;
       els.paintGrid.appendChild(cell);
     }
@@ -1195,17 +1200,25 @@ function renderPaintStats() {
   const correct = hands.filter(({ hand, row, col }) => entries[hand] === correctPaintLevel(row, col)).length;
   const accuracy = hands.length ? Math.round((correct / hands.length) * 100) : 0;
   els.paintFilled.textContent = `${filled}/${hands.length}`;
-  els.paintAccuracy.textContent = state.paint.checked || state.paint.revealed ? `${accuracy}%` : "--";
+  els.paintAccuracy.textContent = state.paint.checked ? `${accuracy}%` : "--";
   if (state.paint.revealed) {
-    els.paintStatus.textContent = "正解表示中。これはギブアップ扱いです。もう一度押すと自分の塗りに戻ります。";
+    els.paintStatus.textContent = state.paint.checked
+      ? "正解表示中。もう一度押すと採点結果に戻ります。"
+      : "正解表示中。もう一度押すと自分の塗りに戻ります。";
   } else if (state.paint.checked) {
     const misses = hands.length - correct;
-    els.paintStatus.textContent = `採点結果: ${correct}マス一致、${misses}マスに差があります。`;
+    els.paintStatus.textContent = `採点結果: ${correct}マス一致、${misses}マスに差があります。表はあなたの塗りのままです。`;
   } else {
     els.paintStatus.textContent = paintStatusText(hands.length);
   }
   els.paintReview.classList.toggle("hidden", !state.paint.checked);
-  els.paintReveal.textContent = state.paint.revealed ? "自分の塗りに戻す" : "正解を表示";
+  els.paintReview.textContent = state.paint.revealed
+    ? "正解レンジを表示中です。採点結果に戻すと、あなたの塗りとミス表示を確認できます。"
+    : "採点後も表はあなたの塗りのままです。赤枠は色違い、点線は未回答、薄いマスは正解済みです。";
+  els.paintCheck.textContent = state.paint.checked && !state.paint.revealed ? "再採点" : "採点";
+  els.paintReveal.textContent = state.paint.revealed
+    ? state.paint.checked ? "採点結果に戻す" : "自分の塗りに戻す"
+    : "正解を表示";
   els.paintBand.disabled = state.paint.drillMode !== "band";
   els.paintModeNote.textContent = state.mode === "tournament"
     ? "トーナメント用: リングより1ランク広い白地図"
@@ -1703,11 +1716,27 @@ els.paintBand.addEventListener("change", () => {
 els.paintGrid.addEventListener("pointerdown", (event) => {
   const cell = event.target.closest("button[data-hand]");
   if (!cell) return;
+  if (event.pointerType === "touch") {
+    state.paint.touchStart = {
+      hand: cell.dataset.hand,
+      x: event.clientX,
+      y: event.clientY,
+      moved: false,
+    };
+    return;
+  }
   state.paint.isPainting = true;
   event.preventDefault();
   setPaintLevel(cell.dataset.hand);
 });
 els.paintGrid.addEventListener("pointermove", (event) => {
+  if (event.pointerType === "touch") {
+    if (!state.paint.touchStart) return;
+    const dx = Math.abs(event.clientX - state.paint.touchStart.x);
+    const dy = Math.abs(event.clientY - state.paint.touchStart.y);
+    if (dx > 8 || dy > 8) state.paint.touchStart.moved = true;
+    return;
+  }
   if (!state.paint.isPainting) return;
   const target = document.elementFromPoint(event.clientX, event.clientY);
   const cell = target && target.closest("button[data-hand]");
@@ -1715,7 +1744,15 @@ els.paintGrid.addEventListener("pointermove", (event) => {
   event.preventDefault();
   setPaintLevel(cell.dataset.hand);
 });
-window.addEventListener("pointerup", () => {
+window.addEventListener("pointerup", (event) => {
+  if (event.pointerType === "touch" && state.paint.touchStart) {
+    if (!state.paint.touchStart.moved) setPaintLevel(state.paint.touchStart.hand);
+    state.paint.touchStart = null;
+  }
+  state.paint.isPainting = false;
+});
+window.addEventListener("pointercancel", () => {
+  state.paint.touchStart = null;
   state.paint.isPainting = false;
 });
 els.paintCheck.addEventListener("click", () => {
@@ -1727,7 +1764,6 @@ els.paintCheck.addEventListener("click", () => {
 });
 els.paintReveal.addEventListener("click", () => {
   state.paint.revealed = !state.paint.revealed;
-  if (state.paint.revealed) state.paint.checked = true;
   renderPaintGrid();
 });
 els.paintClear.addEventListener("click", () => {

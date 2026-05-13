@@ -972,6 +972,7 @@ body.chart-after-answer.chart-revealed .trainer {
 .paintBoardWrap {
   overflow: auto;
   padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .paintGrid {
@@ -979,6 +980,7 @@ body.chart-after-answer.chart-revealed .trainer {
   grid-template-columns: repeat(13, minmax(44px, 1fr));
   border: 2px solid #2d2725;
   min-width: 650px;
+  touch-action: pan-x pan-y;
 }
 
 .paintCell {
@@ -991,6 +993,7 @@ body.chart-after-answer.chart-revealed .trainer {
   font-weight: 900;
   font-size: 13px;
   position: relative;
+  touch-action: pan-x pan-y;
 }
 
 .paintCell.blank {
@@ -1010,15 +1013,63 @@ body.chart-after-answer.chart-revealed .trainer {
   outline-offset: -3px;
 }
 
-.paintCell.correct {
-  background: #fff;
-  color: transparent;
-  opacity: 0.22;
+.paintCell.answer {
+  box-shadow: inset 0 0 0 3px rgb(255 255 255 / 0.55);
+  cursor: default;
 }
 
-.paintCell.wrong,
-.paintCell.missing {
-  box-shadow: none;
+.paintCell.correct {
+  opacity: 0.38;
+}
+
+.paintCell.correct::after,
+.paintCell.wrong::after,
+.paintCell.missing::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  pointer-events: none;
+}
+
+.paintCell.correct::after {
+  border: 3px solid #067647;
+}
+
+.paintCell.wrong::after {
+  border: 4px solid #d92d20;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.paintCell.missing::after {
+  border: 3px dashed #475467;
+}
+
+.paintCell.wrong::before,
+.paintCell.missing::before {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 1px 3px rgb(16 24 40 / 0.28);
+}
+
+.paintCell.wrong::before {
+  content: "!";
+  background: #d92d20;
+}
+
+.paintCell.missing::before {
+  content: "?";
+  background: #475467;
 }
 
 .paintReview {
@@ -1635,6 +1686,7 @@ dialog img {
   .coloringPage {
     display: block;
     margin-top: 8px;
+    padding-bottom: 74px;
     border-width: 1px 0;
     border-radius: 0;
     box-shadow: none;
@@ -1680,9 +1732,18 @@ dialog img {
   }
 
   .paintPalette {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 4px;
+    padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: rgb(255 255 255 / 0.98);
+    box-shadow: 0 -10px 30px rgb(16 24 40 / 0.14);
   }
 
   .paintTools .selectControl,
@@ -1696,10 +1757,21 @@ dialog img {
   }
 
   .paintColor {
-    grid-template-columns: 22px minmax(0, 1fr);
-    gap: 5px;
-    padding: 7px 6px;
-    font-size: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 3px;
+    min-width: 0;
+    min-height: 46px;
+    padding: 5px 2px;
+    font-size: 8px;
+    line-height: 1.05;
+    text-align: center;
+  }
+
+  .paintColor .swatch {
+    width: 20px;
+    height: 20px;
   }
 
   #paintCheck,
@@ -1714,7 +1786,7 @@ dialog img {
   }
 
   .paintBoardPanel {
-    padding: 10px;
+    padding: 8px 6px;
     background: #f4f6f8;
   }
 
@@ -1776,34 +1848,84 @@ dialog img {
 
   .paintBoardPanel .panelHeader {
     display: grid;
-    gap: 6px;
-    margin-bottom: 8px;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .paintBoardPanel .panelHeader h2 {
+    font-size: 15px;
+  }
+
+  .paintBoardPanel .panelHeader > div p {
+    font-size: 11px;
   }
 
   #paintStatus {
     max-width: none;
     text-align: left;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .paintBoardWrap {
-    margin: 0 -10px;
-    padding: 0 10px 4px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
   }
 
-  .paintGrid,
+  .paintGrid {
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+    width: 100%;
+    min-width: 0;
+    border-width: 1px;
+  }
+
+  .paintCell {
+    aspect-ratio: 1 / 0.98;
+    border-width: 0.5px;
+    font-size: clamp(6px, 2.05vw, 8px);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
   .readerGrid {
     grid-template-columns: repeat(13, minmax(44px, 1fr));
     min-width: 650px;
     border-width: 1px;
   }
 
-  .paintCell,
   .readerCell {
     aspect-ratio: 1 / 0.92;
     border-width: 0.5px;
     font-size: clamp(7px, 2.35vw, 11px);
     line-height: 1;
+  }
+
+  .paintCell.correct::after,
+  .paintCell.wrong::after,
+  .paintCell.missing::after {
+    inset: 2px;
+  }
+
+  .paintCell.correct::after {
+    border-width: 2px;
+  }
+
+  .paintCell.wrong::after {
+    border-width: 2px;
+    box-shadow: none;
+  }
+
+  .paintCell.missing::after {
+    border-width: 2px;
+  }
+
+  .paintCell.wrong::before,
+  .paintCell.missing::before {
+    right: 1px;
+    top: 1px;
+    width: 13px;
+    height: 13px;
+    font-size: 9px;
   }
 
   .paintReview {
