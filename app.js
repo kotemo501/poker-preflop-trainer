@@ -24,6 +24,62 @@ const legendItems = [
   [0, "フォールド"],
 ];
 
+const readerCategories = [
+  ["made", "強い完成役", "ツーペア以上・強いペア"],
+  ["topPair", "トップペア", "ボード最高カードにヒット"],
+  ["draw", "ドロー", "ストレート/フラッシュの伸びしろ"],
+  ["overcards", "オーバーカード", "未ヒットだが高いカード2枚"],
+  ["underpair", "中小ペア", "ボードより下のポケット"],
+  ["air", "空振り", "ヒットも強いドローも薄い"],
+];
+
+let readerScenarios = [
+  {
+    id: "btn-cbet-a72",
+    title: "BTN vs BB / A72r / 小CB",
+    heroPosition: "BB",
+    villainPosition: "BTN",
+    board: "A72r",
+    line: "BTNがオープン、BBがコール。フロップ A72r でBTNが小さくCB。",
+    action: "BTNの小CB後に、BTN側にまだ残りやすいハンド群を選ぶ。",
+    keep: ["made", "topPair", "overcards", "air"],
+    notes: ["Aハイボードの小CBはレンジ全体で打ちやすい。", "強いAだけでなく、KQ/KJのような空振りも残りやすい。"],
+  },
+  {
+    id: "utg-barrel-kq7",
+    title: "UTG vs BTN / KQ7ss / ターン大きめ",
+    heroPosition: "BTN",
+    villainPosition: "UTG",
+    board: "KQ7ss",
+    line: "UTGがオープン、BTNがコール。KQ7ssでCB、ターンも大きくベット。",
+    action: "UTGの連続ベット後に、UTG側に濃く残るハンド群を選ぶ。",
+    keep: ["made", "topPair", "draw"],
+    notes: ["早い位置の連続ベットは強いKx/Qxと強いドローに寄りやすい。", "完全な空振りは小CB単発よりかなり減る。"],
+  },
+  {
+    id: "co-check-986",
+    title: "CO vs BB / 986tt / チェックバック",
+    heroPosition: "BB",
+    villainPosition: "CO",
+    board: "986tt",
+    line: "COがオープン、BBがコール。986ツートーンでCOがチェックバック。",
+    action: "COのチェックバック後に、CO側に残りやすいハンド群を選ぶ。",
+    keep: ["underpair", "overcards", "air", "draw"],
+    notes: ["ミドル連結ボードはBB側にも強く当たりやすい。", "チェックには諦め、ショーダウン狙い、弱めのドローが混ざる。"],
+  },
+  {
+    id: "bb-donk-t54",
+    title: "BB防衛 / T54r / ドンク",
+    heroPosition: "BTN",
+    villainPosition: "BB",
+    board: "T54r",
+    line: "BTNがオープン、BBがコール。T54rでBBが小さくドンク。",
+    action: "BBのドンク後に、BB側に残りやすいハンド群を選ぶ。",
+    keep: ["made", "topPair", "draw", "underpair"],
+    notes: ["BBは低中ボードに多くヒットしやすい。", "トップペア、ペア+ドロー、弱い完成役の保護ベットが残る。"],
+  },
+];
+
 const cashMatrix = [
   [8, 8, 7, 7, 7, 5, 5, 5, 5, 5, 5, 5, 5],
   [8, 8, 7, 6, 5, 5, 3, 3, 3, 3, 3, 3, 3],
@@ -41,6 +97,7 @@ const cashMatrix = [
 ];
 
 const storageKey = "preflop-trainer-v1";
+const paintStorageKey = "preflop-range-coloring-v1";
 const drillLabels = {
   all: "全部",
   open: "未参加ポット",
@@ -68,6 +125,7 @@ const mobileSeatPositions = {
 };
 
 const state = {
+  page: "trainer",
   mode: "cash",
   studyMode: "withChart",
   current: null,
@@ -77,12 +135,34 @@ const state = {
   recentQuestionIds: [],
   recentKinds: [],
   stats: loadStats(),
+  paint: {
+    selectedLevel: 8,
+    drillMode: "all",
+    bandLevel: 8,
+    entries: loadPaintEntries(),
+    mistakes: loadPaintMistakes(),
+    checked: false,
+    revealed: false,
+    isPainting: false,
+  },
+  reader: {
+    scenarioId: readerScenarios[0].id,
+    selectedHands: new Set(),
+    checked: false,
+    revealed: false,
+  },
   renderedOnce: false,
 };
 
 const els = {
+  pageButtons: document.querySelectorAll("[data-page]"),
+  trainerControls: document.querySelectorAll(".trainerControl"),
   modeButtons: document.querySelectorAll("[data-mode]"),
   studyButtons: document.querySelectorAll("[data-study-mode]"),
+  studyFlow: document.querySelector(".studyFlow"),
+  trainer: document.querySelector(".trainer"),
+  coloringPage: document.querySelector("#coloringPage"),
+  readerPage: document.querySelector("#readerPage"),
   skipMastered: document.querySelector("#skipMastered"),
   scenarioType: document.querySelector("#scenarioType"),
   handText: document.querySelector("#handText"),
@@ -117,6 +197,35 @@ const els = {
   whyPanel: document.querySelector("#whyPanel"),
   whyTitle: document.querySelector("#whyTitle"),
   whyList: document.querySelector("#whyList"),
+  paintPalette: document.querySelector("#paintPalette"),
+  paintGrid: document.querySelector("#paintGrid"),
+  paintAccuracy: document.querySelector("#paintAccuracy"),
+  paintFilled: document.querySelector("#paintFilled"),
+  paintDrillMode: document.querySelector("#paintDrillMode"),
+  paintBand: document.querySelector("#paintBand"),
+  paintCheck: document.querySelector("#paintCheck"),
+  paintReveal: document.querySelector("#paintReveal"),
+  paintClear: document.querySelector("#paintClear"),
+  paintStatus: document.querySelector("#paintStatus"),
+  paintReview: document.querySelector("#paintReview"),
+  paintModeNote: document.querySelector("#paintModeNote"),
+  readerScenario: document.querySelector("#readerScenario"),
+  readerBoard: document.querySelector("#readerBoard"),
+  readerLine: document.querySelector("#readerLine"),
+  readerHero: document.querySelector("#readerHero"),
+  readerVillain: document.querySelector("#readerVillain"),
+  readerTask: document.querySelector("#readerTask"),
+  readerAction: document.querySelector("#readerAction"),
+  readerRandom: document.querySelector("#readerRandom"),
+  readerCheck: document.querySelector("#readerCheck"),
+  readerReveal: document.querySelector("#readerReveal"),
+  readerReset: document.querySelector("#readerReset"),
+  readerGrid: document.querySelector("#readerGrid"),
+  readerStatus: document.querySelector("#readerStatus"),
+  readerScore: document.querySelector("#readerScore"),
+  readerCombos: document.querySelector("#readerCombos"),
+  readerCaseCount: document.querySelector("#readerCaseCount"),
+  readerNotes: document.querySelector("#readerNotes"),
 };
 
 function handAt(row, col) {
@@ -943,6 +1052,371 @@ function renderLegend() {
   });
 }
 
+function currentPaintEntries() {
+  if (!state.paint.entries[state.mode]) state.paint.entries[state.mode] = {};
+  return state.paint.entries[state.mode];
+}
+
+function correctPaintLevel(row, col) {
+  return state.mode === "tournament" ? Math.min(8, cashMatrix[row][col] + 1) : cashMatrix[row][col];
+}
+
+function paintTargetHands() {
+  const mode = state.paint.drillMode;
+  const mistakes = state.paint.mistakes[state.mode] || [];
+  const hands = allHands().filter(({ row, col, hand }) => {
+    const level = correctPaintLevel(row, col);
+    if (mode === "band") return level === state.paint.bandLevel;
+    if (mode === "boundary") return isPaintBoundary(row, col);
+    if (mode === "mistakes") return mistakes.includes(hand);
+    return true;
+  });
+  return hands;
+}
+
+function paintTargetSet() {
+  return new Set(paintTargetHands().map(({ hand }) => hand));
+}
+
+function isPaintBoundary(row, col) {
+  const level = correctPaintLevel(row, col);
+  return [
+    [-1, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
+  ].some(([rowOffset, colOffset]) => {
+    const nextRow = row + rowOffset;
+    const nextCol = col + colOffset;
+    if (nextRow < 0 || nextRow > 12 || nextCol < 0 || nextCol > 12) return false;
+    return correctPaintLevel(nextRow, nextCol) !== level;
+  });
+}
+
+function paintMistakeHands() {
+  const entries = currentPaintEntries();
+  return paintTargetHands()
+    .filter(({ hand, row, col }) => entries[hand] !== correctPaintLevel(row, col))
+    .map(({ hand }) => hand);
+}
+
+function renderPaintPalette() {
+  els.paintPalette.innerHTML = "";
+  const paletteItems = state.paint.drillMode === "band"
+    ? legendItems.filter(([level]) => level === state.paint.bandLevel || level === 0)
+    : legendItems;
+  paletteItems.forEach(([level, label]) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `paintColor${state.paint.selectedLevel === level ? " active" : ""}`;
+    button.dataset.level = String(level);
+    button.innerHTML = `<span class="swatch rank-${level}"></span><span>${label}</span>`;
+    els.paintPalette.appendChild(button);
+  });
+
+  const eraser = document.createElement("button");
+  eraser.type = "button";
+  eraser.className = `paintColor eraser${state.paint.selectedLevel === null ? " active" : ""}`;
+  eraser.dataset.level = "erase";
+  eraser.innerHTML = '<span class="swatch blankSwatch"></span><span>消しゴム</span>';
+  els.paintPalette.appendChild(eraser);
+}
+
+function renderPaintGrid() {
+  const entries = currentPaintEntries();
+  const target = paintTargetSet();
+  els.paintGrid.innerHTML = "";
+  for (let row = 0; row < 13; row += 1) {
+    for (let col = 0; col < 13; col += 1) {
+      const hand = handAt(row, col);
+      const answer = correctPaintLevel(row, col);
+      const userLevel = entries[hand];
+      const visibleLevel = state.paint.revealed ? answer : userLevel;
+      const cell = document.createElement("button");
+      cell.type = "button";
+      cell.className = "paintCell";
+      cell.dataset.hand = hand;
+      cell.dataset.row = String(row);
+      cell.dataset.col = String(col);
+      if (!target.has(hand)) {
+        cell.classList.add("locked");
+        cell.disabled = true;
+      }
+      if (visibleLevel === undefined) {
+        cell.classList.add("blank");
+      } else {
+        cell.classList.add(`rank-${visibleLevel}`);
+      }
+      if (state.paint.checked && target.has(hand)) {
+        if (userLevel === undefined) cell.classList.add("missing");
+        else if (userLevel === answer) cell.classList.add("correct");
+        else cell.classList.add("wrong");
+      }
+      cell.textContent = hand;
+      cell.title = state.paint.revealed
+        ? `${hand}: 正解は${levelNames[answer]}`
+        : `${hand}: ${userLevel === undefined ? "未回答" : levelNames[userLevel]}`;
+      els.paintGrid.appendChild(cell);
+    }
+  }
+  renderPaintStats();
+}
+
+function renderPaintStats() {
+  const entries = currentPaintEntries();
+  const hands = paintTargetHands();
+  const filled = hands.filter(({ hand }) => entries[hand] !== undefined).length;
+  const correct = hands.filter(({ hand, row, col }) => entries[hand] === correctPaintLevel(row, col)).length;
+  const accuracy = hands.length ? Math.round((correct / hands.length) * 100) : 0;
+  els.paintFilled.textContent = `${filled}/${hands.length}`;
+  els.paintAccuracy.textContent = state.paint.checked || state.paint.revealed ? `${accuracy}%` : "--";
+  if (state.paint.revealed) {
+    els.paintStatus.textContent = "正解表示中。これはギブアップ扱いです。もう一度押すと自分の塗りに戻ります。";
+  } else if (state.paint.checked) {
+    const misses = hands.length - correct;
+    els.paintStatus.textContent = `採点結果: ${correct}マス一致、${misses}マスに差があります。`;
+  } else {
+    els.paintStatus.textContent = paintStatusText(hands.length);
+  }
+  els.paintReview.classList.toggle("hidden", !state.paint.checked);
+  els.paintReveal.textContent = state.paint.revealed ? "自分の塗りに戻す" : "正解を表示";
+  els.paintBand.disabled = state.paint.drillMode !== "band";
+  els.paintModeNote.textContent = state.mode === "tournament"
+    ? "トーナメント用: リングより1ランク広い白地図"
+    : "リングゲーム用の白地図";
+}
+
+function paintStatusText(targetCount) {
+  if (state.paint.drillMode === "band") return `${levelNames[state.paint.bandLevel]}の追加分だけを塗ります。対象は${targetCount}マスです。`;
+  if (state.paint.drillMode === "boundary") return `色が変わる境界だけを塗ります。対象は${targetCount}マスです。`;
+  if (state.paint.drillMode === "mistakes") {
+    return targetCount ? `前回ミスしたマスだけ再テストします。対象は${targetCount}マスです。` : "再テスト対象はありません。先に採点するとミスだけを復習できます。";
+  }
+  return "色を選んで、覚えている範囲を表に塗ります。";
+}
+
+function setPaintLevel(hand) {
+  if (!paintTargetSet().has(hand)) return;
+  const entries = currentPaintEntries();
+  if (state.paint.selectedLevel === null) delete entries[hand];
+  else entries[hand] = state.paint.selectedLevel;
+  state.paint.checked = false;
+  state.paint.revealed = false;
+  savePaintEntries();
+  renderPaintGrid();
+}
+
+function savePaintEntries() {
+  try {
+    localStorage.setItem(paintStorageKey, JSON.stringify(state.paint.entries));
+  } catch {
+    // Storage can be unavailable in private browsing; keep the in-memory answer.
+  }
+}
+
+function loadPaintEntries() {
+  try {
+    return JSON.parse(localStorage.getItem(paintStorageKey) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function savePaintMistakes() {
+  try {
+    localStorage.setItem(`${paintStorageKey}-mistakes`, JSON.stringify(state.paint.mistakes));
+  } catch {
+    // Keep the session usable even when persistence is blocked.
+  }
+}
+
+function loadPaintMistakes() {
+  try {
+    return JSON.parse(localStorage.getItem(`${paintStorageKey}-mistakes`) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function setPage(page) {
+  state.page = page;
+  els.pageButtons.forEach((button) => button.classList.toggle("active", button.dataset.page === page));
+  els.studyFlow.classList.toggle("hidden", page !== "trainer");
+  els.trainer.classList.toggle("hidden", page !== "trainer");
+  els.coloringPage.classList.toggle("hidden", page !== "coloring");
+  els.readerPage.classList.toggle("hidden", page !== "reader");
+  els.trainerControls.forEach((control) => control.classList.toggle("hidden", page !== "trainer"));
+  if (page === "coloring") {
+    renderPaintPalette();
+    renderPaintGrid();
+  } else if (page === "reader") {
+    if (!state.reader.checked && !state.reader.revealed && state.reader.selectedHands.size === 0) {
+      pickRandomReaderCase();
+      return;
+    }
+    renderReader();
+  }
+}
+
+function currentReaderScenario() {
+  return readerScenarios.find((scenario) => scenario.id === state.reader.scenarioId) || readerScenarios[0];
+}
+
+function renderReaderScenarioOptions() {
+  els.readerScenario.innerHTML = "";
+  readerScenarios.forEach((scenario) => {
+    const option = document.createElement("option");
+    option.value = scenario.id;
+    option.textContent = scenario.title;
+    els.readerScenario.appendChild(option);
+  });
+  els.readerScenario.value = state.reader.scenarioId;
+}
+
+function renderReader() {
+  const scenario = currentReaderScenario();
+  els.readerBoard.textContent = scenario.board;
+  els.readerLine.textContent = scenario.line;
+  els.readerHero.textContent = scenario.heroPosition;
+  els.readerVillain.textContent = scenario.villainPosition;
+  els.readerTask.textContent = `${scenario.villainPosition}に残るハンドをクリック`;
+  els.readerAction.textContent = scenario.action;
+  renderReaderGrid();
+  renderReaderStats();
+}
+
+function renderReaderGrid() {
+  const scenario = currentReaderScenario();
+  const retained = retainedReaderHands(scenario);
+  const caseIndex = readerScenarios.findIndex((item) => item.id === scenario.id);
+  const answerHands = new Set(retained.map((entry) => entry.hand));
+  const showAnswer = state.reader.revealed || state.reader.checked;
+  els.readerGrid.innerHTML = "";
+  for (let row = 0; row < 13; row += 1) {
+    for (let col = 0; col < 13; col += 1) {
+      const hand = handAt(row, col);
+      const level = correctPaintLevel(row, col);
+      const item = retained.find((entry) => entry.hand === hand);
+      const selected = state.reader.selectedHands.has(hand);
+      const cell = document.createElement("button");
+      cell.type = "button";
+      cell.dataset.hand = hand;
+      cell.className = `readerCell ${showAnswer && item ? `rank-${level}` : "blank"}`;
+      if (selected) cell.classList.add("selected");
+      if (showAnswer && !item) cell.classList.add("faded");
+      if (state.reader.checked) {
+        if (selected && answerHands.has(hand)) cell.classList.add("correct");
+        else if (selected && !answerHands.has(hand)) cell.classList.add("extra");
+        else if (!selected && answerHands.has(hand)) cell.classList.add("missed");
+      }
+      cell.textContent = hand;
+      cell.title = showAnswer && item ? `${hand}: ${categoryLabel(item.category)}` : `${hand}: クリックで選択`;
+      els.readerGrid.appendChild(cell);
+    }
+  }
+}
+
+function renderReaderStats() {
+  const scenario = currentReaderScenario();
+  const retained = retainedReaderHands(scenario);
+  const answerHands = new Set(retained.map((entry) => entry.hand));
+  const selected = Array.from(state.reader.selectedHands);
+  const correct = selected.filter((hand) => answerHands.has(hand)).length;
+  const extra = selected.filter((hand) => !answerHands.has(hand)).length;
+  const missing = retained.filter((entry) => !state.reader.selectedHands.has(entry.hand)).length;
+  const score = Math.max(0, Math.round(((correct - extra * 0.65 - missing * 0.35) / Math.max(1, retained.length)) * 100));
+  els.readerScore.textContent = state.reader.checked ? `${score}%` : "--";
+  els.readerCombos.textContent = state.reader.revealed || state.reader.checked
+    ? `${selected.length}/${retained.length}`
+    : `${selected.length}/--`;
+  els.readerCaseCount.textContent = `${caseIndex + 1}/${readerScenarios.length}`;
+  if (state.reader.checked) {
+    els.readerStatus.textContent = extra || missing
+      ? `一致${correct}、残しすぎ${extra}、落としすぎ${missing}。赤枠と点線を見直します。`
+      : "完全一致。残存レンジの形を確認します。";
+  } else if (state.reader.revealed) {
+    els.readerStatus.textContent = "残るレンジを表示中。カテゴリの偏りを表で確認します。";
+  } else {
+    els.readerStatus.textContent = `${scenario.villainPosition}のアクション後に残ると思うハンドを表からクリックします。`;
+  }
+  els.readerNotes.innerHTML = state.reader.checked || state.reader.revealed
+    ? scenario.notes.map((note) => `<p>${note}</p>`).join("")
+    : "";
+  els.readerReveal.textContent = state.reader.revealed ? "レンジを隠す" : "残るレンジを見る";
+}
+
+function retainedReaderHands(scenario) {
+  const threshold = scenario.villainPosition === "BB" ? 1 : openingThreshold(scenario.villainPosition);
+  return allHands()
+    .filter(({ row, col }) => correctPaintLevel(row, col) >= threshold)
+    .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, scenario.board) }))
+    .filter((entry) => scenario.keep.includes(entry.category));
+}
+
+function readerHandCategory(hand, board) {
+  const profile = handProfile(hand);
+  const boardRanks = board.replace(/[^AKQJT98765432]/g, "").split("");
+  const boardPowers = boardRanks.map(rankPower);
+  const highBoard = Math.max(...boardPowers);
+  const lowBoard = Math.min(...boardPowers);
+  const handPowers = [rankPower(profile.first), rankPower(profile.second)];
+  const pairedBoard = new Set(boardRanks).size < boardRanks.length;
+  const matches = handPowers.filter((power) => boardPowers.includes(power)).length;
+  if (profile.pair && handPowers[0] >= highBoard) return "made";
+  if (matches >= 2 || (pairedBoard && matches >= 1)) return "made";
+  if (matches === 1 && Math.max(...handPowers) >= highBoard) return "topPair";
+  if (profile.suited && board.includes("ss")) return "draw";
+  if (!profile.pair && profile.gap <= 1 && profile.low <= highBoard && profile.high >= lowBoard) return "draw";
+  if (handPowers.every((power) => power > highBoard)) return "overcards";
+  if (profile.pair && handPowers[0] < highBoard) return "underpair";
+  return "air";
+}
+
+function categoryLabel(category) {
+  const item = readerCategories.find(([id]) => id === category);
+  return item ? item[1] : category;
+}
+
+function pickRandomReaderCase() {
+  if (!readerScenarios.length) return;
+  let next = readerScenarios[Math.floor(Math.random() * readerScenarios.length)];
+  if (readerScenarios.length > 1) {
+    while (next.id === state.reader.scenarioId) {
+      next = readerScenarios[Math.floor(Math.random() * readerScenarios.length)];
+    }
+  }
+  state.reader.scenarioId = next.id;
+  els.readerScenario.value = next.id;
+  resetReaderAnswer();
+  renderReader();
+}
+
+function resetReaderAnswer() {
+  state.reader.selectedHands = new Set();
+  state.reader.checked = false;
+  state.reader.revealed = false;
+}
+
+function loadReaderCases() {
+  return fetch("./data/range-reading-cases.json")
+    .then((response) => {
+      if (!response.ok) throw new Error("case fetch failed");
+      return response.json();
+    })
+    .then((payload) => {
+      if (!Array.isArray(payload.cases) || !payload.cases.length) return;
+      readerScenarios = payload.cases;
+      state.reader.scenarioId = readerScenarios[Math.floor(Math.random() * readerScenarios.length)].id;
+      resetReaderAnswer();
+      renderReaderScenarioOptions();
+      renderReader();
+    })
+    .catch(() => {
+      renderReaderScenarioOptions();
+      renderReader();
+    });
+}
+
 function renderStats() {
   const rate = state.stats.total ? Math.round((state.stats.correct / state.stats.total) * 100) : 0;
   els.accuracy.textContent = `${rate}%`;
@@ -974,7 +1448,11 @@ function loadStats() {
 }
 
 function saveStats() {
-  localStorage.setItem(storageKey, JSON.stringify(state.stats));
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(state.stats));
+  } catch {
+    // Keep training usable when browser storage is unavailable.
+  }
 }
 
 els.modeButtons.forEach((button) => {
@@ -982,8 +1460,16 @@ els.modeButtons.forEach((button) => {
     state.mode = button.dataset.mode;
     els.modeButtons.forEach((item) => item.classList.toggle("active", item === button));
     els.modeNote.textContent = state.mode === "tournament" ? "トーナメント用: リングより1ランク広く判定" : "リングゲーム用";
-    renderQuestion();
+    state.paint.checked = false;
+    state.paint.revealed = false;
+    renderPaintGrid();
+    if (state.page === "trainer") renderQuestion();
+    if (state.page === "reader") renderReader();
   });
+});
+
+els.pageButtons.forEach((button) => {
+  button.addEventListener("click", () => setPage(button.dataset.page));
 });
 
 els.studyButtons.forEach((button) => {
@@ -1024,7 +1510,99 @@ els.resetStats.addEventListener("click", () => {
   renderStats();
   renderQuestion();
 });
+els.paintPalette.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-level]");
+  if (!button) return;
+  state.paint.selectedLevel = button.dataset.level === "erase" ? null : Number(button.dataset.level);
+  renderPaintPalette();
+});
+els.paintDrillMode.addEventListener("change", () => {
+  state.paint.drillMode = els.paintDrillMode.value;
+  if (state.paint.drillMode === "band") state.paint.selectedLevel = state.paint.bandLevel;
+  state.paint.checked = false;
+  state.paint.revealed = false;
+  renderPaintPalette();
+  renderPaintGrid();
+});
+els.paintBand.addEventListener("change", () => {
+  state.paint.bandLevel = Number(els.paintBand.value);
+  state.paint.selectedLevel = state.paint.bandLevel;
+  state.paint.checked = false;
+  state.paint.revealed = false;
+  renderPaintPalette();
+  renderPaintGrid();
+});
+els.paintGrid.addEventListener("pointerdown", (event) => {
+  const cell = event.target.closest("button[data-hand]");
+  if (!cell) return;
+  state.paint.isPainting = true;
+  event.preventDefault();
+  setPaintLevel(cell.dataset.hand);
+});
+els.paintGrid.addEventListener("pointermove", (event) => {
+  if (!state.paint.isPainting) return;
+  const target = document.elementFromPoint(event.clientX, event.clientY);
+  const cell = target && target.closest("button[data-hand]");
+  if (!cell) return;
+  event.preventDefault();
+  setPaintLevel(cell.dataset.hand);
+});
+window.addEventListener("pointerup", () => {
+  state.paint.isPainting = false;
+});
+els.paintCheck.addEventListener("click", () => {
+  state.paint.checked = true;
+  state.paint.revealed = false;
+  state.paint.mistakes[state.mode] = paintMistakeHands();
+  savePaintMistakes();
+  renderPaintGrid();
+});
+els.paintReveal.addEventListener("click", () => {
+  state.paint.revealed = !state.paint.revealed;
+  if (state.paint.revealed) state.paint.checked = true;
+  renderPaintGrid();
+});
+els.paintClear.addEventListener("click", () => {
+  state.paint.entries[state.mode] = {};
+  state.paint.checked = false;
+  state.paint.revealed = false;
+  savePaintEntries();
+  renderPaintGrid();
+});
+els.readerScenario.addEventListener("change", () => {
+  state.reader.scenarioId = els.readerScenario.value;
+  resetReaderAnswer();
+  renderReader();
+});
+els.readerRandom.addEventListener("click", pickRandomReaderCase);
+els.readerGrid.addEventListener("click", (event) => {
+  const cell = event.target.closest("button[data-hand]");
+  if (!cell) return;
+  const hand = cell.dataset.hand;
+  if (state.reader.selectedHands.has(hand)) state.reader.selectedHands.delete(hand);
+  else state.reader.selectedHands.add(hand);
+  state.reader.checked = false;
+  state.reader.revealed = false;
+  renderReader();
+});
+els.readerCheck.addEventListener("click", () => {
+  state.reader.checked = true;
+  state.reader.revealed = true;
+  renderReader();
+});
+els.readerReveal.addEventListener("click", () => {
+  state.reader.revealed = !state.reader.revealed;
+  renderReader();
+});
+els.readerReset.addEventListener("click", () => {
+  resetReaderAnswer();
+  renderReader();
+});
 
 renderLegend();
+renderPaintPalette();
+renderPaintGrid();
+loadReaderCases();
 renderStats();
+setPage("trainer");
 renderQuestion();

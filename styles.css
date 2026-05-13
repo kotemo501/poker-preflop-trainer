@@ -167,6 +167,15 @@ h2 {
   color: #fff;
 }
 
+.appSwitch button {
+  min-width: 92px;
+}
+
+.appSwitch {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .toggle {
   display: inline-flex;
   gap: 8px;
@@ -701,7 +710,7 @@ h2 {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .quizFooter {
@@ -859,6 +868,440 @@ body.chart-after-answer.chart-revealed .trainer {
 .rank-1 { background: #f6c6d9; }
 .rank-0 { background: #c9c9c9; }
 
+.coloringPage {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgb(16 24 40 / 0.08);
+  overflow: hidden;
+}
+
+.readerPage {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  margin-top: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgb(16 24 40 / 0.08);
+  overflow: hidden;
+}
+
+.paintTools,
+.readerTools {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 16px;
+  border-right: 1px solid var(--line);
+  background: #fbfcfd;
+}
+
+.paintScore {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.paintScore span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.paintScore strong {
+  font-size: 26px;
+}
+
+.paintPalette {
+  display: grid;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.paintColor {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.paintColor.active {
+  border-color: #101828;
+  box-shadow: 0 0 0 3px rgb(16 24 40 / 0.12);
+}
+
+.blankSwatch {
+  background:
+    linear-gradient(135deg, transparent 45%, #98a2b3 46%, #98a2b3 54%, transparent 55%),
+    #ffffff;
+}
+
+#paintCheck {
+  padding: 12px 10px;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 900;
+}
+
+.paintBoardPanel {
+  min-width: 0;
+  padding: 16px;
+}
+
+.paintBoardPanel .panelHeader {
+  align-items: start;
+}
+
+#paintStatus {
+  max-width: 460px;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.paintBoardWrap {
+  overflow: auto;
+  padding-bottom: 2px;
+}
+
+.paintGrid {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(44px, 1fr));
+  border: 2px solid #2d2725;
+  min-width: 650px;
+}
+
+.paintCell {
+  aspect-ratio: 1 / 0.76;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  border: 1px solid #2d2725;
+  border-radius: 0;
+  font-weight: 900;
+  font-size: 13px;
+  position: relative;
+}
+
+.paintCell.blank {
+  background:
+    linear-gradient(135deg, rgb(16 24 40 / 0.035) 25%, transparent 25%) 0 0 / 12px 12px,
+    #ffffff;
+}
+
+.paintCell.locked {
+  opacity: 0.26;
+  cursor: not-allowed;
+}
+
+.paintCell:hover {
+  z-index: 2;
+  outline: 3px solid #101828;
+  outline-offset: -3px;
+}
+
+.paintCell.correct::after,
+.paintCell.wrong::after,
+.paintCell.missing::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  pointer-events: none;
+}
+
+.paintCell.correct::after {
+  border: 3px solid #067647;
+}
+
+.paintCell.wrong::after {
+  border: 4px solid #f04438;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.paintCell.missing::after {
+  border: 3px dashed #667085;
+}
+
+.paintReview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.paintReview div {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reviewMark {
+  width: 18px;
+  height: 18px;
+  border: 3px solid;
+  background: #fff;
+}
+
+.reviewMark.correct {
+  border-color: #067647;
+}
+
+.reviewMark.wrong {
+  border-color: #f04438;
+}
+
+.reviewMark.missing {
+  border-style: dashed;
+  border-color: #667085;
+}
+
+.readerScenarioCard {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid #d7e3df;
+  border-radius: 8px;
+  background: #f6fbf9;
+}
+
+.readerScenarioCard strong {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.readerScenarioCard p {
+  margin: 0;
+  color: #344054;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.readerRoles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.readerRoles div,
+.readerTask {
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid #edf0f4;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.readerRoles span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.readerRoles strong {
+  font-size: 22px;
+}
+
+.readerTask {
+  border-color: #c7d7fe;
+  background: #f5f8ff;
+}
+
+.readerTask strong {
+  font-size: 15px;
+}
+
+.readerTask p {
+  margin: 0;
+  color: #344054;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.readerPick {
+  display: grid;
+  gap: 7px;
+}
+
+.readerPick button {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+  text-align: left;
+  font-weight: 800;
+}
+
+.readerPick button strong {
+  font-size: 13px;
+}
+
+.readerPick button span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.readerPick button.active {
+  border-color: #101828;
+  background: #101828;
+  color: #fff;
+}
+
+.readerPick button.active span {
+  color: #d0d5dd;
+}
+
+#readerRandom,
+#readerCheck {
+  padding: 12px 10px;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 900;
+}
+
+.readerBoardPanel {
+  min-width: 0;
+  padding: 16px;
+}
+
+.readerMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 180px));
+  gap: 10px;
+  margin: 0 0 12px;
+}
+
+.readerMetrics div {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+  border: 1px solid #edf0f4;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.readerMetrics span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.readerMetrics strong {
+  font-size: 24px;
+}
+
+.readerGrid {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(44px, 1fr));
+  min-width: 650px;
+  border: 2px solid #2d2725;
+}
+
+.readerCell {
+  aspect-ratio: 1 / 0.76;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  border: 1px solid #2d2725;
+  border-radius: 0;
+  font-weight: 900;
+  font-size: 13px;
+  position: relative;
+}
+
+.readerCell.blank {
+  background: #ffffff;
+}
+
+.readerCell.faded {
+  opacity: 0.16;
+}
+
+.readerCell.selected::after,
+.readerCell.correct::after,
+.readerCell.extra::after,
+.readerCell.missed::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  pointer-events: none;
+}
+
+.readerCell.selected::after {
+  border: 3px solid #101828;
+}
+
+.readerCell.selected {
+  background: #fff3c6;
+  color: #101828;
+  box-shadow: inset 0 0 0 999px rgb(251 188 5 / 0.36);
+}
+
+.readerCell.selected.rank-8,
+.readerCell.selected.rank-7,
+.readerCell.selected.rank-6,
+.readerCell.selected.rank-5,
+.readerCell.selected.rank-4,
+.readerCell.selected.rank-3,
+.readerCell.selected.rank-2,
+.readerCell.selected.rank-1,
+.readerCell.selected.rank-0 {
+  box-shadow: inset 0 0 0 999px rgb(251 188 5 / 0.42);
+}
+
+.readerCell.correct::after {
+  border: 3px solid #067647;
+}
+
+.readerCell.correct {
+  box-shadow: inset 0 0 0 999px rgb(117 224 167 / 0.38);
+}
+
+.readerCell.extra::after {
+  border: 4px solid #f04438;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.readerCell.extra {
+  box-shadow: inset 0 0 0 999px rgb(240 68 56 / 0.28);
+}
+
+.readerCell.missed::after {
+  border: 3px dashed #667085;
+}
+
+.readerNotes {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.readerNotes p {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid #f7d77a;
+  border-radius: 8px;
+  background: #fffdf3;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
 dialog {
   width: min(980px, calc(100% - 26px));
   border: 1px solid var(--line);
@@ -999,6 +1442,10 @@ dialog img {
     white-space: nowrap;
   }
 
+  .appSwitch button {
+    min-width: 0;
+  }
+
   .toggle,
   .selectControl {
     width: 100%;
@@ -1031,6 +1478,166 @@ dialog img {
     box-shadow: none;
     width: 100%;
     min-width: 0;
+  }
+
+  .coloringPage {
+    display: block;
+    margin-top: 8px;
+    border-width: 1px 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .readerPage {
+    display: block;
+    margin-top: 8px;
+    border-width: 1px 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .paintTools,
+  .readerTools {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .paintScore {
+    display: grid;
+    justify-items: center;
+    gap: 2px;
+    padding: 7px 4px;
+    border: 0;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .paintScore span {
+    font-size: 10px;
+  }
+
+  .paintScore strong {
+    font-size: 19px;
+    line-height: 1;
+  }
+
+  .paintPalette {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .paintTools .selectControl,
+  .readerTools .selectControl,
+  .readerScenarioCard,
+  .readerRoles,
+  .readerTask,
+  .readerPick {
+    grid-column: 1 / -1;
+  }
+
+  .paintColor {
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 5px;
+    padding: 7px 6px;
+    font-size: 10px;
+  }
+
+  #paintCheck,
+  #readerRandom,
+  #readerCheck,
+  .paintTools .ghost,
+  .readerTools .ghost {
+    min-height: 42px;
+    padding: 9px 7px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .paintBoardPanel {
+    padding: 10px;
+    background: #f4f6f8;
+  }
+
+  .readerBoardPanel {
+    padding: 10px;
+    background: #f4f6f8;
+  }
+
+  .readerBoardPanel .panelHeader {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .readerScenarioCard strong {
+    font-size: 28px;
+  }
+
+  .readerPick {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .readerPick button {
+    padding: 9px 7px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .readerMetrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .paintBoardPanel .panelHeader {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  #paintStatus {
+    max-width: none;
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .paintBoardWrap {
+    margin: 0 -10px;
+    padding: 0 10px 4px;
+  }
+
+  .paintGrid,
+  .readerGrid {
+    grid-template-columns: repeat(13, minmax(44px, 1fr));
+    min-width: 650px;
+    border-width: 1px;
+  }
+
+  .paintCell,
+  .readerCell {
+    aspect-ratio: 1 / 0.92;
+    border-width: 0.5px;
+    font-size: clamp(7px, 2.35vw, 11px);
+    line-height: 1;
+  }
+
+  .paintCell.correct::after,
+  .paintCell.wrong::after,
+  .paintCell.missing::after {
+    inset: 1px;
+    border-width: 2px;
+  }
+
+  .paintReview {
+    gap: 8px;
+    font-size: 11px;
   }
 
   .stats {

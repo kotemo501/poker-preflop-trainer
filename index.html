@@ -14,19 +14,24 @@
           <h1>ヨコサワ式ハンドレンジ練習</h1>
         </div>
         <div class="controls">
+          <div class="segmented appSwitch" role="tablist" aria-label="ページ">
+            <button class="active" data-page="trainer" type="button">問題</button>
+            <button data-page="coloring" type="button">塗り絵</button>
+            <button data-page="reader" type="button">レンジ読み</button>
+          </div>
           <div class="segmented" role="tablist" aria-label="モード">
             <button class="active" data-mode="cash" type="button">リング</button>
             <button data-mode="tournament" type="button">トナメ</button>
           </div>
-          <label class="toggle">
+          <label class="toggle trainerControl">
             <input id="skipMastered" type="checkbox" checked />
             <span>習得済みをスキップ</span>
           </label>
-          <div class="segmented studySwitch" role="tablist" aria-label="表の表示">
+          <div class="segmented studySwitch trainerControl" role="tablist" aria-label="表の表示">
             <button class="active" data-study-mode="withChart" type="button">表を見ながら</button>
             <button data-study-mode="afterAnswer" type="button">回答後のみ</button>
           </div>
-          <label class="selectControl">
+          <label class="selectControl trainerControl">
             <span>練習範囲</span>
             <select id="drillMode">
               <option value="all">全部</option>
@@ -163,6 +168,116 @@
           </div>
           <div id="rangeGrid" class="rangeGrid" aria-label="ハンドレンジ表"></div>
           <div class="legend" id="legend"></div>
+        </section>
+      </section>
+
+      <section class="coloringPage hidden" id="coloringPage" aria-label="ハンドレンジ塗り絵">
+        <aside class="paintTools">
+          <div class="paintScore">
+            <span>採点結果</span>
+            <strong id="paintAccuracy">--</strong>
+          </div>
+          <div class="paintScore">
+            <span>対象マス</span>
+            <strong id="paintFilled">0/169</strong>
+          </div>
+          <label class="selectControl">
+            <span>塗り対象</span>
+            <select id="paintDrillMode">
+              <option value="all">全部</option>
+              <option value="band">ポジション追加分</option>
+              <option value="boundary">境界だけ</option>
+              <option value="mistakes">間違いだけ</option>
+            </select>
+          </label>
+          <label class="selectControl">
+            <span>追加分</span>
+            <select id="paintBand">
+              <option value="8">UTG強</option>
+              <option value="7">UTG中</option>
+              <option value="6">UTG弱</option>
+              <option value="5">EP</option>
+              <option value="4">LJ/HJ</option>
+              <option value="3">CO</option>
+              <option value="2">BTN</option>
+              <option value="1">BB</option>
+              <option value="0">Fold</option>
+            </select>
+          </label>
+          <div class="paintPalette" id="paintPalette" aria-label="塗る色"></div>
+          <button id="paintCheck" type="button">採点</button>
+          <button id="paintReveal" class="ghost" type="button">正解を表示</button>
+          <button id="paintClear" class="ghost danger" type="button">クリア</button>
+        </aside>
+
+        <section class="paintBoardPanel">
+          <div class="panelHeader">
+            <div>
+              <h2>ハンドレンジ塗り絵</h2>
+              <p id="paintModeNote">リングゲーム用の白地図</p>
+            </div>
+            <p id="paintStatus">色を選んで、覚えている範囲を表に塗ります。</p>
+          </div>
+          <div class="paintBoardWrap">
+            <div id="paintGrid" class="paintGrid" aria-label="塗り絵用ハンドレンジ表"></div>
+          </div>
+          <div class="paintReview hidden" id="paintReview">
+            <div><span class="reviewMark correct"></span>一致</div>
+            <div><span class="reviewMark wrong"></span>違いあり</div>
+            <div><span class="reviewMark missing"></span>未回答</div>
+          </div>
+        </section>
+      </section>
+
+      <section class="readerPage hidden" id="readerPage" aria-label="フロップ以降のレンジ読み">
+        <aside class="readerTools">
+          <label class="selectControl">
+            <span>ケース</span>
+            <select id="readerScenario"></select>
+          </label>
+          <button id="readerRandom" type="button">ランダムケース</button>
+          <div class="readerScenarioCard">
+            <span class="label">ボード</span>
+            <strong id="readerBoard">A72r</strong>
+            <p id="readerLine">BTNがオープン、BBがコール。フロップでBTNが小さくCB。</p>
+          </div>
+          <div class="readerRoles" aria-label="レンジ読みの対象">
+            <div>
+              <span>あなた</span>
+              <strong id="readerHero">BB</strong>
+            </div>
+            <div>
+              <span>読む相手</span>
+              <strong id="readerVillain">BTN</strong>
+            </div>
+          </div>
+          <div class="readerTask">
+            <span class="label">入力すること</span>
+            <strong id="readerTask">表から相手に残るハンドをクリック</strong>
+            <p id="readerAction">相手の小CB後に残るハンド群を選びます。</p>
+          </div>
+          <button id="readerCheck" type="button">判定</button>
+          <button id="readerReveal" class="ghost" type="button">残るレンジを見る</button>
+          <button id="readerReset" class="ghost danger" type="button">選択を戻す</button>
+        </aside>
+
+        <section class="readerBoardPanel">
+          <div class="panelHeader">
+            <div>
+              <h2>相手レンジ読み</h2>
+              <p id="readerModeNote">フロップ以降のアクションから、残りやすいハンド群を読む</p>
+            </div>
+            <p id="readerStatus">相手のアクション後に残すカテゴリを選びます。</p>
+          </div>
+          <div class="readerMetrics">
+            <div><span>レンジ一致</span><strong id="readerScore">--</strong></div>
+            <div><span>選択 / 正解</span><strong id="readerCombos">0/--</strong></div>
+            <div><span>ケース</span><strong id="readerCaseCount">--</strong></div>
+          </div>
+          <div class="paintBoardWrap">
+            <div id="readerGrid" class="readerGrid" aria-label="相手の残存レンジ"></div>
+          </div>
+          <div class="readerNotes" id="readerNotes"></div>
         </section>
       </section>
     </main>

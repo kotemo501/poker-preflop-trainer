@@ -1,0 +1,4117 @@
+{
+  "source": {
+    "name": "Balanced normalized poker range-reading cases",
+    "description": "Generated training cases balanced across position families, common board textures, and practical postflop actions. Real hand histories should be normalized into this same schema by the app-server/GPT pipeline.",
+    "public_dataset_reference": "A Dataset of Poker Hand Histories, Zenodo DOI 10.5281/zenodo.10796886",
+    "generated_case_count": 216
+  },
+  "coverage": {
+    "position_families": 9,
+    "board_profiles": 12,
+    "action_variants_per_family_board": 2
+  },
+  "cases": [
+    {
+      "id": "utg-bb-a72r-small-cbet",
+      "title": "UTG vs BB / A72r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "A72r",
+      "line": "UTGがオープン、BBがコール。A72rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "utg-bb-a72r-delayed-or-big",
+      "title": "UTG vs BB / A72r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "A72r",
+      "line": "UTGがオープン、BBがコール。A72rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "utg-bb-k83r-small-cbet",
+      "title": "UTG vs BB / K83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "K83r",
+      "line": "UTGがオープン、BBがコール。K83rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-k83r-delayed-or-big",
+      "title": "UTG vs BB / K83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "K83r",
+      "line": "UTGがオープン、BBがコール。K83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-qj5tt-small-cbet",
+      "title": "UTG vs BB / QJ5tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "QJ5tt",
+      "line": "UTGがオープン、BBがコール。QJ5ttでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "utg-bb-qj5tt-delayed-or-big",
+      "title": "UTG vs BB / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "QJ5tt",
+      "line": "UTGがオープン、BBがコール。QJ5ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "utg-bb-t54r-small-cbet",
+      "title": "UTG vs BB / T54r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "T54r",
+      "line": "UTGがオープン、BBがコール。T54rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-t54r-delayed-or-big",
+      "title": "UTG vs BB / T54r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "T54r",
+      "line": "UTGがオープン、BBがコール。T54rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-876ss-small-cbet",
+      "title": "UTG vs BB / 876ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "876ss",
+      "line": "UTGがオープン、BBがコール。876ssでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-876ss-big-barrel",
+      "title": "UTG vs BB / 876ss / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "876ss",
+      "line": "UTGがオープン、BBがコール。876ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-772r-small-cbet",
+      "title": "UTG vs BB / 772r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "772r",
+      "line": "UTGがオープン、BBがコール。772rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "utg-bb-772r-delayed-or-big",
+      "title": "UTG vs BB / 772r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "772r",
+      "line": "UTGがオープン、BBがコール。772rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "utg-bb-tt4r-small-cbet",
+      "title": "UTG vs BB / TT4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "TT4r",
+      "line": "UTGがオープン、BBがコール。TT4rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "utg-bb-tt4r-delayed-or-big",
+      "title": "UTG vs BB / TT4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "TT4r",
+      "line": "UTGがオープン、BBがコール。TT4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "utg-bb-aj5ss-small-cbet",
+      "title": "UTG vs BB / AJ5ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "AJ5ss",
+      "line": "UTGがオープン、BBがコール。AJ5ssでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "utg-bb-aj5ss-delayed-or-big",
+      "title": "UTG vs BB / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "AJ5ss",
+      "line": "UTGがオープン、BBがコール。AJ5ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "utg-bb-986tt-small-cbet",
+      "title": "UTG vs BB / 986tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "986tt",
+      "line": "UTGがオープン、BBがコール。986ttでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "utg-bb-986tt-big-barrel",
+      "title": "UTG vs BB / 986tt / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "986tt",
+      "line": "UTGがオープン、BBがコール。986ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "utg-bb-q83r-small-cbet",
+      "title": "UTG vs BB / Q83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "Q83r",
+      "line": "UTGがオープン、BBがコール。Q83rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "utg-bb-q83r-delayed-or-big",
+      "title": "UTG vs BB / Q83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "Q83r",
+      "line": "UTGがオープン、BBがコール。Q83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "utg-bb-ak4r-small-cbet",
+      "title": "UTG vs BB / AK4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "AK4r",
+      "line": "UTGがオープン、BBがコール。AK4rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "utg-bb-ak4r-delayed-or-big",
+      "title": "UTG vs BB / AK4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "AK4r",
+      "line": "UTGがオープン、BBがコール。AK4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "utg-bb-654r-small-cbet",
+      "title": "UTG vs BB / 654r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "654r",
+      "line": "UTGがオープン、BBがコール。654rでBBチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-bb-654r-big-barrel",
+      "title": "UTG vs BB / 654r / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "UTG",
+      "board": "654r",
+      "line": "UTGがオープン、BBがコール。654rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-a72r-small-cbet",
+      "title": "EP vs BB / A72r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "A72r",
+      "line": "EPがオープン、BBがコール。A72rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "ep-bb-a72r-delayed-or-big",
+      "title": "EP vs BB / A72r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "A72r",
+      "line": "EPがオープン、BBがコール。A72rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "ep-bb-k83r-small-cbet",
+      "title": "EP vs BB / K83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "K83r",
+      "line": "EPがオープン、BBがコール。K83rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-k83r-delayed-or-big",
+      "title": "EP vs BB / K83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "K83r",
+      "line": "EPがオープン、BBがコール。K83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-qj5tt-small-cbet",
+      "title": "EP vs BB / QJ5tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "QJ5tt",
+      "line": "EPがオープン、BBがコール。QJ5ttでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "ep-bb-qj5tt-delayed-or-big",
+      "title": "EP vs BB / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "QJ5tt",
+      "line": "EPがオープン、BBがコール。QJ5ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "ep-bb-t54r-small-cbet",
+      "title": "EP vs BB / T54r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "T54r",
+      "line": "EPがオープン、BBがコール。T54rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-t54r-delayed-or-big",
+      "title": "EP vs BB / T54r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "T54r",
+      "line": "EPがオープン、BBがコール。T54rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-876ss-small-cbet",
+      "title": "EP vs BB / 876ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "876ss",
+      "line": "EPがオープン、BBがコール。876ssでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-876ss-big-barrel",
+      "title": "EP vs BB / 876ss / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "876ss",
+      "line": "EPがオープン、BBがコール。876ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-772r-small-cbet",
+      "title": "EP vs BB / 772r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "772r",
+      "line": "EPがオープン、BBがコール。772rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "ep-bb-772r-delayed-or-big",
+      "title": "EP vs BB / 772r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "772r",
+      "line": "EPがオープン、BBがコール。772rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "ep-bb-tt4r-small-cbet",
+      "title": "EP vs BB / TT4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "TT4r",
+      "line": "EPがオープン、BBがコール。TT4rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "ep-bb-tt4r-delayed-or-big",
+      "title": "EP vs BB / TT4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "TT4r",
+      "line": "EPがオープン、BBがコール。TT4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "ep-bb-aj5ss-small-cbet",
+      "title": "EP vs BB / AJ5ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "AJ5ss",
+      "line": "EPがオープン、BBがコール。AJ5ssでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "ep-bb-aj5ss-delayed-or-big",
+      "title": "EP vs BB / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "AJ5ss",
+      "line": "EPがオープン、BBがコール。AJ5ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "ep-bb-986tt-small-cbet",
+      "title": "EP vs BB / 986tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "986tt",
+      "line": "EPがオープン、BBがコール。986ttでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "ep-bb-986tt-big-barrel",
+      "title": "EP vs BB / 986tt / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "986tt",
+      "line": "EPがオープン、BBがコール。986ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "ep-bb-q83r-small-cbet",
+      "title": "EP vs BB / Q83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "Q83r",
+      "line": "EPがオープン、BBがコール。Q83rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "ep-bb-q83r-delayed-or-big",
+      "title": "EP vs BB / Q83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "Q83r",
+      "line": "EPがオープン、BBがコール。Q83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "ep-bb-ak4r-small-cbet",
+      "title": "EP vs BB / AK4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "AK4r",
+      "line": "EPがオープン、BBがコール。AK4rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "ep-bb-ak4r-delayed-or-big",
+      "title": "EP vs BB / AK4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "AK4r",
+      "line": "EPがオープン、BBがコール。AK4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "ep-bb-654r-small-cbet",
+      "title": "EP vs BB / 654r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "654r",
+      "line": "EPがオープン、BBがコール。654rでBBチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-bb-654r-big-barrel",
+      "title": "EP vs BB / 654r / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "EP",
+      "board": "654r",
+      "line": "EPがオープン、BBがコール。654rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-a72r-small-cbet",
+      "title": "LJ/HJ vs BB / A72r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "A72r",
+      "line": "LJ/HJがオープン、BBがコール。A72rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "hj-bb-a72r-delayed-or-big",
+      "title": "LJ/HJ vs BB / A72r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "A72r",
+      "line": "LJ/HJがオープン、BBがコール。A72rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "hj-bb-k83r-small-cbet",
+      "title": "LJ/HJ vs BB / K83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "K83r",
+      "line": "LJ/HJがオープン、BBがコール。K83rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-k83r-delayed-or-big",
+      "title": "LJ/HJ vs BB / K83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "K83r",
+      "line": "LJ/HJがオープン、BBがコール。K83rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-qj5tt-small-cbet",
+      "title": "LJ/HJ vs BB / QJ5tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "QJ5tt",
+      "line": "LJ/HJがオープン、BBがコール。QJ5ttでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "hj-bb-qj5tt-delayed-or-big",
+      "title": "LJ/HJ vs BB / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "QJ5tt",
+      "line": "LJ/HJがオープン、BBがコール。QJ5ttで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "hj-bb-t54r-small-cbet",
+      "title": "LJ/HJ vs BB / T54r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "T54r",
+      "line": "LJ/HJがオープン、BBがコール。T54rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-t54r-delayed-or-big",
+      "title": "LJ/HJ vs BB / T54r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "T54r",
+      "line": "LJ/HJがオープン、BBがコール。T54rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-876ss-small-cbet",
+      "title": "LJ/HJ vs BB / 876ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "876ss",
+      "line": "LJ/HJがオープン、BBがコール。876ssでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-876ss-big-barrel",
+      "title": "LJ/HJ vs BB / 876ss / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "876ss",
+      "line": "LJ/HJがオープン、BBがコール。876ssで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-772r-small-cbet",
+      "title": "LJ/HJ vs BB / 772r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "772r",
+      "line": "LJ/HJがオープン、BBがコール。772rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "hj-bb-772r-delayed-or-big",
+      "title": "LJ/HJ vs BB / 772r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "772r",
+      "line": "LJ/HJがオープン、BBがコール。772rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "hj-bb-tt4r-small-cbet",
+      "title": "LJ/HJ vs BB / TT4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "TT4r",
+      "line": "LJ/HJがオープン、BBがコール。TT4rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "hj-bb-tt4r-delayed-or-big",
+      "title": "LJ/HJ vs BB / TT4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "TT4r",
+      "line": "LJ/HJがオープン、BBがコール。TT4rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "hj-bb-aj5ss-small-cbet",
+      "title": "LJ/HJ vs BB / AJ5ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "AJ5ss",
+      "line": "LJ/HJがオープン、BBがコール。AJ5ssでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "hj-bb-aj5ss-delayed-or-big",
+      "title": "LJ/HJ vs BB / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "AJ5ss",
+      "line": "LJ/HJがオープン、BBがコール。AJ5ssで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "hj-bb-986tt-small-cbet",
+      "title": "LJ/HJ vs BB / 986tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "986tt",
+      "line": "LJ/HJがオープン、BBがコール。986ttでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "hj-bb-986tt-big-barrel",
+      "title": "LJ/HJ vs BB / 986tt / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "986tt",
+      "line": "LJ/HJがオープン、BBがコール。986ttで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "hj-bb-q83r-small-cbet",
+      "title": "LJ/HJ vs BB / Q83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "Q83r",
+      "line": "LJ/HJがオープン、BBがコール。Q83rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "hj-bb-q83r-delayed-or-big",
+      "title": "LJ/HJ vs BB / Q83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "Q83r",
+      "line": "LJ/HJがオープン、BBがコール。Q83rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "hj-bb-ak4r-small-cbet",
+      "title": "LJ/HJ vs BB / AK4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "AK4r",
+      "line": "LJ/HJがオープン、BBがコール。AK4rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "hj-bb-ak4r-delayed-or-big",
+      "title": "LJ/HJ vs BB / AK4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "AK4r",
+      "line": "LJ/HJがオープン、BBがコール。AK4rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "hj-bb-654r-small-cbet",
+      "title": "LJ/HJ vs BB / 654r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "654r",
+      "line": "LJ/HJがオープン、BBがコール。654rでBBチェック、LJ/HJが小さくCB。",
+      "action": "LJ/HJの小CB後、LJ/HJ側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "hj-bb-654r-big-barrel",
+      "title": "LJ/HJ vs BB / 654r / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "LJ/HJ",
+      "board": "654r",
+      "line": "LJ/HJがオープン、BBがコール。654rで一度アクションが入り、LJ/HJが次のストリートで大きめにベット。",
+      "action": "LJ/HJの強い継続アクション後、LJ/HJ側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-bb-a72r-small-cbet",
+      "title": "CO vs BB / A72r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "A72r",
+      "line": "COがオープン、BBがコール。A72rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "co-bb-a72r-delayed-or-big",
+      "title": "CO vs BB / A72r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "A72r",
+      "line": "COがオープン、BBがコール。A72rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "co-bb-k83r-small-cbet",
+      "title": "CO vs BB / K83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "K83r",
+      "line": "COがオープン、BBがコール。K83rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "co-bb-k83r-delayed-or-big",
+      "title": "CO vs BB / K83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "K83r",
+      "line": "COがオープン、BBがコール。K83rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "co-bb-qj5tt-small-cbet",
+      "title": "CO vs BB / QJ5tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "QJ5tt",
+      "line": "COがオープン、BBがコール。QJ5ttでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "co-bb-qj5tt-delayed-or-big",
+      "title": "CO vs BB / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "QJ5tt",
+      "line": "COがオープン、BBがコール。QJ5ttで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "co-bb-t54r-small-cbet",
+      "title": "CO vs BB / T54r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "T54r",
+      "line": "COがオープン、BBがコール。T54rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "co-bb-t54r-delayed-or-big",
+      "title": "CO vs BB / T54r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "T54r",
+      "line": "COがオープン、BBがコール。T54rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "co-bb-876ss-small-cbet",
+      "title": "CO vs BB / 876ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "876ss",
+      "line": "COがオープン、BBがコール。876ssでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-bb-876ss-big-barrel",
+      "title": "CO vs BB / 876ss / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "876ss",
+      "line": "COがオープン、BBがコール。876ssで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-bb-772r-small-cbet",
+      "title": "CO vs BB / 772r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "772r",
+      "line": "COがオープン、BBがコール。772rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "co-bb-772r-delayed-or-big",
+      "title": "CO vs BB / 772r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "772r",
+      "line": "COがオープン、BBがコール。772rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "co-bb-tt4r-small-cbet",
+      "title": "CO vs BB / TT4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "TT4r",
+      "line": "COがオープン、BBがコール。TT4rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "co-bb-tt4r-delayed-or-big",
+      "title": "CO vs BB / TT4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "TT4r",
+      "line": "COがオープン、BBがコール。TT4rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "co-bb-aj5ss-small-cbet",
+      "title": "CO vs BB / AJ5ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "AJ5ss",
+      "line": "COがオープン、BBがコール。AJ5ssでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "co-bb-aj5ss-delayed-or-big",
+      "title": "CO vs BB / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "AJ5ss",
+      "line": "COがオープン、BBがコール。AJ5ssで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "co-bb-986tt-small-cbet",
+      "title": "CO vs BB / 986tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "986tt",
+      "line": "COがオープン、BBがコール。986ttでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "co-bb-986tt-big-barrel",
+      "title": "CO vs BB / 986tt / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "986tt",
+      "line": "COがオープン、BBがコール。986ttで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "co-bb-q83r-small-cbet",
+      "title": "CO vs BB / Q83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "Q83r",
+      "line": "COがオープン、BBがコール。Q83rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "co-bb-q83r-delayed-or-big",
+      "title": "CO vs BB / Q83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "Q83r",
+      "line": "COがオープン、BBがコール。Q83rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "co-bb-ak4r-small-cbet",
+      "title": "CO vs BB / AK4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "AK4r",
+      "line": "COがオープン、BBがコール。AK4rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "co-bb-ak4r-delayed-or-big",
+      "title": "CO vs BB / AK4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "AK4r",
+      "line": "COがオープン、BBがコール。AK4rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "co-bb-654r-small-cbet",
+      "title": "CO vs BB / 654r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "654r",
+      "line": "COがオープン、BBがコール。654rでBBチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-bb-654r-big-barrel",
+      "title": "CO vs BB / 654r / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "CO",
+      "board": "654r",
+      "line": "COがオープン、BBがコール。654rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-a72r-small-cbet",
+      "title": "BTN vs BB / A72r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "A72r",
+      "line": "BTNがオープン、BBがコール。A72rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "btn-bb-a72r-delayed-or-big",
+      "title": "BTN vs BB / A72r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "A72r",
+      "line": "BTNがオープン、BBがコール。A72rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "btn-bb-k83r-small-cbet",
+      "title": "BTN vs BB / K83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "K83r",
+      "line": "BTNがオープン、BBがコール。K83rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-k83r-delayed-or-big",
+      "title": "BTN vs BB / K83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "K83r",
+      "line": "BTNがオープン、BBがコール。K83rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-qj5tt-small-cbet",
+      "title": "BTN vs BB / QJ5tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "QJ5tt",
+      "line": "BTNがオープン、BBがコール。QJ5ttでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "btn-bb-qj5tt-delayed-or-big",
+      "title": "BTN vs BB / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "QJ5tt",
+      "line": "BTNがオープン、BBがコール。QJ5ttで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "btn-bb-t54r-small-cbet",
+      "title": "BTN vs BB / T54r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "T54r",
+      "line": "BTNがオープン、BBがコール。T54rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-t54r-delayed-or-big",
+      "title": "BTN vs BB / T54r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "T54r",
+      "line": "BTNがオープン、BBがコール。T54rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-876ss-small-cbet",
+      "title": "BTN vs BB / 876ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "876ss",
+      "line": "BTNがオープン、BBがコール。876ssでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-876ss-big-barrel",
+      "title": "BTN vs BB / 876ss / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "876ss",
+      "line": "BTNがオープン、BBがコール。876ssで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-772r-small-cbet",
+      "title": "BTN vs BB / 772r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "772r",
+      "line": "BTNがオープン、BBがコール。772rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "btn-bb-772r-delayed-or-big",
+      "title": "BTN vs BB / 772r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "772r",
+      "line": "BTNがオープン、BBがコール。772rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "btn-bb-tt4r-small-cbet",
+      "title": "BTN vs BB / TT4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "TT4r",
+      "line": "BTNがオープン、BBがコール。TT4rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "btn-bb-tt4r-delayed-or-big",
+      "title": "BTN vs BB / TT4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "TT4r",
+      "line": "BTNがオープン、BBがコール。TT4rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "btn-bb-aj5ss-small-cbet",
+      "title": "BTN vs BB / AJ5ss / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "AJ5ss",
+      "line": "BTNがオープン、BBがコール。AJ5ssでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "btn-bb-aj5ss-delayed-or-big",
+      "title": "BTN vs BB / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "AJ5ss",
+      "line": "BTNがオープン、BBがコール。AJ5ssで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "btn-bb-986tt-small-cbet",
+      "title": "BTN vs BB / 986tt / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "986tt",
+      "line": "BTNがオープン、BBがコール。986ttでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "btn-bb-986tt-big-barrel",
+      "title": "BTN vs BB / 986tt / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "986tt",
+      "line": "BTNがオープン、BBがコール。986ttで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "btn-bb-q83r-small-cbet",
+      "title": "BTN vs BB / Q83r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "Q83r",
+      "line": "BTNがオープン、BBがコール。Q83rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "btn-bb-q83r-delayed-or-big",
+      "title": "BTN vs BB / Q83r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "Q83r",
+      "line": "BTNがオープン、BBがコール。Q83rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "btn-bb-ak4r-small-cbet",
+      "title": "BTN vs BB / AK4r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "AK4r",
+      "line": "BTNがオープン、BBがコール。AK4rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "btn-bb-ak4r-delayed-or-big",
+      "title": "BTN vs BB / AK4r / 遅延/大きめ",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "AK4r",
+      "line": "BTNがオープン、BBがコール。AK4rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "btn-bb-654r-small-cbet",
+      "title": "BTN vs BB / 654r / 小CB",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "654r",
+      "line": "BTNがオープン、BBがコール。654rでBBチェック、BTNが小さくCB。",
+      "action": "BTNの小CB後、BTN側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "btn-bb-654r-big-barrel",
+      "title": "BTN vs BB / 654r / 大きめ継続",
+      "heroPosition": "BB",
+      "villainPosition": "BTN",
+      "board": "654r",
+      "line": "BTNがオープン、BBがコール。654rで一度アクションが入り、BTNが次のストリートで大きめにベット。",
+      "action": "BTNの強い継続アクション後、BTN側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-a72r-small-cbet",
+      "title": "UTG vs BTN / A72r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "A72r",
+      "line": "UTGがオープン、BTNがコール。A72rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "utg-btn-a72r-delayed-or-big",
+      "title": "UTG vs BTN / A72r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "A72r",
+      "line": "UTGがオープン、BTNがコール。A72rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "utg-btn-k83r-small-cbet",
+      "title": "UTG vs BTN / K83r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "K83r",
+      "line": "UTGがオープン、BTNがコール。K83rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-k83r-delayed-or-big",
+      "title": "UTG vs BTN / K83r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "K83r",
+      "line": "UTGがオープン、BTNがコール。K83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-qj5tt-small-cbet",
+      "title": "UTG vs BTN / QJ5tt / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "QJ5tt",
+      "line": "UTGがオープン、BTNがコール。QJ5ttでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "utg-btn-qj5tt-delayed-or-big",
+      "title": "UTG vs BTN / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "QJ5tt",
+      "line": "UTGがオープン、BTNがコール。QJ5ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "utg-btn-t54r-small-cbet",
+      "title": "UTG vs BTN / T54r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "T54r",
+      "line": "UTGがオープン、BTNがコール。T54rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-t54r-delayed-or-big",
+      "title": "UTG vs BTN / T54r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "T54r",
+      "line": "UTGがオープン、BTNがコール。T54rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-876ss-small-cbet",
+      "title": "UTG vs BTN / 876ss / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "876ss",
+      "line": "UTGがオープン、BTNがコール。876ssでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-876ss-big-barrel",
+      "title": "UTG vs BTN / 876ss / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "876ss",
+      "line": "UTGがオープン、BTNがコール。876ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-772r-small-cbet",
+      "title": "UTG vs BTN / 772r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "772r",
+      "line": "UTGがオープン、BTNがコール。772rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "utg-btn-772r-delayed-or-big",
+      "title": "UTG vs BTN / 772r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "772r",
+      "line": "UTGがオープン、BTNがコール。772rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "utg-btn-tt4r-small-cbet",
+      "title": "UTG vs BTN / TT4r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "TT4r",
+      "line": "UTGがオープン、BTNがコール。TT4rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "utg-btn-tt4r-delayed-or-big",
+      "title": "UTG vs BTN / TT4r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "TT4r",
+      "line": "UTGがオープン、BTNがコール。TT4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "utg-btn-aj5ss-small-cbet",
+      "title": "UTG vs BTN / AJ5ss / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "AJ5ss",
+      "line": "UTGがオープン、BTNがコール。AJ5ssでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "utg-btn-aj5ss-delayed-or-big",
+      "title": "UTG vs BTN / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "AJ5ss",
+      "line": "UTGがオープン、BTNがコール。AJ5ssで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "utg-btn-986tt-small-cbet",
+      "title": "UTG vs BTN / 986tt / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "986tt",
+      "line": "UTGがオープン、BTNがコール。986ttでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "utg-btn-986tt-big-barrel",
+      "title": "UTG vs BTN / 986tt / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "986tt",
+      "line": "UTGがオープン、BTNがコール。986ttで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "utg-btn-q83r-small-cbet",
+      "title": "UTG vs BTN / Q83r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "Q83r",
+      "line": "UTGがオープン、BTNがコール。Q83rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "utg-btn-q83r-delayed-or-big",
+      "title": "UTG vs BTN / Q83r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "Q83r",
+      "line": "UTGがオープン、BTNがコール。Q83rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "utg-btn-ak4r-small-cbet",
+      "title": "UTG vs BTN / AK4r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "AK4r",
+      "line": "UTGがオープン、BTNがコール。AK4rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "utg-btn-ak4r-delayed-or-big",
+      "title": "UTG vs BTN / AK4r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "AK4r",
+      "line": "UTGがオープン、BTNがコール。AK4rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "utg-btn-654r-small-cbet",
+      "title": "UTG vs BTN / 654r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "654r",
+      "line": "UTGがオープン、BTNがコール。654rでBTNチェック、UTGが小さくCB。",
+      "action": "UTGの小CB後、UTG側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "utg-btn-654r-big-barrel",
+      "title": "UTG vs BTN / 654r / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "UTG",
+      "board": "654r",
+      "line": "UTGがオープン、BTNがコール。654rで一度アクションが入り、UTGが次のストリートで大きめにベット。",
+      "action": "UTGの強い継続アクション後、UTG側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-a72r-small-cbet",
+      "title": "EP vs BTN / A72r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "A72r",
+      "line": "EPがオープン、BTNがコール。A72rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "ep-btn-a72r-delayed-or-big",
+      "title": "EP vs BTN / A72r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "A72r",
+      "line": "EPがオープン、BTNがコール。A72rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "ep-btn-k83r-small-cbet",
+      "title": "EP vs BTN / K83r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "K83r",
+      "line": "EPがオープン、BTNがコール。K83rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-k83r-delayed-or-big",
+      "title": "EP vs BTN / K83r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "K83r",
+      "line": "EPがオープン、BTNがコール。K83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-qj5tt-small-cbet",
+      "title": "EP vs BTN / QJ5tt / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "QJ5tt",
+      "line": "EPがオープン、BTNがコール。QJ5ttでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "ep-btn-qj5tt-delayed-or-big",
+      "title": "EP vs BTN / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "QJ5tt",
+      "line": "EPがオープン、BTNがコール。QJ5ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "ep-btn-t54r-small-cbet",
+      "title": "EP vs BTN / T54r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "T54r",
+      "line": "EPがオープン、BTNがコール。T54rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-t54r-delayed-or-big",
+      "title": "EP vs BTN / T54r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "T54r",
+      "line": "EPがオープン、BTNがコール。T54rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-876ss-small-cbet",
+      "title": "EP vs BTN / 876ss / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "876ss",
+      "line": "EPがオープン、BTNがコール。876ssでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-876ss-big-barrel",
+      "title": "EP vs BTN / 876ss / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "876ss",
+      "line": "EPがオープン、BTNがコール。876ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-772r-small-cbet",
+      "title": "EP vs BTN / 772r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "772r",
+      "line": "EPがオープン、BTNがコール。772rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "ep-btn-772r-delayed-or-big",
+      "title": "EP vs BTN / 772r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "772r",
+      "line": "EPがオープン、BTNがコール。772rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "ep-btn-tt4r-small-cbet",
+      "title": "EP vs BTN / TT4r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "TT4r",
+      "line": "EPがオープン、BTNがコール。TT4rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "ep-btn-tt4r-delayed-or-big",
+      "title": "EP vs BTN / TT4r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "TT4r",
+      "line": "EPがオープン、BTNがコール。TT4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "ep-btn-aj5ss-small-cbet",
+      "title": "EP vs BTN / AJ5ss / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "AJ5ss",
+      "line": "EPがオープン、BTNがコール。AJ5ssでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "ep-btn-aj5ss-delayed-or-big",
+      "title": "EP vs BTN / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "AJ5ss",
+      "line": "EPがオープン、BTNがコール。AJ5ssで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "ep-btn-986tt-small-cbet",
+      "title": "EP vs BTN / 986tt / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "986tt",
+      "line": "EPがオープン、BTNがコール。986ttでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "ep-btn-986tt-big-barrel",
+      "title": "EP vs BTN / 986tt / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "986tt",
+      "line": "EPがオープン、BTNがコール。986ttで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "ep-btn-q83r-small-cbet",
+      "title": "EP vs BTN / Q83r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "Q83r",
+      "line": "EPがオープン、BTNがコール。Q83rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "ep-btn-q83r-delayed-or-big",
+      "title": "EP vs BTN / Q83r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "Q83r",
+      "line": "EPがオープン、BTNがコール。Q83rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "ep-btn-ak4r-small-cbet",
+      "title": "EP vs BTN / AK4r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "AK4r",
+      "line": "EPがオープン、BTNがコール。AK4rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "ep-btn-ak4r-delayed-or-big",
+      "title": "EP vs BTN / AK4r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "AK4r",
+      "line": "EPがオープン、BTNがコール。AK4rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "ep-btn-654r-small-cbet",
+      "title": "EP vs BTN / 654r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "654r",
+      "line": "EPがオープン、BTNがコール。654rでBTNチェック、EPが小さくCB。",
+      "action": "EPの小CB後、EP側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "ep-btn-654r-big-barrel",
+      "title": "EP vs BTN / 654r / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "EP",
+      "board": "654r",
+      "line": "EPがオープン、BTNがコール。654rで一度アクションが入り、EPが次のストリートで大きめにベット。",
+      "action": "EPの強い継続アクション後、EP側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-btn-a72r-small-cbet",
+      "title": "CO vs BTN / A72r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "A72r",
+      "line": "COがオープン、BTNがコール。A72rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "co-btn-a72r-delayed-or-big",
+      "title": "CO vs BTN / A72r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "A72r",
+      "line": "COがオープン、BTNがコール。A72rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "co-btn-k83r-small-cbet",
+      "title": "CO vs BTN / K83r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "K83r",
+      "line": "COがオープン、BTNがコール。K83rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "co-btn-k83r-delayed-or-big",
+      "title": "CO vs BTN / K83r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "K83r",
+      "line": "COがオープン、BTNがコール。K83rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "co-btn-qj5tt-small-cbet",
+      "title": "CO vs BTN / QJ5tt / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "QJ5tt",
+      "line": "COがオープン、BTNがコール。QJ5ttでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "co-btn-qj5tt-delayed-or-big",
+      "title": "CO vs BTN / QJ5tt / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "QJ5tt",
+      "line": "COがオープン、BTNがコール。QJ5ttで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "co-btn-t54r-small-cbet",
+      "title": "CO vs BTN / T54r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "T54r",
+      "line": "COがオープン、BTNがコール。T54rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "co-btn-t54r-delayed-or-big",
+      "title": "CO vs BTN / T54r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "T54r",
+      "line": "COがオープン、BTNがコール。T54rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "co-btn-876ss-small-cbet",
+      "title": "CO vs BTN / 876ss / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "876ss",
+      "line": "COがオープン、BTNがコール。876ssでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-btn-876ss-big-barrel",
+      "title": "CO vs BTN / 876ss / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "876ss",
+      "line": "COがオープン、BTNがコール。876ssで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-btn-772r-small-cbet",
+      "title": "CO vs BTN / 772r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "772r",
+      "line": "COがオープン、BTNがコール。772rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "co-btn-772r-delayed-or-big",
+      "title": "CO vs BTN / 772r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "772r",
+      "line": "COがオープン、BTNがコール。772rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "co-btn-tt4r-small-cbet",
+      "title": "CO vs BTN / TT4r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "TT4r",
+      "line": "COがオープン、BTNがコール。TT4rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "co-btn-tt4r-delayed-or-big",
+      "title": "CO vs BTN / TT4r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "TT4r",
+      "line": "COがオープン、BTNがコール。TT4rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "co-btn-aj5ss-small-cbet",
+      "title": "CO vs BTN / AJ5ss / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "AJ5ss",
+      "line": "COがオープン、BTNがコール。AJ5ssでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "co-btn-aj5ss-delayed-or-big",
+      "title": "CO vs BTN / AJ5ss / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "AJ5ss",
+      "line": "COがオープン、BTNがコール。AJ5ssで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "co-btn-986tt-small-cbet",
+      "title": "CO vs BTN / 986tt / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "986tt",
+      "line": "COがオープン、BTNがコール。986ttでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "co-btn-986tt-big-barrel",
+      "title": "CO vs BTN / 986tt / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "986tt",
+      "line": "COがオープン、BTNがコール。986ttで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "co-btn-q83r-small-cbet",
+      "title": "CO vs BTN / Q83r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "Q83r",
+      "line": "COがオープン、BTNがコール。Q83rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards",
+        "air"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "co-btn-q83r-delayed-or-big",
+      "title": "CO vs BTN / Q83r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "Q83r",
+      "line": "COがオープン、BTNがコール。Q83rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "co-btn-ak4r-small-cbet",
+      "title": "CO vs BTN / AK4r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "AK4r",
+      "line": "COがオープン、BTNがコール。AK4rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "co-btn-ak4r-delayed-or-big",
+      "title": "CO vs BTN / AK4r / 遅延/大きめ",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "AK4r",
+      "line": "COがオープン、BTNがコール。AK4rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "co-btn-654r-small-cbet",
+      "title": "CO vs BTN / 654r / 小CB",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "654r",
+      "line": "COがオープン、BTNがコール。654rでBTNチェック、COが小さくCB。",
+      "action": "COの小CB後、CO側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "overcards"
+      ],
+      "notes": [
+        "小CBは広めに打てるラインなので、強いハンドだけに絞りすぎない。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "co-btn-654r-big-barrel",
+      "title": "CO vs BTN / 654r / 大きめ継続",
+      "heroPosition": "BTN",
+      "villainPosition": "CO",
+      "board": "654r",
+      "line": "COがオープン、BTNがコール。654rで一度アクションが入り、COが次のストリートで大きめにベット。",
+      "action": "COの強い継続アクション後、CO側に濃く残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "大きめの継続アクションはレンジ全体より強い塊に寄る。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-a72r-donk-small",
+      "title": "BB vs BTN / A72r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "A72r",
+      "line": "BTNがオープン、BBがコール。A72rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "Aハイドライでのドンクは、コール側が絡んだ時に出やすい。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "bb-btn-a72r-checkraise",
+      "title": "BB vs BTN / A72r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "A72r",
+      "line": "BTNがオープン、BBがコール。A72rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "Aハイドライはプリフロップレイザーが小さく広く打ちやすい。",
+        "強いAだけに寄せすぎると、小CBに含まれる空振りを落としすぎる。"
+      ]
+    },
+    {
+      "id": "bb-btn-k83r-donk-small",
+      "title": "BB vs BTN / K83r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "K83r",
+      "line": "BTNがオープン、BBがコール。K83rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "Kハイドライでのドンクは、コール側が絡んだ時に出やすい。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-k83r-checkraise",
+      "title": "BB vs BTN / K83r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "K83r",
+      "line": "BTNがオープン、BBがコール。K83rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "Kハイドライもレイザー有利だが、Aハイよりコール側のヒットも少し残る。",
+        "小CBなら未ヒットの高いカードも残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-qj5tt-donk-small",
+      "title": "BB vs BTN / QJ5tt / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "QJ5tt",
+      "line": "BTNがオープン、BBがコール。QJ5ttでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "高カード2枚ツートーンでのドンクは、コール側が絡んだ時に出やすい。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "bb-btn-qj5tt-checkraise",
+      "title": "BB vs BTN / QJ5tt / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "QJ5tt",
+      "line": "BTNがオープン、BBがコール。QJ5ttでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "高カード2枚はトップペアと強いドローが多く残る。",
+        "ツートーンではフラッシュドローを落としすぎない。"
+      ]
+    },
+    {
+      "id": "bb-btn-t54r-donk-small",
+      "title": "BB vs BTN / T54r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "T54r",
+      "line": "BTNがオープン、BBがコール。T54rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "underpair"
+      ],
+      "notes": [
+        "低中連結レインボーでのドンクは、コール側が絡んだ時に出やすい。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-t54r-checkraise",
+      "title": "BB vs BTN / T54r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "T54r",
+      "line": "BTNがオープン、BBがコール。T54rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw",
+        "underpair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "低中連結はBB側が多く絡みやすい。",
+        "ワンペア、ペア+ドロー、オーバーペア系を意識して残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-876ss-donk-small",
+      "title": "BB vs BTN / 876ss / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "876ss",
+      "line": "BTNがオープン、BBがコール。876ssでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "低中連結ツートーンでのドンクは、コール側が絡んだ時に出やすい。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-876ss-checkraise",
+      "title": "BB vs BTN / 876ss / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "876ss",
+      "line": "BTNがオープン、BBがコール。876ssでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "876ツートーンはコール側にツーペア、ストレート、強いドローが多い。",
+        "強いアクション後は完成役とドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-772r-donk-small",
+      "title": "BB vs BTN / 772r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "772r",
+      "line": "BTNがオープン、BBがコール。772rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair",
+        "air"
+      ],
+      "notes": [
+        "低ペアボードでのドンクは、コール側が絡んだ時に出やすい。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "bb-btn-772r-checkraise",
+      "title": "BB vs BTN / 772r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "772r",
+      "line": "BTNがオープン、BBがコール。772rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "ペアボードの小CBは広く打てる。",
+        "強い完成役だけでなく、オーバーカードや中小ペアも一部残る。"
+      ]
+    },
+    {
+      "id": "bb-btn-tt4r-donk-small",
+      "title": "BB vs BTN / TT4r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "TT4r",
+      "line": "BTNがオープン、BBがコール。TT4rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "高ペアボードでのドンクは、コール側が絡んだ時に出やすい。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "bb-btn-tt4r-checkraise",
+      "title": "BB vs BTN / TT4r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "TT4r",
+      "line": "BTNがオープン、BBがコール。TT4rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "underpair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "高ペアボードでは強いペアと中小ペアが残りやすい。",
+        "小さいサイズなら空振りを完全には消さない。"
+      ]
+    },
+    {
+      "id": "bb-btn-aj5ss-donk-small",
+      "title": "BB vs BTN / AJ5ss / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "AJ5ss",
+      "line": "BTNがオープン、BBがコール。AJ5ssでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "Aハイ濃いドローでのドンクは、コール側が絡んだ時に出やすい。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "bb-btn-aj5ss-checkraise",
+      "title": "BB vs BTN / AJ5ss / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "AJ5ss",
+      "line": "BTNがオープン、BBがコール。AJ5ssでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "draw"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "Aハイでドローが濃い時はAヒットと強いドローを残す。",
+        "大きいベットはレンジ全体より強い塊に寄る。"
+      ]
+    },
+    {
+      "id": "bb-btn-986tt-donk-small",
+      "title": "BB vs BTN / 986tt / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "986tt",
+      "line": "BTNがオープン、BBがコール。986ttでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "topPair"
+      ],
+      "notes": [
+        "ミドル連結ツートーンでのドンクは、コール側が絡んだ時に出やすい。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "bb-btn-986tt-checkraise",
+      "title": "BB vs BTN / 986tt / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "986tt",
+      "line": "BTNがオープン、BBがコール。986ttでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "topPair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "ミドル連結はコール側にもかなり刺さる。",
+        "チェックバックやレイズでレンジの形が大きく変わる。"
+      ]
+    },
+    {
+      "id": "bb-btn-q83r-donk-small",
+      "title": "BB vs BTN / Q83r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "Q83r",
+      "line": "BTNがオープン、BBがコール。Q83rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair",
+        "air"
+      ],
+      "notes": [
+        "Qハイドライでのドンクは、コール側が絡んだ時に出やすい。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "bb-btn-q83r-checkraise",
+      "title": "BB vs BTN / Q83r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "Q83r",
+      "line": "BTNがオープン、BBがコール。Q83rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "Qハイドライは小CBしやすいが、A/Kハイほど一方的ではない。",
+        "遅延CBでは弱いショーダウンバリューも残る。"
+      ]
+    },
+    {
+      "id": "bb-btn-ak4r-donk-small",
+      "title": "BB vs BTN / AK4r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "AK4r",
+      "line": "BTNがオープン、BBがコール。AK4rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "AKハイでのドンクは、コール側が絡んだ時に出やすい。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "bb-btn-ak4r-checkraise",
+      "title": "BB vs BTN / AK4r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "AK4r",
+      "line": "BTNがオープン、BBがコール。AK4rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "topPair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "AKハイは早いポジションのレイザーにかなり強く当たりやすい。",
+        "強いアクションでは空振りを残しすぎない。"
+      ]
+    },
+    {
+      "id": "bb-btn-654r-donk-small",
+      "title": "BB vs BTN / 654r / BBドンク",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "654r",
+      "line": "BTNがオープン、BBがコール。654rでBBが小さくドンク。",
+      "action": "BBのドンク後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "underpair"
+      ],
+      "notes": [
+        "低連結でのドンクは、コール側が絡んだ時に出やすい。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    },
+    {
+      "id": "bb-btn-654r-checkraise",
+      "title": "BB vs BTN / 654r / チェックレイズ",
+      "heroPosition": "BTN",
+      "villainPosition": "BB",
+      "board": "654r",
+      "line": "BTNがオープン、BBがコール。654rでBTNがCB、BBがチェックレイズ。",
+      "action": "BBのチェックレイズ後、BB側に残すハンドをクリック。",
+      "keep": [
+        "made",
+        "draw",
+        "underpair"
+      ],
+      "notes": [
+        "チェックレイズ後はレンジが強い完成役と強いドローに寄りやすい。",
+        "低連結はBB側のレンジに強く絡む。",
+        "強いアクションではセット、ツーペア、ストレート、ドローを中心に残す。"
+      ]
+    }
+  ]
+}
