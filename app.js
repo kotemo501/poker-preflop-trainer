@@ -159,6 +159,8 @@ const state = {
     checked: false,
     revealed: false,
     isPainting: false,
+    draggedHands: new Set(),
+    dragChanged: false,
   },
   reader: {
     scenarioId: readerScenarios[0].id,
@@ -1233,15 +1235,34 @@ function paintStatusText(targetCount) {
   return "色を選んで、覚えている範囲を表に塗ります。";
 }
 
-function setPaintLevel(hand) {
+function updatePaintCellVisual(cell, hand) {
+  const entries = currentPaintEntries();
+  cell.classList.remove("blank", "correct", "wrong", "missing");
+  for (let level = 0; level <= 8; level += 1) cell.classList.remove(`rank-${level}`);
+  const userLevel = entries[hand];
+  if (userLevel === undefined) {
+    cell.classList.add("blank");
+    cell.title = `${hand}: 未回答`;
+  } else {
+    cell.classList.add(`rank-${userLevel}`);
+    cell.title = `${hand}: ${levelNames[userLevel]}`;
+  }
+}
+
+function setPaintLevel(hand, { render = true, persist = true, cell = null } = {}) {
   if (!paintTargetSet().has(hand)) return;
   const entries = currentPaintEntries();
+  const previousLevel = entries[hand];
+  const wasReviewing = state.paint.checked || state.paint.revealed;
   if (state.paint.selectedLevel === null) delete entries[hand];
   else entries[hand] = state.paint.selectedLevel;
   state.paint.checked = false;
   state.paint.revealed = false;
-  savePaintEntries();
-  renderPaintGrid();
+  const changed = previousLevel !== entries[hand] || wasReviewing;
+  if (!changed) return;
+  if (persist) savePaintEntries();
+  if (render) renderPaintGrid();
+  else if (cell) updatePaintCellVisual(cell, hand);
 }
 
 function savePaintEntries() {
@@ -1716,22 +1737,44 @@ els.paintGrid.addEventListener("pointerdown", (event) => {
   const cell = event.target.closest("button[data-hand]");
   if (!cell) return;
   state.paint.isPainting = true;
+  state.paint.draggedHands = new Set();
+  state.paint.dragChanged = false;
+  els.paintGrid.setPointerCapture?.(event.pointerId);
   event.preventDefault();
-  setPaintLevel(cell.dataset.hand);
+  state.paint.draggedHands.add(cell.dataset.hand);
+  setPaintLevel(cell.dataset.hand, { render: false, persist: false, cell });
+  state.paint.dragChanged = true;
 });
 els.paintGrid.addEventListener("pointermove", (event) => {
   if (!state.paint.isPainting) return;
   const target = document.elementFromPoint(event.clientX, event.clientY);
   const cell = target && target.closest("button[data-hand]");
   if (!cell) return;
+  if (state.paint.draggedHands.has(cell.dataset.hand)) return;
   event.preventDefault();
-  setPaintLevel(cell.dataset.hand);
+  state.paint.draggedHands.add(cell.dataset.hand);
+  setPaintLevel(cell.dataset.hand, { render: false, persist: false, cell });
+  state.paint.dragChanged = true;
 });
-window.addEventListener("pointerup", () => {
+window.addEventListener("pointerup", (event) => {
+  if (state.paint.isPainting && state.paint.dragChanged) {
+    savePaintEntries();
+    renderPaintGrid();
+  }
   state.paint.isPainting = false;
+  state.paint.draggedHands = new Set();
+  state.paint.dragChanged = false;
+  if (els.paintGrid.hasPointerCapture?.(event.pointerId)) els.paintGrid.releasePointerCapture(event.pointerId);
 });
-window.addEventListener("pointercancel", () => {
+window.addEventListener("pointercancel", (event) => {
+  if (state.paint.isPainting && state.paint.dragChanged) {
+    savePaintEntries();
+    renderPaintGrid();
+  }
   state.paint.isPainting = false;
+  state.paint.draggedHands = new Set();
+  state.paint.dragChanged = false;
+  if (els.paintGrid.hasPointerCapture?.(event.pointerId)) els.paintGrid.releasePointerCapture(event.pointerId);
 });
 els.paintCheck.addEventListener("click", () => {
   state.paint.checked = true;
