@@ -253,13 +253,15 @@
           </div>
           <div class="readerTask">
             <span class="label">入力すること</span>
-            <strong id="readerTask">表から相手に残るハンドをクリック</strong>
+            <strong id="readerTask">残る塊を選んで、表で調整</strong>
             <p id="readerAction">相手の小CB後に残るハンド群を選びます。</p>
           </div>
-          <label class="toggle readerAutoFill">
-            <input id="readerAutoStronger" type="checkbox" checked />
-            <span>クリックした強さ以上をまとめて選ぶ</span>
-          </label>
+          <div class="readerGuide" aria-label="レンジ読みの手順">
+            <div><span>1</span><strong>塊を選ぶ</strong></div>
+            <div><span>2</span><strong>表で調整</strong></div>
+            <div><span>3</span><strong>判定</strong></div>
+          </div>
+          <div class="readerPick" id="readerPick" aria-label="相手に残すハンドの塊"></div>
           <button id="readerCheck" type="button">判定</button>
           <button id="readerReveal" class="ghost" type="button">残るレンジを見る</button>
           <button id="readerReset" class="ghost danger" type="button">選択を戻す</button>

@@ -216,7 +216,7 @@ const els = {
   readerVillain: document.querySelector("#readerVillain"),
   readerTask: document.querySelector("#readerTask"),
   readerAction: document.querySelector("#readerAction"),
-  readerAutoStronger: document.querySelector("#readerAutoStronger"),
+  readerPick: document.querySelector("#readerPick"),
   readerRandom: document.querySelector("#readerRandom"),
   readerCheck: document.querySelector("#readerCheck"),
   readerReveal: document.querySelector("#readerReveal"),
@@ -1280,10 +1280,24 @@ function renderReader() {
   els.readerLine.textContent = scenario.line;
   els.readerHero.textContent = scenario.heroPosition;
   els.readerVillain.textContent = scenario.villainPosition;
-  els.readerTask.textContent = `${scenario.villainPosition}に残るハンドをクリック`;
+  els.readerTask.textContent = `${scenario.villainPosition}に残る塊を選択`;
   els.readerAction.textContent = scenario.action;
+  renderReaderPick();
   renderReaderGrid();
   renderReaderStats();
+}
+
+function renderReaderPick() {
+  els.readerPick.innerHTML = "";
+  const selectedCategories = selectedReaderCategories();
+  readerCategories.forEach(([id, label, hint]) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.dataset.category = id;
+    button.className = selectedCategories.has(id) ? "active" : "";
+    button.innerHTML = `<strong>${label}</strong><span>${hint}</span>`;
+    els.readerPick.appendChild(button);
+  });
 }
 
 function renderReaderGrid() {
@@ -1355,24 +1369,36 @@ function displayBoard(board) {
   return ranksText || board;
 }
 
-function setReaderHandSelection(hand) {
-  if (!els.readerAutoStronger.checked) {
-    if (state.reader.selectedHands.has(hand)) state.reader.selectedHands.delete(hand);
-    else state.reader.selectedHands.add(hand);
-    return;
-  }
+function toggleReaderHand(hand) {
+  if (state.reader.selectedHands.has(hand)) state.reader.selectedHands.delete(hand);
+  else state.reader.selectedHands.add(hand);
+}
 
-  const clicked = allHands().find((item) => item.hand === hand);
-  if (!clicked) return;
-  const level = correctPaintLevel(clicked.row, clicked.col);
-  const targetHands = allHands()
-    .filter(({ row, col }) => correctPaintLevel(row, col) >= level)
-    .map(({ hand: targetHand }) => targetHand);
-  const shouldRemove = targetHands.every((targetHand) => state.reader.selectedHands.has(targetHand));
-  targetHands.forEach((targetHand) => {
-    if (shouldRemove) state.reader.selectedHands.delete(targetHand);
-    else state.reader.selectedHands.add(targetHand);
+function toggleReaderCategory(category) {
+  const scenario = currentReaderScenario();
+  const hands = allHands()
+    .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, scenario.board) }))
+    .filter((entry) => entry.category === category)
+    .map((entry) => entry.hand);
+  const shouldRemove = hands.every((hand) => state.reader.selectedHands.has(hand));
+  hands.forEach((hand) => {
+    if (shouldRemove) state.reader.selectedHands.delete(hand);
+    else state.reader.selectedHands.add(hand);
   });
+}
+
+function selectedReaderCategories() {
+  const scenario = currentReaderScenario();
+  const selected = Array.from(state.reader.selectedHands);
+  return new Set(readerCategories
+    .filter(([category]) => {
+      const categoryHands = allHands()
+        .map((entry) => ({ ...entry, category: readerHandCategory(entry.hand, scenario.board) }))
+        .filter((entry) => entry.category === category)
+        .map((entry) => entry.hand);
+      return categoryHands.length && categoryHands.some((hand) => selected.includes(hand));
+    })
+    .map(([category]) => category));
 }
 
 function retainedReaderHands(scenario) {
@@ -1605,16 +1631,21 @@ els.readerScenario.addEventListener("change", () => {
   renderReader();
 });
 els.readerRandom.addEventListener("click", pickRandomReaderCase);
-els.readerGrid.addEventListener("click", (event) => {
-  const cell = event.target.closest("button[data-hand]");
-  if (!cell) return;
-  setReaderHandSelection(cell.dataset.hand);
+els.readerPick.addEventListener("click", (event) => {
+  const button = event.target.closest("button[data-category]");
+  if (!button) return;
+  toggleReaderCategory(button.dataset.category);
   state.reader.checked = false;
   state.reader.revealed = false;
   renderReader();
 });
-els.readerAutoStronger.addEventListener("change", () => {
-  renderReaderStats();
+els.readerGrid.addEventListener("click", (event) => {
+  const cell = event.target.closest("button[data-hand]");
+  if (!cell) return;
+  toggleReaderHand(cell.dataset.hand);
+  state.reader.checked = false;
+  state.reader.revealed = false;
+  renderReader();
 });
 els.readerCheck.addEventListener("click", () => {
   state.reader.checked = true;

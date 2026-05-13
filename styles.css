@@ -1097,22 +1097,13 @@ body.chart-after-answer.chart-revealed .trainer {
 }
 
 .readerRoles div,
-.readerTask,
-.readerAutoFill {
+.readerTask {
   display: grid;
   gap: 5px;
   padding: 10px;
   border: 1px solid #edf0f4;
   border-radius: 8px;
   background: #fff;
-}
-
-.readerAutoFill {
-  display: flex;
-  align-items: center;
-  border-color: #f7d77a;
-  background: #fffdf3;
-  font-weight: 800;
 }
 
 .readerRoles span {
@@ -1142,8 +1133,42 @@ body.chart-after-answer.chart-revealed .trainer {
   font-weight: 700;
 }
 
+.readerGuide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.readerGuide div {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 8px 4px;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+}
+
+.readerGuide span {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.readerGuide strong {
+  font-size: 11px;
+}
+
 .readerPick {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 7px;
 }
 
@@ -1547,7 +1572,7 @@ dialog img {
   .readerScenarioCard,
   .readerRoles,
   .readerTask,
-  .readerAutoFill,
+  .readerGuide,
   .readerPick {
     grid-column: 1 / -1;
   }
@@ -1611,8 +1636,7 @@ dialog img {
   }
 
   .readerRoles div,
-  .readerTask,
-  .readerAutoFill {
+  .readerTask {
     padding: 8px;
   }
 
