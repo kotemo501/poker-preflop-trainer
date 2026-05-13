@@ -1733,49 +1733,74 @@ els.paintBand.addEventListener("change", () => {
   renderPaintPalette();
   renderPaintGrid();
 });
-els.paintGrid.addEventListener("pointerdown", (event) => {
-  const cell = event.target.closest("button[data-hand]");
+
+function paintCellFromPoint(clientX, clientY) {
+  const target = document.elementFromPoint(clientX, clientY);
+  return target && target.closest("button[data-hand]");
+}
+
+function paintStrokeCell(cell) {
   if (!cell) return;
+  if (state.paint.draggedHands.has(cell.dataset.hand)) return;
+  state.paint.draggedHands.add(cell.dataset.hand);
+  setPaintLevel(cell.dataset.hand, { render: false, persist: false, cell });
+  state.paint.dragChanged = true;
+}
+
+function beginPaintStroke(cell) {
   state.paint.isPainting = true;
   state.paint.draggedHands = new Set();
   state.paint.dragChanged = false;
+  paintStrokeCell(cell);
+}
+
+function finishPaintStroke() {
+  if (state.paint.isPainting && state.paint.dragChanged) {
+    savePaintEntries();
+    renderPaintGrid();
+  }
+  state.paint.isPainting = false;
+  state.paint.draggedHands = new Set();
+  state.paint.dragChanged = false;
+}
+
+els.paintGrid.addEventListener("pointerdown", (event) => {
+  const cell = event.target.closest("button[data-hand]");
+  if (!cell) return;
+  beginPaintStroke(cell);
   els.paintGrid.setPointerCapture?.(event.pointerId);
   event.preventDefault();
-  state.paint.draggedHands.add(cell.dataset.hand);
-  setPaintLevel(cell.dataset.hand, { render: false, persist: false, cell });
-  state.paint.dragChanged = true;
 });
 els.paintGrid.addEventListener("pointermove", (event) => {
   if (!state.paint.isPainting) return;
-  const target = document.elementFromPoint(event.clientX, event.clientY);
-  const cell = target && target.closest("button[data-hand]");
-  if (!cell) return;
-  if (state.paint.draggedHands.has(cell.dataset.hand)) return;
   event.preventDefault();
-  state.paint.draggedHands.add(cell.dataset.hand);
-  setPaintLevel(cell.dataset.hand, { render: false, persist: false, cell });
-  state.paint.dragChanged = true;
+  paintStrokeCell(paintCellFromPoint(event.clientX, event.clientY));
 });
 window.addEventListener("pointerup", (event) => {
-  if (state.paint.isPainting && state.paint.dragChanged) {
-    savePaintEntries();
-    renderPaintGrid();
-  }
-  state.paint.isPainting = false;
-  state.paint.draggedHands = new Set();
-  state.paint.dragChanged = false;
+  finishPaintStroke();
   if (els.paintGrid.hasPointerCapture?.(event.pointerId)) els.paintGrid.releasePointerCapture(event.pointerId);
 });
 window.addEventListener("pointercancel", (event) => {
-  if (state.paint.isPainting && state.paint.dragChanged) {
-    savePaintEntries();
-    renderPaintGrid();
-  }
-  state.paint.isPainting = false;
-  state.paint.draggedHands = new Set();
-  state.paint.dragChanged = false;
+  finishPaintStroke();
   if (els.paintGrid.hasPointerCapture?.(event.pointerId)) els.paintGrid.releasePointerCapture(event.pointerId);
 });
+els.paintGrid.addEventListener("touchstart", (event) => {
+  const touch = event.touches[0];
+  if (!touch) return;
+  const cell = paintCellFromPoint(touch.clientX, touch.clientY);
+  if (!cell) return;
+  event.preventDefault();
+  beginPaintStroke(cell);
+}, { passive: false });
+els.paintGrid.addEventListener("touchmove", (event) => {
+  if (!state.paint.isPainting) return;
+  const touch = event.touches[0];
+  if (!touch) return;
+  event.preventDefault();
+  paintStrokeCell(paintCellFromPoint(touch.clientX, touch.clientY));
+}, { passive: false });
+els.paintGrid.addEventListener("touchend", finishPaintStroke);
+els.paintGrid.addEventListener("touchcancel", finishPaintStroke);
 els.paintCheck.addEventListener("click", () => {
   state.paint.checked = true;
   state.paint.revealed = false;
