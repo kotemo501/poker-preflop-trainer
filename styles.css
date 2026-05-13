@@ -863,7 +863,7 @@ body.chart-after-answer.chart-revealed .trainer {
 .rank-6 { background: #ffd91a; }
 .rank-5 { background: #6dbc2a; }
 .rank-4 { background: #79c7e8; }
-.rank-3 { background: #ffffff; }
+.rank-3 { background: #dff4ff; }
 .rank-2 { background: #d7d7d7; box-shadow: inset 0 0 0 4px #f0008b; }
 .rank-1 { background: #f6c6d9; }
 .rank-0 { background: #c9c9c9; }
@@ -1023,13 +1023,50 @@ body.chart-after-answer.chart-revealed .trainer {
   border: 3px solid #067647;
 }
 
+.paintCell.correct {
+  box-shadow: inset 0 0 0 999px rgb(117 224 167 / 0.28);
+}
+
 .paintCell.wrong::after {
   border: 4px solid #f04438;
   box-shadow: inset 0 0 0 2px #fff;
 }
 
+.paintCell.wrong::before {
+  content: "正解";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  background: #f04438;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1.1;
+  pointer-events: none;
+}
+
 .paintCell.missing::after {
   border: 3px dashed #667085;
+}
+
+.paintCell.missing::before {
+  content: "未";
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  width: 16px;
+  height: 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  background: #667085;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .paintReview {
@@ -1339,6 +1376,28 @@ body.chart-after-answer.chart-revealed .trainer {
   font-size: 13px;
   line-height: 1.45;
   font-weight: 700;
+}
+
+.readerInsight {
+  display: grid;
+  gap: 4px;
+  padding: 11px 12px;
+  border: 1px solid #b9d8d1;
+  border-radius: 8px;
+  background: #f3faf8;
+}
+
+.readerInsight h3 {
+  margin: 0;
+  color: #0b6b5e;
+  font-size: 13px;
+}
+
+.readerInsight p {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #26313d;
 }
 
 dialog {

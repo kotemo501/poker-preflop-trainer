@@ -45,6 +45,20 @@ let readerScenarios = [
     action: "BTNの小CB後に、BTN側にまだ残りやすいハンド群を選ぶ。",
     keep: ["made", "topPair", "overcards", "air"],
     notes: ["Aハイボードの小CBはレンジ全体で打ちやすい。", "強いAだけでなく、KQ/KJのような空振りも残りやすい。"],
+    insights: [
+      {
+        title: "なぜこのハンド？",
+        body: "BTNはA72rでレンジ優位が大きく、33%CBを広く使いやすい。強いAxやセットだけでなく、88のような中程度SDVやKQ/KJの空振りも一部ベットに混ざる。",
+      },
+      {
+        title: "レンジ内の役割",
+        body: "セットや強いAxはバリュー、88-TTは薄いプロテクション兼SDV、KQ/KJ/QJは小さいサイズでフォールドを作る候補。小CBなので強い手だけに絞らない。",
+      },
+      {
+        title: "ここまでの経路",
+        body: "この時点ではフロップCBを打った全体レンジを見ている。ハンド単体で毎回打つかではなく、各ハンドの一部がCBラインに入ると考える。",
+      },
+    ],
   },
   {
     id: "utg-barrel-kq7",
@@ -1137,7 +1151,8 @@ function renderPaintGrid() {
       const hand = handAt(row, col);
       const answer = correctPaintLevel(row, col);
       const userLevel = entries[hand];
-      const visibleLevel = state.paint.revealed ? answer : userLevel;
+      const shouldShowAnswerColor = state.paint.revealed || (state.paint.checked && target.has(hand) && userLevel !== answer);
+      const visibleLevel = shouldShowAnswerColor ? answer : userLevel;
       const cell = document.createElement("button");
       cell.type = "button";
       cell.className = "paintCell";
@@ -1156,11 +1171,14 @@ function renderPaintGrid() {
       if (state.paint.checked && target.has(hand)) {
         if (userLevel === undefined) cell.classList.add("missing");
         else if (userLevel === answer) cell.classList.add("correct");
-        else cell.classList.add("wrong");
+        else {
+          cell.classList.add("wrong");
+          cell.dataset.userLevel = String(userLevel);
+        }
       }
       cell.textContent = hand;
-      cell.title = state.paint.revealed
-        ? `${hand}: 正解は${levelNames[answer]}`
+      cell.title = shouldShowAnswerColor
+        ? `${hand}: 正解は${levelNames[answer]}${userLevel === undefined ? " / 未回答" : ` / あなたは${levelNames[userLevel]}`}`
         : `${hand}: ${userLevel === undefined ? "未回答" : levelNames[userLevel]}`;
       els.paintGrid.appendChild(cell);
     }
@@ -1364,10 +1382,31 @@ function renderReaderStats() {
   } else {
     els.readerStatus.textContent = `${scenario.villainPosition}の開始レンジ内から、アクション後に残るハンドを選びます。`;
   }
-  els.readerNotes.innerHTML = state.reader.checked || state.reader.revealed
-    ? scenario.notes.map((note) => `<p>${note}</p>`).join("")
-    : "";
+  renderReaderNotes(scenario);
   els.readerReveal.textContent = state.reader.revealed ? "レンジを隠す" : "残るレンジを見る";
+}
+
+function renderReaderNotes(scenario) {
+  els.readerNotes.innerHTML = "";
+  if (!state.reader.checked && !state.reader.revealed) return;
+
+  const fragment = document.createDocumentFragment();
+  (scenario.notes || []).forEach((note) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = note;
+    fragment.appendChild(paragraph);
+  });
+  (scenario.insights || []).forEach((insight) => {
+    const section = document.createElement("section");
+    section.className = "readerInsight";
+    const title = document.createElement("h3");
+    title.textContent = insight.title;
+    const body = document.createElement("p");
+    body.textContent = insight.body;
+    section.append(title, body);
+    fragment.appendChild(section);
+  });
+  els.readerNotes.appendChild(fragment);
 }
 
 function displayBoard(board, turn = null) {

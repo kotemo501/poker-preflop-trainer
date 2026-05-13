@@ -110,6 +110,20 @@ for (const item of payload.cases || []) {
   (item.keep || []).forEach((category) => {
     if (!validCategories.has(category)) errors.push(`${item.id}: invalid keep category ${category}`);
   });
+  if (item.insights !== undefined) {
+    if (!Array.isArray(item.insights) || !item.insights.length) {
+      errors.push(`${item.id}: insights must be a non-empty array when present`);
+    } else {
+      item.insights.forEach((insight, index) => {
+        if (!insight || typeof insight.title !== "string" || !insight.title.trim()) {
+          errors.push(`${item.id}: insights[${index}] missing title`);
+        }
+        if (!insight || typeof insight.body !== "string" || !insight.body.trim()) {
+          errors.push(`${item.id}: insights[${index}] missing body`);
+        }
+      });
+    }
+  }
 
   const start = startingHands(item);
   const board = item.turn ? `${item.board}${item.turn}` : item.board;

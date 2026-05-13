@@ -220,10 +220,47 @@ function turnCardFor(boardId) {
   }[boardId] || "8";
 }
 
+function learningInsightsFor(family, board, action) {
+  if (board.id !== "a72r" || !["small-cbet", "delayed-or-big"].includes(action.id)) return null;
+
+  if (action.id === "small-cbet") {
+    return [
+      {
+        title: "なぜこのハンド？",
+        body: `${family.villain}はA72rでレンジ優位が大きく、33%CBを広く使いやすい。強いAxやセットだけでなく、88のような中程度SDVやKQ/KJの空振りも一部ベットに混ざる。`,
+      },
+      {
+        title: "レンジ内の役割",
+        body: "セットや強いAxはバリュー、88-TTは薄いプロテクション兼SDV、KQ/KJ/QJは小さいサイズでフォールドを作る候補。小CBなので強い手だけに絞らない。",
+      },
+      {
+        title: "ここまでの経路",
+        body: "この時点ではフロップCBを打った全体レンジを見ている。ハンド単体で毎回打つかではなく、各ハンドの一部がCBラインに入ると考える。",
+      },
+    ];
+  }
+
+  return [
+    {
+      title: "なぜこのハンド？",
+      body: `ターン8で88はセットに改善する。フロップで33%CBに回した一部の88だけがこのラインに残り、${family.caller}のAxコールレンジから大きく取りに行ける。`,
+    },
+    {
+      title: "レンジ内の役割",
+      body: "88/77/22/AAは強バリュー、AK/AQは厚めまたは薄めのバリュー、KQ/KJ/QJの一部はブラフ候補。A72rはドローが少ないので、ターン75%はバリュー寄りに見やすい。",
+    },
+    {
+      title: "ここまでの経路",
+      body: "88全部がターン75%にいるわけではない。フロップでチェックした88はこのラインに来ず、フロップ33%CBを選んだ一部だけがターン8で強バリューに変わる。",
+    },
+  ];
+}
+
 const cases = [];
 for (const family of lineFamilies) {
   for (const board of boardProfiles) {
     for (const action of actionTemplates(family, board)) {
+      const insights = learningInsightsFor(family, board, action);
       cases.push({
         id: `${family.id}-${board.id}-${action.id}`,
         title: `${family.villain} vs ${family.hero} / ${board.label} / ${action.label}`,
@@ -237,6 +274,7 @@ for (const family of lineFamilies) {
         action: action.action,
         keep: Array.from(new Set(action.keep)),
         notes: action.notes.slice(0, 3),
+        ...(insights ? { insights } : {}),
       });
     }
   }
