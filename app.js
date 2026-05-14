@@ -2,25 +2,36 @@ const ranks = ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"];
 
 const levelNames = {
   8: "UTG強",
-  7: "UTG中",
-  6: "UTG弱",
-  5: "EP",
-  4: "LJ/HJ",
-  3: "CO",
-  2: "BTN",
-  1: "BB対BTNコール",
+  7: "UTG",
+  6: "EP",
+  5: "LJ/HJ",
+  4: "CO",
+  3: "BTN",
+  2: "BB対BTNコール",
+  1: "トナメBB追加",
   0: "フォールド",
 };
 
-const legendItems = [
+const ringLegendItems = [
+  [8, "UTGの強ハンド"],
+  [7, "UTGのハンド"],
+  [6, "EPのハンド"],
+  [5, "LJ/HJのハンド"],
+  [4, "COのハンド"],
+  [3, "BTNのハンド"],
+  [2, "BB対BTNコール"],
+  [0, "フォールド"],
+];
+
+const tournamentLegendItems = [
   [8, "UTGの強ハンド"],
   [7, "UTGの中ハンド"],
   [6, "UTGの弱ハンド"],
   [5, "EPのハンド"],
   [4, "LJ/HJのハンド"],
   [3, "COのハンド"],
-  [2, "BTNの追加ハンド"],
-  [1, "BBのみコール候補"],
+  [2, "BTNのハンド"],
+  [1, "BB対BTNコール"],
   [0, "フォールド"],
 ];
 
@@ -268,11 +279,12 @@ function allHands() {
 }
 
 function effectiveLevel(baseLevel) {
-  return state.mode === "tournament" ? Math.min(8, baseLevel + 1) : baseLevel;
+  if (state.mode === "tournament") return baseLevel === 0 ? 0 : Math.min(8, baseLevel + 1);
+  return ringDisplayLevel(baseLevel);
 }
 
 function openingThreshold(position) {
-  return { UTG: 6, EP: 5, "LJ/HJ": 4, CO: 3, BTN: 2 }[position];
+  return { UTG: 7, EP: 6, "LJ/HJ": 5, CO: 4, BTN: 3 }[position];
 }
 
 function answerFor(question) {
@@ -282,7 +294,7 @@ function answerFor(question) {
   }
 
   if (question.kind === "bbDefense") {
-    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
+    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 2 }[question.villainPosition];
     if (strength >= callThreshold + 2) return "raise";
     if (strength >= callThreshold) return "call";
     return "fold";
@@ -1054,21 +1066,36 @@ function renderGrid() {
   for (let row = 0; row < 13; row += 1) {
     for (let col = 0; col < 13; col += 1) {
       const hand = handAt(row, col);
-      const level = state.mode === "tournament" ? Math.min(8, cashMatrix[row][col] + 1) : cashMatrix[row][col];
+      const level = displayLevel(cashMatrix[row][col]);
       const cell = document.createElement("div");
       cell.className = `cell rank-${level}`;
       if (state.current && state.current.hand === hand) cell.classList.add("current");
       if (state.reviewHand === hand) cell.classList.add("reviewHand");
       cell.textContent = hand;
-      cell.title = `${hand}: ${levelNames[level]}`;
+      cell.title = `${hand}: ${displayLevelLabel(level)}`;
       els.rangeGrid.appendChild(cell);
     }
   }
 }
 
+function ringDisplayLevel(baseLevel) {
+  return baseLevel <= 1 ? 0 : baseLevel;
+}
+
+function displayLevel(baseLevel) {
+  return state.mode === "tournament" ? baseLevel : ringDisplayLevel(baseLevel);
+}
+
+function displayLevelLabel(level) {
+  const items = state.mode === "tournament" ? tournamentLegendItems : ringLegendItems;
+  const item = items.find(([itemLevel]) => itemLevel === level);
+  return item ? item[1] : levelNames[level];
+}
+
 function renderLegend() {
   els.legend.innerHTML = "";
-  legendItems.forEach(([level, label]) => {
+  const items = state.mode === "tournament" ? tournamentLegendItems : ringLegendItems;
+  items.forEach(([level, label]) => {
     const item = document.createElement("div");
     item.className = "legendItem";
     item.innerHTML = `<span class="swatch rank-${level}"></span><span>${label}</span>`;
@@ -1082,7 +1109,7 @@ function currentPaintEntries() {
 }
 
 function correctPaintLevel(row, col) {
-  return state.mode === "tournament" ? Math.min(8, cashMatrix[row][col] + 1) : cashMatrix[row][col];
+  return displayLevel(cashMatrix[row][col]);
 }
 
 function paintTargetHands() {
@@ -1126,9 +1153,10 @@ function paintMistakeHands() {
 
 function renderPaintPalette() {
   els.paintPalette.innerHTML = "";
+  const modeItems = state.mode === "tournament" ? tournamentLegendItems : ringLegendItems;
   const paletteItems = state.paint.drillMode === "band"
-    ? legendItems.filter(([level]) => level === state.paint.bandLevel || level === 0)
-    : legendItems;
+    ? modeItems.filter(([level]) => level === state.paint.bandLevel || level === 0)
+    : modeItems;
   paletteItems.forEach(([level, label]) => {
     const button = document.createElement("button");
     button.type = "button";
@@ -1144,6 +1172,23 @@ function renderPaintPalette() {
   eraser.dataset.level = "erase";
   eraser.innerHTML = '<span class="swatch blankSwatch"></span><span>消しゴム</span>';
   els.paintPalette.appendChild(eraser);
+}
+
+function renderPaintBandOptions() {
+  const items = (state.mode === "tournament" ? tournamentLegendItems : ringLegendItems)
+    .filter(([level]) => level !== 0);
+  if (!items.some(([level]) => level === state.paint.bandLevel)) {
+    state.paint.bandLevel = items[0][0];
+    if (state.paint.drillMode === "band") state.paint.selectedLevel = state.paint.bandLevel;
+  }
+  els.paintBand.innerHTML = "";
+  items.forEach(([level]) => {
+    const option = document.createElement("option");
+    option.value = String(level);
+    option.textContent = displayLevelLabel(level);
+    els.paintBand.appendChild(option);
+  });
+  els.paintBand.value = String(state.paint.bandLevel);
 }
 
 function renderPaintGrid() {
@@ -1186,8 +1231,8 @@ function renderPaintGrid() {
       }
       cell.textContent = hand;
       cell.title = shouldShowAnswerColor
-        ? `${hand}: 正解は${levelNames[answer]}${userLevel === undefined ? "" : ` / あなたは${levelNames[userLevel]}`}`
-        : `${hand}: ${userLevel === undefined ? "未回答" : levelNames[userLevel]}`;
+        ? `${hand}: 正解は${displayLevelLabel(answer)}${userLevel === undefined ? "" : ` / あなたは${displayLevelLabel(userLevel)}`}`
+        : `${hand}: ${userLevel === undefined ? "未回答" : displayLevelLabel(userLevel)}`;
       els.paintGrid.appendChild(cell);
     }
   }
@@ -1227,7 +1272,7 @@ function renderPaintStats() {
 }
 
 function paintStatusText(targetCount) {
-  if (state.paint.drillMode === "band") return `${levelNames[state.paint.bandLevel]}の追加分だけを塗ります。対象は${targetCount}マスです。`;
+  if (state.paint.drillMode === "band") return `${displayLevelLabel(state.paint.bandLevel)}の追加分だけを塗ります。対象は${targetCount}マスです。`;
   if (state.paint.drillMode === "boundary") return `色が変わる境界だけを塗ります。対象は${targetCount}マスです。`;
   if (state.paint.drillMode === "mistakes") {
     return targetCount ? `前回ミスしたマスだけ再テストします。対象は${targetCount}マスです。` : "再テスト対象はありません。先に採点するとミスだけを復習できます。";
@@ -1245,7 +1290,7 @@ function updatePaintCellVisual(cell, hand) {
     cell.title = `${hand}: 未回答`;
   } else {
     cell.classList.add(`rank-${userLevel}`);
-    cell.title = `${hand}: ${levelNames[userLevel]}`;
+    cell.title = `${hand}: ${displayLevelLabel(userLevel)}`;
   }
 }
 
@@ -1661,8 +1706,16 @@ els.modeButtons.forEach((button) => {
     state.mode = button.dataset.mode;
     els.modeButtons.forEach((item) => item.classList.toggle("active", item === button));
     els.modeNote.textContent = state.mode === "tournament" ? "トーナメント用: リングより1ランク広く判定" : "リングゲーム用";
+    if (state.mode === "cash" && state.paint.bandLevel === 1) {
+      state.paint.bandLevel = 2;
+      els.paintBand.value = "2";
+      if (state.paint.drillMode === "band") state.paint.selectedLevel = 2;
+    }
     state.paint.checked = false;
     state.paint.revealed = false;
+    renderLegend();
+    renderPaintBandOptions();
+    renderPaintPalette();
     renderPaintGrid();
     if (state.page === "trainer") renderQuestion();
     if (state.page === "reader") renderReader();
@@ -1880,6 +1933,7 @@ els.readerReset.addEventListener("click", () => {
 });
 
 renderLegend();
+renderPaintBandOptions();
 renderPaintPalette();
 renderPaintGrid();
 loadReaderCases();
