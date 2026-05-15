@@ -113,13 +113,13 @@ const cashMatrix = [
   [6, 5, 4, 7, 6, 4, 3, 3, 2, 1, 1, 1, 1],
   [5, 4, 3, 4, 7, 5, 4, 2, 1, 1, 1, 1, 0],
   [4, 3, 3, 3, 3, 7, 4, 3, 2, 1, 0, 0, 0],
-  [3, 0, 0, 1, 1, 2, 6, 3, 2, 1, 0, 0, 0],
-  [3, 1, 1, 0, 0, 1, 0, 6, 3, 2, 0, 0, 0],
-  [2, 1, 0, 0, 0, 0, 0, 0, 5, 3, 0, 1, 0],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 5, 2, 0, 0],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
-  [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4],
+  [3, 1, 1, 1, 1, 2, 6, 3, 2, 1, 0, 0, 0],
+  [3, 1, 1, 1, 0, 1, 0, 6, 3, 2, 1, 0, 0],
+  [2, 1, 1, 0, 0, 0, 0, 0, 5, 3, 2, 0, 0],
+  [1, 1, 1, 0, 0, 0, 0, 0, 0, 5, 2, 1, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4],
 ];
 
 const storageKey = "preflop-trainer-v1";
@@ -388,7 +388,7 @@ function isMarginal(question) {
     return onBoundary && strength >= threshold - 1 && strength <= threshold + 1;
   }
   if (question.kind === "bbDefense") {
-    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
+    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 2 }[question.villainPosition];
     return onBoundary && strength >= callThreshold - 1 && strength <= callThreshold + 2;
   }
   const threshold = openingThreshold(question.villainPosition);
@@ -556,7 +556,7 @@ function ruleFor(question) {
     return `${question.heroPosition}は${thresholdLabel(threshold)}ならオープン`;
   }
   if (question.kind === "bbDefense") {
-    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
+    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 2 }[question.villainPosition];
     return `BBは${question.villainPosition}相手に${thresholdLabel(callThreshold)}でコール、2ランク上でレイズ`;
   }
   const thresholds = vsOpenThresholds(question.villainPosition);
@@ -571,7 +571,7 @@ function explainAnswer(question) {
     return `${question.hand}は${band}。${question.heroPosition}の基準は${thresholdLabel(threshold)}です。`;
   }
   if (question.kind === "bbDefense") {
-    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
+    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 2 }[question.villainPosition];
     return `${question.hand}は${band}。BB対${question.villainPosition}は${thresholdLabel(callThreshold)}でコール、さらに強ければレイズです。`;
   }
   const thresholds = vsOpenThresholds(question.villainPosition);
@@ -755,7 +755,7 @@ function scrollQuestionIntoView() {
 function referenceThreshold(question) {
   if (question.kind === "open") return openingThreshold(question.heroPosition);
   if (question.kind === "bbDefense") {
-    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 1 }[question.villainPosition];
+    const callThreshold = { "LJ/HJ": 4, CO: 3, BTN: 2 }[question.villainPosition];
     return callThreshold;
   }
   return vsOpenThresholds(question.villainPosition).call;
